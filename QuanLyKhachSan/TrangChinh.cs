@@ -24,9 +24,9 @@
                         }
                     }
 
-               
+        
 
-                private void tolGioiThieu_Click(object sender, EventArgs e)
+        private void tolGioiThieu_Click(object sender, EventArgs e)
                 {
                     MessageBox.Show("Welcome to our application!");
                 }
@@ -56,32 +56,18 @@
         private void TrangChinh_Load_1(object sender, EventArgs e)
         {
             hideForm();
-            this.Hide();
-            DichVu dv = new DichVu();
-
             foreach (Form f in this.MdiChildren)
             {
                 if (f.Name == "DangNhap")
                 {
                     f.Activate();
-                    DangNhap dn = (DangNhap)f;
-                    if (dn.ShowDialog() == DialogResult.OK && dn.IsLoginSuccessful)
-                    {
-                        dv.MdiParent = this;
-                        dv.WindowState = FormWindowState.Maximized;
-                        dv.Show();
-                    }
                     return;
                 }
             }
-
-            DangNhap loginForm = new DangNhap();
-            if (loginForm.ShowDialog() == DialogResult.OK && loginForm.IsLoginSuccessful)
-            {
-                dv.MdiParent = this;
-                dv.WindowState = FormWindowState.Maximized;
-                dv.Show();
-            }
+            DangNhap dn = new DangNhap();
+            dn.MdiParent = this;
+            dn.WindowState = FormWindowState.Maximized;
+            dn.Show();
         }
 
        

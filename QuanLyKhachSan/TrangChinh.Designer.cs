@@ -51,8 +51,8 @@
             this.tolSearcher});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1336, 32);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(754, 32);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,21 +70,21 @@
             // tslGioiThieu
             // 
             this.tslGioiThieu.Name = "tslGioiThieu";
-            this.tslGioiThieu.Size = new System.Drawing.Size(224, 26);
+            this.tslGioiThieu.Size = new System.Drawing.Size(181, 26);
             this.tslGioiThieu.Text = "Giới Thiệu";
             this.tslGioiThieu.Click += new System.EventHandler(this.tolGioiThieu_Click);
             // 
             // tslHotline
             // 
             this.tslHotline.Name = "tslHotline";
-            this.tslHotline.Size = new System.Drawing.Size(224, 26);
+            this.tslHotline.Size = new System.Drawing.Size(181, 26);
             this.tslHotline.Text = "Hotline";
             this.tslHotline.Click += new System.EventHandler(this.tolHotline_Click);
             // 
             // tslSearcher
             // 
             this.tslSearcher.Name = "tslSearcher";
-            this.tslSearcher.Size = new System.Drawing.Size(224, 26);
+            this.tslSearcher.Size = new System.Drawing.Size(181, 26);
             this.tslSearcher.Text = "Searcher";
             this.tslSearcher.Click += new System.EventHandler(this.tolSearcher_Click);
             // 
@@ -120,14 +120,14 @@
             // 
             // TrangChinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1336, 688);
+            this.ClientSize = new System.Drawing.Size(754, 422);
             this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Times New Roman", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "TrangChinh";
             this.Text = "Trang Chính";
             this.Load += new System.EventHandler(this.TrangChinh_Load_1);

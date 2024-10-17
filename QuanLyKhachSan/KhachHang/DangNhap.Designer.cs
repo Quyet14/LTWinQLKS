@@ -40,67 +40,77 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(235, 201);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(178, 162);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 25);
+            this.label1.Size = new System.Drawing.Size(114, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Username";
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.Location = new System.Drawing.Point(322, 368);
+            this.btnDangNhap.BackColor = System.Drawing.Color.Transparent;
+            this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnDangNhap.Location = new System.Drawing.Point(217, 324);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(115, 45);
+            this.btnDangNhap.Size = new System.Drawing.Size(101, 42);
             this.btnDangNhap.TabIndex = 1;
             this.btnDangNhap.Text = "Đăng nhập";
-            this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // txtUsername
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(364, 201);
+            this.txtUsername.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(312, 157);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(304, 30);
+            this.txtUsername.Size = new System.Drawing.Size(266, 36);
             this.txtUsername.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(239, 274);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Yellow;
+            this.label2.Location = new System.Drawing.Point(182, 235);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 25);
+            this.label2.Size = new System.Drawing.Size(110, 29);
             this.label2.TabIndex = 0;
             this.label2.Text = "Password";
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(364, 271);
+            this.txtPassword.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(312, 235);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(304, 30);
+            this.txtPassword.Size = new System.Drawing.Size(266, 36);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnThoat
             // 
-            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(565, 368);
+            this.btnThoat.BackColor = System.Drawing.Color.Transparent;
+            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnThoat.Location = new System.Drawing.Point(430, 324);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(103, 45);
+            this.btnThoat.Size = new System.Drawing.Size(90, 42);
             this.btnThoat.TabIndex = 1;
             this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label3.Location = new System.Drawing.Point(292, 76);
+            this.label3.ForeColor = System.Drawing.Color.Yellow;
+            this.label3.Location = new System.Drawing.Point(209, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(406, 48);
             this.label3.TabIndex = 0;
@@ -108,9 +118,9 @@
             // 
             // DangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 510);
+            this.ClientSize = new System.Drawing.Size(754, 478);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label2);
@@ -118,8 +128,11 @@
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "DangNhap";
             this.Text = "DangNhap";
+            this.Load += new System.EventHandler(this.DangNhap_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.DangNhap_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
 
