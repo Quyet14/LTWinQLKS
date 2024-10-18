@@ -55,6 +55,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\VBButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\VBTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\VBTextBox.Designer.cs">
+      <DependentUpon>VBTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="KhachHang\DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +90,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Components\VBTextBox.resx">
+      <DependentUpon>VBTextBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KhachHang\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
