@@ -56,45 +56,50 @@ namespace QuanLyKhachSan.NhanVien
             // 
             this.lblCustomerName.AutoSize = true;
             this.lblCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerName.Location = new System.Drawing.Point(59, 77);
+            this.lblCustomerName.Location = new System.Drawing.Point(39, 49);
+            this.lblCustomerName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(257, 37);
+            this.lblCustomerName.Size = new System.Drawing.Size(160, 25);
             this.lblCustomerName.TabIndex = 0;
             this.lblCustomerName.Text = "Tên khách hàng:";
             // 
             // txtCustomerName
             // 
             this.txtCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerName.Location = new System.Drawing.Point(320, 77);
+            this.txtCustomerName.Location = new System.Drawing.Point(213, 49);
+            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(626, 44);
+            this.txtCustomerName.Size = new System.Drawing.Size(419, 30);
             this.txtCustomerName.TabIndex = 1;
             // 
             // lblPhoneNumber
             // 
             this.lblPhoneNumber.AutoSize = true;
             this.lblPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNumber.Location = new System.Drawing.Point(59, 181);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(39, 116);
+            this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(214, 37);
+            this.lblPhoneNumber.Size = new System.Drawing.Size(132, 25);
             this.lblPhoneNumber.TabIndex = 2;
             this.lblPhoneNumber.Text = "Số điện thoại:";
             // 
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(320, 178);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(213, 114);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(626, 44);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(419, 30);
             this.txtPhoneNumber.TabIndex = 3;
             // 
             // lblRoomType
             // 
             this.lblRoomType.AutoSize = true;
             this.lblRoomType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoomType.Location = new System.Drawing.Point(59, 293);
+            this.lblRoomType.Location = new System.Drawing.Point(39, 188);
+            this.lblRoomType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRoomType.Name = "lblRoomType";
-            this.lblRoomType.Size = new System.Drawing.Size(186, 37);
+            this.lblRoomType.Size = new System.Drawing.Size(115, 25);
             this.lblRoomType.TabIndex = 4;
             this.lblRoomType.Text = "Loại phòng:";
             // 
@@ -107,18 +112,20 @@ namespace QuanLyKhachSan.NhanVien
             "Twin Bedroom",
             "Double Bedroom",
             "Triple Bedroom"});
-            this.cmbRoomType.Location = new System.Drawing.Point(320, 285);
+            this.cmbRoomType.Location = new System.Drawing.Point(213, 182);
+            this.cmbRoomType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbRoomType.Name = "cmbRoomType";
-            this.cmbRoomType.Size = new System.Drawing.Size(626, 45);
+            this.cmbRoomType.Size = new System.Drawing.Size(419, 33);
             this.cmbRoomType.TabIndex = 5;
             // 
             // lblBedType
             // 
             this.lblBedType.AutoSize = true;
             this.lblBedType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBedType.Location = new System.Drawing.Point(59, 410);
+            this.lblBedType.Location = new System.Drawing.Point(39, 262);
+            this.lblBedType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBedType.Name = "lblBedType";
-            this.lblBedType.Size = new System.Drawing.Size(193, 37);
+            this.lblBedType.Size = new System.Drawing.Size(119, 25);
             this.lblBedType.TabIndex = 6;
             this.lblBedType.Text = "Loại giường:";
             // 
@@ -132,71 +139,79 @@ namespace QuanLyKhachSan.NhanVien
             "Queen size bed",
             "King size bed",
             "Super king size bed"});
-            this.cmbBedType.Location = new System.Drawing.Point(320, 402);
+            this.cmbBedType.Location = new System.Drawing.Point(213, 257);
+            this.cmbBedType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbBedType.Name = "cmbBedType";
-            this.cmbBedType.Size = new System.Drawing.Size(626, 45);
+            this.cmbBedType.Size = new System.Drawing.Size(419, 33);
             this.cmbBedType.TabIndex = 7;
             // 
             // lblCheckIn
             // 
             this.lblCheckIn.AutoSize = true;
             this.lblCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCheckIn.Location = new System.Drawing.Point(1183, 84);
+            this.lblCheckIn.Location = new System.Drawing.Point(789, 54);
+            this.lblCheckIn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCheckIn.Name = "lblCheckIn";
-            this.lblCheckIn.Size = new System.Drawing.Size(182, 37);
+            this.lblCheckIn.Size = new System.Drawing.Size(113, 25);
             this.lblCheckIn.TabIndex = 8;
             this.lblCheckIn.Text = "Ngày nhận:";
             // 
             // dtpCheckIn
             // 
             this.dtpCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpCheckIn.Location = new System.Drawing.Point(1374, 78);
+            this.dtpCheckIn.Location = new System.Drawing.Point(916, 50);
+            this.dtpCheckIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpCheckIn.Name = "dtpCheckIn";
-            this.dtpCheckIn.Size = new System.Drawing.Size(592, 44);
+            this.dtpCheckIn.Size = new System.Drawing.Size(396, 30);
             this.dtpCheckIn.TabIndex = 9;
             // 
             // lblCheckOut
             // 
             this.lblCheckOut.AutoSize = true;
             this.lblCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCheckOut.Location = new System.Drawing.Point(1183, 178);
+            this.lblCheckOut.Location = new System.Drawing.Point(789, 114);
+            this.lblCheckOut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCheckOut.Name = "lblCheckOut";
-            this.lblCheckOut.Size = new System.Drawing.Size(148, 37);
+            this.lblCheckOut.Size = new System.Drawing.Size(91, 25);
             this.lblCheckOut.TabIndex = 10;
             this.lblCheckOut.Text = "Ngày trả:";
             // 
             // dtpCheckOut
             // 
             this.dtpCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpCheckOut.Location = new System.Drawing.Point(1374, 172);
+            this.dtpCheckOut.Location = new System.Drawing.Point(916, 110);
+            this.dtpCheckOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpCheckOut.Name = "dtpCheckOut";
-            this.dtpCheckOut.Size = new System.Drawing.Size(592, 44);
+            this.dtpCheckOut.Size = new System.Drawing.Size(396, 30);
             this.dtpCheckOut.TabIndex = 11;
             // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(1183, 288);
+            this.lblPrice.Location = new System.Drawing.Point(789, 184);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(136, 37);
+            this.lblPrice.Size = new System.Drawing.Size(84, 25);
             this.lblPrice.TabIndex = 12;
             this.lblPrice.Text = "Giá tiền:";
             // 
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(1374, 286);
+            this.txtPrice.Location = new System.Drawing.Point(916, 183);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(592, 44);
+            this.txtPrice.Size = new System.Drawing.Size(396, 30);
             this.txtPrice.TabIndex = 13;
             // 
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(587, 620);
+            this.btnAdd.Location = new System.Drawing.Point(391, 397);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(276, 67);
+            this.btnAdd.Size = new System.Drawing.Size(184, 43);
             this.btnAdd.TabIndex = 14;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -205,9 +220,10 @@ namespace QuanLyKhachSan.NhanVien
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(940, 620);
+            this.btnEdit.Location = new System.Drawing.Point(627, 397);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(276, 67);
+            this.btnEdit.Size = new System.Drawing.Size(184, 43);
             this.btnEdit.TabIndex = 15;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -216,9 +232,10 @@ namespace QuanLyKhachSan.NhanVien
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(1296, 620);
+            this.btnDelete.Location = new System.Drawing.Point(864, 397);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(276, 67);
+            this.btnDelete.Size = new System.Drawing.Size(184, 43);
             this.btnDelete.TabIndex = 16;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -228,19 +245,20 @@ namespace QuanLyKhachSan.NhanVien
             // 
             this.dgvBookings.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBookings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBookings.Location = new System.Drawing.Point(45, 714);
+            this.dgvBookings.Location = new System.Drawing.Point(30, 457);
+            this.dgvBookings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvBookings.Name = "dgvBookings";
             this.dgvBookings.RowHeadersWidth = 51;
             this.dgvBookings.RowTemplate.Height = 29;
-            this.dgvBookings.Size = new System.Drawing.Size(2029, 747);
+            this.dgvBookings.Size = new System.Drawing.Size(1353, 478);
             this.dgvBookings.TabIndex = 17;
             this.dgvBookings.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBookings_CellClick);
             // 
             // frmQuanLyPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2108, 1557);
+            this.ClientSize = new System.Drawing.Size(1283, 675);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.dgvBookings);
             this.Controls.Add(this.btnDelete);
@@ -260,9 +278,11 @@ namespace QuanLyKhachSan.NhanVien
             this.Controls.Add(this.txtCustomerName);
             this.Controls.Add(this.lblCustomerName);
             this.Cursor = System.Windows.Forms.Cursors.Help;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmQuanLyPhong";
             this.Text = "Quản lý đặt phòng";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmQuanLyPhong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookings)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

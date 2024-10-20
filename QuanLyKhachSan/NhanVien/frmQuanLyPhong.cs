@@ -256,5 +256,10 @@ namespace QuanLyKhachSan.NhanVien
                 txtPrice.Text = row.Cells[6].Value.ToString();
             }
         }
+
+        private void frmQuanLyPhong_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
