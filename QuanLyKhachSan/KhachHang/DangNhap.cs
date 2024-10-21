@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnN6_QLKS_DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,23 +27,20 @@ namespace QuanLyKhachSan
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             // Get username and password from text boxes
-            string username = txtUsername.Texts;
-            string password = txtPassword.Texts;
+            string username = txtUsername.Texts.Trim();
+            string password = txtPassword.Texts.Trim();
+
 
             // Validate username and password
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Please enter both username and password.");
+                MessageBox.Show("Vui lòng nhập cả tên đăng nhập và mật khẩu.");
                 return;
             }
 
-            // Check if username and password are correct
-            // For demonstration purposes, we'll assume the correct credentials are "admin" and "password"
-            if (username == "1" && password == "1")
+            // Authenticate user
+            if (AuthenticateUser(username, password))
             {
-                MessageBox.Show("Login successful, opening TrangChinh form");
-                // Login successful, open main form
-
                 IsLoginSuccessful = true;
                 this.DialogResult = DialogResult.OK;
                 this.Close();
@@ -50,7 +48,17 @@ namespace QuanLyKhachSan
             }
             else
             {
-                MessageBox.Show("Invalid username or password.");
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không hợp lệ. Vui lòng thử lại.");
+            }
+        }
+        private bool AuthenticateUser(string username, string password)
+        {
+            using (var dbContext = new Model2())
+            {
+                // Ensure you are querying the correct DbSet and property names
+                var user = dbContext.DangNhaps.FirstOrDefault(u => u.Username == username && u.Password == password);
+
+                return user != null;
             }
         }
 

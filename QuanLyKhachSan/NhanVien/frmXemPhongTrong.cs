@@ -39,7 +39,8 @@ namespace QuanLyKhachSan
             dgvRoomAvailability.Columns["GiaPhong"].DataPropertyName = "GiaPhong";
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+
+        private void btnSearch_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -66,5 +67,7 @@ namespace QuanLyKhachSan
                 MessageBox.Show("Lỗi khi tìm kiếm phòng trống: " + ex.Message);
             }
         }
+
+       
     }
 }
