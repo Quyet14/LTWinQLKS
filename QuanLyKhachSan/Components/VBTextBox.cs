@@ -366,5 +366,6 @@ namespace QuanLyKhachSan.Components
         }
         ///::::+
         #endregion
+
     }
 }
