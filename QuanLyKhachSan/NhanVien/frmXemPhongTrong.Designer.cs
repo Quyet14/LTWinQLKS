@@ -1,4 +1,4 @@
-﻿namespace QuanLyKhachSan.NhanVien
+﻿namespace QuanLyKhachSan
 {
     partial class frmXemPhongTrong
     {

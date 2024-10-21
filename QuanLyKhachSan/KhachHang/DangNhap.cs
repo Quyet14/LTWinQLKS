@@ -26,8 +26,8 @@ namespace QuanLyKhachSan
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             // Get username and password from text boxes
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
+            string username = txtUsername.Texts;
+            string password = txtPassword.Texts;
 
             // Validate username and password
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
@@ -38,12 +38,15 @@ namespace QuanLyKhachSan
 
             // Check if username and password are correct
             // For demonstration purposes, we'll assume the correct credentials are "admin" and "password"
-            if (username == "admin" && password == "password")
+            if (username == "1" && password == "1")
             {
+                MessageBox.Show("Login successful, opening TrangChinh form");
                 // Login successful, open main form
-                TrangChinh mainForm = new TrangChinh();
-                mainForm.Show();
-                this.Hide();
+
+                IsLoginSuccessful = true;
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+
             }
             else
             {
@@ -56,9 +59,5 @@ namespace QuanLyKhachSan
             Application.Exit();
         }
 
-        private void DangNhap_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
