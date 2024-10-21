@@ -42,7 +42,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -98,6 +100,12 @@
     <Compile Include="NhanVien\frmQuanLyPhong.Designer.cs">
       <DependentUpon>frmQuanLyPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLy\frmThemDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy\frmThemDichVu.Designer.cs">
+      <DependentUpon>frmThemDichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrangChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +140,9 @@
     </Compile>
     <EmbeddedResource Include="QuanLy\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLy\frmThemDichVu.resx">
+      <DependentUpon>frmThemDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChinh.resx">
       <DependentUpon>TrangChinh.cs</DependentUpon>
