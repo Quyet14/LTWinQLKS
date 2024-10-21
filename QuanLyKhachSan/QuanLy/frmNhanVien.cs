@@ -69,7 +69,9 @@ namespace NguyenKhanhLong_qlks
             btnSua.Enabled = val;
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+       
+
+        private void btnThem_Click_1(object sender, EventArgs e)
         {
             // Kiểm tra thông tin đã được nhập đầy đủ
             if (string.IsNullOrWhiteSpace(txtMaNhanVien.Text) ||
@@ -107,27 +109,6 @@ namespace NguyenKhanhLong_qlks
             MessageBox.Show("Thêm mới nhân viên thành công");
         }
 
-
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            if (dgvNhanVien.SelectedRows.Count > 0)
-            {
-                DialogResult dr = MessageBox.Show("Bạn có chắc xóa không?", "Xóa nhân viên", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dr == DialogResult.Yes)
-                {
-                    int selectedIndex = dgvNhanVien.SelectedRows[0].Index;
-                    dtNhanVien.Rows.RemoveAt(selectedIndex);
-                    hienThiNhanVien();
-                    setNull();
-                    MessageBox.Show("Xóa nhân viên thành công");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Bạn phải chọn mẫu tin cần xóa");
-            }
-        }
         private void btnLuu_Click(object sender, EventArgs e)
         {
             if (dgvNhanVien.SelectedRows.Count > 0)
@@ -152,8 +133,6 @@ namespace NguyenKhanhLong_qlks
             }
         }
 
-
-
         private void btnSua_Click(object sender, EventArgs e)
         {
             if (dgvNhanVien.SelectedRows.Count > 0)
@@ -172,6 +151,25 @@ namespace NguyenKhanhLong_qlks
             }
         }
 
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (dgvNhanVien.SelectedRows.Count > 0)
+            {
+                DialogResult dr = MessageBox.Show("Bạn có chắc xóa không?", "Xóa nhân viên", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    int selectedIndex = dgvNhanVien.SelectedRows[0].Index;
+                    dtNhanVien.Rows.RemoveAt(selectedIndex);
+                    hienThiNhanVien();
+                    setNull();
+                    MessageBox.Show("Xóa nhân viên thành công");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải chọn mẫu tin cần xóa");
+            }
+        }
     }
 
 }
