@@ -27,8 +27,9 @@ namespace QuanLyKhachSan
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             // Get username and password from text boxes
-            string username = txtUsername.Text.Trim();
-            string password = txtPassword.Text.Trim();
+            string username = txtUsername.Texts.Trim();
+            string password = txtPassword.Texts.Trim();
+
 
             // Validate username and password
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
@@ -40,10 +41,10 @@ namespace QuanLyKhachSan
             // Authenticate user
             if (AuthenticateUser(username, password))
             {
-                // Login successful, open frmHoaDon
-                frmHoaDon hoaDonForm = new frmHoaDon();
-                hoaDonForm.Show();
-                this.Hide(); // Hide login form
+                IsLoginSuccessful = true;
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+
             }
             else
             {
@@ -64,11 +65,6 @@ namespace QuanLyKhachSan
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void DangNhap_Load(object sender, EventArgs e)
-        {
-
         }
 
     }
