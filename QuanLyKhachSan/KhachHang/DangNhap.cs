@@ -39,28 +39,28 @@ namespace QuanLyKhachSan
             }
 
             // Authenticate user
-            if (AuthenticateUser(username, password))
+            /*if (AuthenticateUser(username, password))
             {
                 IsLoginSuccessful = true;
                 this.DialogResult = DialogResult.OK;
                 this.Close();
 
-            }
+            }*/
             else
             {
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu không hợp lệ. Vui lòng thử lại.");
             }
         }
-        private bool AuthenticateUser(string username, string password)
+       /* private bool AuthenticateUser(string username, string password)
         {
-            using (var dbContext = new Model2())
-            {
-                // Ensure you are querying the correct DbSet and property names
-                var user = dbContext.DangNhaps.FirstOrDefault(u => u.Username == username && u.Password == password);
+            ///* using (var dbContext = new Model2())
+            // {
+            //     // Ensure you are querying the correct DbSet and property names
+            //     var user = dbContext.DangNhaps.FirstOrDefault(u => u.Username == username && u.Password == password);
 
-                return user != null;
-            }
-        }
+            //     return user != null;
+            // }*//*
+        }*/
 
         private void btnThoat_Click(object sender, EventArgs e)
         {

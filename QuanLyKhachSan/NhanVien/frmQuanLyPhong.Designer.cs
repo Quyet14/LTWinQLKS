@@ -253,7 +253,7 @@ namespace QuanLyKhachSan.NhanVien
             this.txtCustomerName.BackColor = System.Drawing.SystemColors.Window;
             this.txtCustomerName.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtCustomerName.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtCustomerName.BorderRadius = 20;
+            this.txtCustomerName.BorderRadius = 15;
             this.txtCustomerName.BorderSize = 2;
             this.txtCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -276,7 +276,7 @@ namespace QuanLyKhachSan.NhanVien
             this.txtPhoneNumber.BackColor = System.Drawing.SystemColors.Window;
             this.txtPhoneNumber.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtPhoneNumber.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtPhoneNumber.BorderRadius = 20;
+            this.txtPhoneNumber.BorderRadius = 15;
             this.txtPhoneNumber.BorderSize = 2;
             this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -299,7 +299,7 @@ namespace QuanLyKhachSan.NhanVien
             this.txtPrice.BackColor = System.Drawing.SystemColors.Window;
             this.txtPrice.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtPrice.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtPrice.BorderRadius = 20;
+            this.txtPrice.BorderRadius = 15;
             this.txtPrice.BorderSize = 2;
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
