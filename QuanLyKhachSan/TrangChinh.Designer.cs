@@ -68,7 +68,7 @@
             this.iconButton4.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.iconButton4.FlatAppearance.BorderSize = 0;
             this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton4.ForeColor = System.Drawing.Color.White;
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Bed;
             this.iconButton4.IconColor = System.Drawing.Color.White;
@@ -89,7 +89,7 @@
             this.btnHoaDon.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnHoaDon.FlatAppearance.BorderSize = 0;
             this.btnHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHoaDon.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHoaDon.ForeColor = System.Drawing.Color.White;
             this.btnHoaDon.IconChar = FontAwesome.Sharp.IconChar.Receipt;
             this.btnHoaDon.IconColor = System.Drawing.Color.White;
@@ -110,7 +110,7 @@
             this.btnDatPhong.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnDatPhong.FlatAppearance.BorderSize = 0;
             this.btnDatPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDatPhong.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDatPhong.ForeColor = System.Drawing.Color.White;
             this.btnDatPhong.IconChar = FontAwesome.Sharp.IconChar.Bed;
             this.btnDatPhong.IconColor = System.Drawing.Color.White;
@@ -131,7 +131,7 @@
             this.btnPhong.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnPhong.FlatAppearance.BorderSize = 0;
             this.btnPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPhong.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhong.ForeColor = System.Drawing.Color.White;
             this.btnPhong.IconChar = FontAwesome.Sharp.IconChar.Hotel;
             this.btnPhong.IconColor = System.Drawing.Color.White;
@@ -216,11 +216,11 @@
             // lblHome
             // 
             this.lblHome.AutoSize = true;
-            this.lblHome.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHome.ForeColor = System.Drawing.Color.White;
             this.lblHome.Location = new System.Drawing.Point(96, 33);
             this.lblHome.Name = "lblHome";
-            this.lblHome.Size = new System.Drawing.Size(97, 41);
+            this.lblHome.Size = new System.Drawing.Size(64, 25);
             this.lblHome.TabIndex = 1;
             this.lblHome.Text = "Home";
             // 
@@ -247,7 +247,7 @@
             // 
             // TrangChinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 33F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1555, 881);
             this.Controls.Add(this.panelMain);
