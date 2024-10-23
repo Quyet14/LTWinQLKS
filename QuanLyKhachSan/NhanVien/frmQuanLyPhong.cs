@@ -35,16 +35,106 @@ namespace QuanLyKhachSan.NhanVien
         // Phương thức xóa thông tin sau khi thêm
         private void ClearInputs()
         {
-            txtCustomerName.Clear();
-            txtPhoneNumber.Clear();
+            txtCustomerName.Text = string.Empty; // Use Text property
+            txtPhoneNumber.Text = string.Empty; // Use Text property
             cmbRoomType.SelectedIndex = -1;
             cmbBedType.SelectedIndex = -1;
             dtpCheckIn.Value = DateTime.Now;
             dtpCheckOut.Value = DateTime.Now;
-            txtPrice.Clear();
+            txtPrice.Text = string.Empty; // Use Text property
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void DeleteBooking(string customerName = null, string phoneNumber = null)
+        {
+            // Xác nhận trước khi xóa
+            var confirmResult = MessageBox.Show("Bạn có chắc muốn xóa thông tin khách hàng không?",
+                                                 "Xác nhận xóa", MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.No)
+            {
+                return; // Nếu người dùng chọn không, thoát khỏi hàm
+            }
+
+            // Kiểm tra nếu không có tên hoặc số điện thoại
+            if (string.IsNullOrEmpty(customerName) && string.IsNullOrEmpty(phoneNumber))
+            {
+                MessageBox.Show("Vui lòng nhập tên khách hàng hoặc số điện thoại để xóa.");
+                return;
+            }
+
+            // Tìm kiếm các dòng cần xóa
+            string filterExpression = "";
+            if (!string.IsNullOrEmpty(customerName))
+            {
+                filterExpression += $"[Tên khách hàng] = '{customerName}'";
+            }
+            if (!string.IsNullOrEmpty(phoneNumber))
+            {
+                if (!string.IsNullOrEmpty(filterExpression))
+                {
+                    filterExpression += " OR "; // Nếu đã có điều kiện trước đó, nối thêm
+                }
+                filterExpression += $"[Số điện thoại] = '{phoneNumber}'";
+            }
+
+            // Lấy các dòng cần xóa
+            DataRow[] rowsToDelete = bookingTable.Select(filterExpression);
+
+            if (rowsToDelete.Length == 0)
+            {
+                MessageBox.Show("Không tìm thấy thông tin khách hàng để xóa.");
+                return;
+            }
+
+            // Xóa từng dòng tìm thấy
+            foreach (DataRow row in rowsToDelete)
+            {
+                bookingTable.Rows.Remove(row);
+            }
+
+            // Cập nhật lại DataGridView
+            dgvBookings.DataSource = null; // Đặt lại DataSource
+            dgvBookings.DataSource = bookingTable; // Gán lại DataSource
+            MessageBox.Show("Đã xóa thông tin khách hàng.");
+        }
+       
+        private void dgvBookings_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvBookings.Rows[e.RowIndex];
+
+                // Hiển thị dữ liệu từ hàng được chọn lên các textbox và combobox
+                txtCustomerName.Text = row.Cells[0].Value.ToString();
+                txtPhoneNumber.Text = row.Cells[1].Value.ToString();
+                cmbRoomType.SelectedItem = row.Cells[2].Value.ToString();
+                cmbBedType.SelectedItem = row.Cells[3].Value.ToString();
+
+                // Kiểm tra và chuyển đổi giá trị ngày
+                if (DateTime.TryParse(row.Cells[4].Value.ToString(), out DateTime checkInDate))
+                {
+                    dtpCheckIn.Value = checkInDate;
+                }
+                else
+                {
+                    MessageBox.Show("Ngày nhận phòng không hợp lệ.");
+                }
+
+                if (DateTime.TryParse(row.Cells[5].Value.ToString(), out DateTime checkOutDate))
+                {
+                    dtpCheckOut.Value = checkOutDate;
+                }
+                else
+                {
+                    MessageBox.Show("Ngày trả phòng không hợp lệ.");
+                }
+
+                txtPrice.Text = row.Cells[6].Value.ToString();
+            }
+        }
+
+       
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
         {
             // Kiểm tra nhập đầy đủ thông tin
             if (string.IsNullOrEmpty(txtCustomerName.Text) || string.IsNullOrEmpty(txtPhoneNumber.Text) ||
@@ -84,7 +174,7 @@ namespace QuanLyKhachSan.NhanVien
             ClearInputs();
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void btnEdit_Click_1(object sender, EventArgs e)
         {
             // Kiểm tra nhập đầy đủ thông tin
             if (string.IsNullOrEmpty(txtCustomerName.Text) || string.IsNullOrEmpty(txtPhoneNumber.Text) ||
@@ -158,61 +248,7 @@ namespace QuanLyKhachSan.NhanVien
             ClearInputs();
         }
 
-
-
-        private void DeleteBooking(string customerName = null, string phoneNumber = null)
-        {
-            // Xác nhận trước khi xóa
-            var confirmResult = MessageBox.Show("Bạn có chắc muốn xóa thông tin khách hàng không?",
-                                                 "Xác nhận xóa", MessageBoxButtons.YesNo);
-            if (confirmResult == DialogResult.No)
-            {
-                return; // Nếu người dùng chọn không, thoát khỏi hàm
-            }
-
-            // Kiểm tra nếu không có tên hoặc số điện thoại
-            if (string.IsNullOrEmpty(customerName) && string.IsNullOrEmpty(phoneNumber))
-            {
-                MessageBox.Show("Vui lòng nhập tên khách hàng hoặc số điện thoại để xóa.");
-                return;
-            }
-
-            // Tìm kiếm các dòng cần xóa
-            string filterExpression = "";
-            if (!string.IsNullOrEmpty(customerName))
-            {
-                filterExpression += $"[Tên khách hàng] = '{customerName}'";
-            }
-            if (!string.IsNullOrEmpty(phoneNumber))
-            {
-                if (!string.IsNullOrEmpty(filterExpression))
-                {
-                    filterExpression += " OR "; // Nếu đã có điều kiện trước đó, nối thêm
-                }
-                filterExpression += $"[Số điện thoại] = '{phoneNumber}'";
-            }
-
-            // Lấy các dòng cần xóa
-            DataRow[] rowsToDelete = bookingTable.Select(filterExpression);
-
-            if (rowsToDelete.Length == 0)
-            {
-                MessageBox.Show("Không tìm thấy thông tin khách hàng để xóa.");
-                return;
-            }
-
-            // Xóa từng dòng tìm thấy
-            foreach (DataRow row in rowsToDelete)
-            {
-                bookingTable.Rows.Remove(row);
-            }
-
-            // Cập nhật lại DataGridView
-            dgvBookings.DataSource = null; // Đặt lại DataSource
-            dgvBookings.DataSource = bookingTable; // Gán lại DataSource
-            MessageBox.Show("Đã xóa thông tin khách hàng.");
-        }
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnDelete_Click_1(object sender, EventArgs e)
         {
             // Lấy tên khách hàng và số điện thoại từ các textbox
             string customerName = txtCustomerName.Text;
@@ -222,42 +258,17 @@ namespace QuanLyKhachSan.NhanVien
             DeleteBooking(customerName, phoneNumber);
         }
 
-        private void dgvBookings_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void txtCustomerName__TextChanged(object sender, EventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dgvBookings.Rows[e.RowIndex];
 
-                // Hiển thị dữ liệu từ hàng được chọn lên các textbox và combobox
-                txtCustomerName.Text = row.Cells[0].Value.ToString();
-                txtPhoneNumber.Text = row.Cells[1].Value.ToString();
-                cmbRoomType.SelectedItem = row.Cells[2].Value.ToString();
-                cmbBedType.SelectedItem = row.Cells[3].Value.ToString();
-
-                // Kiểm tra và chuyển đổi giá trị ngày
-                if (DateTime.TryParse(row.Cells[4].Value.ToString(), out DateTime checkInDate))
-                {
-                    dtpCheckIn.Value = checkInDate;
-                }
-                else
-                {
-                    MessageBox.Show("Ngày nhận phòng không hợp lệ.");
-                }
-
-                if (DateTime.TryParse(row.Cells[5].Value.ToString(), out DateTime checkOutDate))
-                {
-                    dtpCheckOut.Value = checkOutDate;
-                }
-                else
-                {
-                    MessageBox.Show("Ngày trả phòng không hợp lệ.");
-                }
-
-                txtPrice.Text = row.Cells[6].Value.ToString();
-            }
         }
 
-        private void frmQuanLyPhong_Load(object sender, EventArgs e)
+        private void txtPhoneNumber__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrice__TextChanged(object sender, EventArgs e)
         {
 
         }

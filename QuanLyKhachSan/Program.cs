@@ -19,7 +19,9 @@ namespace QuanLyKhachSan
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TrangChinh());
+
+            TrangChinh mainForm = new TrangChinh();
+            Application.Run(mainForm);
         }
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
