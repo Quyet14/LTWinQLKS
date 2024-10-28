@@ -12,18 +12,20 @@ namespace DoAnN6_QLKS_DAL.Entity
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DichVu()
         {
-            ChiTietDichVus = new HashSet<ChiTietDichVu>();
+            ChiTietHoaDonDichVus = new HashSet<ChiTietHoaDonDichVu>();
         }
 
-        public int id { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int MaDichVu { get; set; }
 
-        [StringLength(50)]
-        public string TenDV { get; set; }
+        [StringLength(100)]
+        public string TenDichVu { get; set; }
 
         [Column(TypeName = "money")]
         public decimal? DonGia { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietDichVu> ChiTietDichVus { get; set; }
+        public virtual ICollection<ChiTietHoaDonDichVu> ChiTietHoaDonDichVus { get; set; }
     }
 }

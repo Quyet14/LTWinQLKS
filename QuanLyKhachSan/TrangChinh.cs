@@ -99,18 +99,18 @@ namespace QuanLyKhachSan
         }
         private void ShowLoginForm()
         {
-            DangNhap loginForm = new DangNhap();
-            DialogResult result = loginForm.ShowDialog();
+            //DangNhap loginForm = new DangNhap();
+            //DialogResult result = loginForm.ShowDialog();
 
-            if (result == DialogResult.OK && loginForm.IsLoginSuccessful)
-            {
-                this.Show(); // Show the main form after successful login
-                //ShowDichVuForm();
-            }
-            else
-            {
-                Application.Exit(); // Exit the application if login is unsuccessful
-            }
+            //if (result == DialogResult.OK && loginForm.IsLoginSuccessful)
+            //{
+            //    this.Show(); // Show the main form after successful login
+            //    //ShowDichVuForm();
+            //}
+            //else
+            //{
+            //    Application.Exit(); // Exit the application if login is unsuccessful
+            //}
         }
         private void TrangChinh_Load_1(object sender, EventArgs e)
         {

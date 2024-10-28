@@ -6,18 +6,20 @@ namespace DoAnN6_QLKS_DAL.Entity
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("ChamCong")]
-    public partial class ChamCong
+    [Table("BangChamCong")]
+    public partial class BangChamCong
     {
-        public int id { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int MaChamCong { get; set; }
 
-        public int? NhanVien_id { get; set; }
+        public int? MaNhanVien { get; set; }
 
         [Column(TypeName = "smalldatetime")]
-        public DateTime? NgayVao { get; set; }
+        public DateTime GioVao { get; set; }
 
         [Column(TypeName = "smalldatetime")]
-        public DateTime? NgayRa { get; set; }
+        public DateTime? GioRa { get; set; }
 
         public virtual NhanVien NhanVien { get; set; }
     }

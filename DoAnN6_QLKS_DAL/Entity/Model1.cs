@@ -12,99 +12,100 @@ namespace DoAnN6_QLKS_DAL.Entity
         {
         }
 
-        public virtual DbSet<ChamCong> ChamCongs { get; set; }
-        public virtual DbSet<ChiTietDatPhong> ChiTietDatPhongs { get; set; }
-        public virtual DbSet<ChiTietDichVu> ChiTietDichVus { get; set; }
-        public virtual DbSet<ChiTietHoaDon> ChiTietHoaDons { get; set; }
+        public virtual DbSet<BangChamCong> BangChamCongs { get; set; }
+        public virtual DbSet<ChiTietHoaDonDichVu> ChiTietHoaDonDichVus { get; set; }
+        public virtual DbSet<ChiTietPhieuDatPhong> ChiTietPhieuDatPhongs { get; set; }
         public virtual DbSet<DichVu> DichVus { get; set; }
-        public virtual DbSet<Khach_Hang> Khach_Hang { get; set; }
+        public virtual DbSet<HoaDonDichVu> HoaDonDichVus { get; set; }
+        public virtual DbSet<HoaDonThanhToan> HoaDonThanhToans { get; set; }
+        public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<LoaiPhong> LoaiPhongs { get; set; }
+        public virtual DbSet<LoaiTinhTrangPhong> LoaiTinhTrangPhongs { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
+        public virtual DbSet<PhanHoiKhachHang> PhanHoiKhachHangs { get; set; }
+        public virtual DbSet<PhieuDatPhong> PhieuDatPhongs { get; set; }
         public virtual DbSet<Phong> Phongs { get; set; }
-        public virtual DbSet<TinhTrangPhong> TinhTrangPhongs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ChiTietDatPhong>()
-                .Property(e => e.TongTien)
-                .HasPrecision(19, 4);
-
-            modelBuilder.Entity<ChiTietDatPhong>()
-                .HasMany(e => e.ChiTietHoaDons)
-                .WithOptional(e => e.ChiTietDatPhong)
-                .HasForeignKey(e => e.Phong_id);
-
-            modelBuilder.Entity<ChiTietDichVu>()
-                .Property(e => e.TongChiPhi)
-                .HasPrecision(19, 4);
-
-            modelBuilder.Entity<ChiTietDichVu>()
-                .HasMany(e => e.ChiTietHoaDons)
-                .WithOptional(e => e.ChiTietDichVu)
-                .HasForeignKey(e => e.CTDV_id);
-
-            modelBuilder.Entity<ChiTietHoaDon>()
+            modelBuilder.Entity<ChiTietHoaDonDichVu>()
                 .Property(e => e.ThanhTien)
                 .HasPrecision(19, 4);
 
+            modelBuilder.Entity<ChiTietPhieuDatPhong>()
+                .Property(e => e.MaPhong)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ChiTietPhieuDatPhong>()
+                .Property(e => e.DonGia)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<ChiTietPhieuDatPhong>()
+                .Property(e => e.ThanhTien)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<ChiTietPhieuDatPhong>()
+                .HasMany(e => e.HoaDonThanhToans)
+                .WithOptional(e => e.ChiTietPhieuDatPhong)
+                .HasForeignKey(e => e.MaChiTietPhieu);
+
             modelBuilder.Entity<DichVu>()
                 .Property(e => e.DonGia)
                 .HasPrecision(19, 4);
 
-            modelBuilder.Entity<DichVu>()
-                .HasMany(e => e.ChiTietDichVus)
-                .WithOptional(e => e.DichVu)
-                .HasForeignKey(e => e.DichVu_id);
-
-            modelBuilder.Entity<Khach_Hang>()
-                .Property(e => e.GioiTinh)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Khach_Hang>()
-                .Property(e => e.SDT)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Khach_Hang>()
-                .HasMany(e => e.ChiTietDatPhongs)
-                .WithOptional(e => e.Khach_Hang)
-                .HasForeignKey(e => e.KhachHang_id);
-
-            modelBuilder.Entity<LoaiPhong>()
-                .Property(e => e.DonGia)
+            modelBuilder.Entity<HoaDonDichVu>()
+                .Property(e => e.TongTien)
                 .HasPrecision(19, 4);
 
-            modelBuilder.Entity<LoaiPhong>()
-                .HasMany(e => e.Phongs)
-                .WithOptional(e => e.LoaiPhong)
-                .HasForeignKey(e => e.LoaiPhong_id);
+            modelBuilder.Entity<HoaDonDichVu>()
+                .HasMany(e => e.ChiTietPhieuDatPhongs)
+                .WithOptional(e => e.HoaDonDichVu)
+                .HasForeignKey(e => e.MaHoaDonDV);
 
-            modelBuilder.Entity<NhanVien>()
-                .Property(e => e.password)
+            modelBuilder.Entity<HoaDonThanhToan>()
+                .Property(e => e.TongTienPhong)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<HoaDonThanhToan>()
+                .Property(e => e.TongTienDichVu)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<HoaDonThanhToan>()
+                .Property(e => e.TongTien)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<KhachHang>()
+                .Property(e => e.SoDienThoai)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<KhachHang>()
+                .Property(e => e.Email)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<KhachHang>()
+                .Property(e => e.CMND)
                 .IsUnicode(false);
 
             modelBuilder.Entity<NhanVien>()
-                .HasMany(e => e.ChamCongs)
-                .WithOptional(e => e.NhanVien)
-                .HasForeignKey(e => e.NhanVien_id);
+                .Property(e => e.SoDienThoai)
+                .IsUnicode(false);
 
             modelBuilder.Entity<NhanVien>()
-                .HasMany(e => e.ChiTietDatPhongs)
-                .WithOptional(e => e.NhanVien)
-                .HasForeignKey(e => e.NhanVien_id);
+                .Property(e => e.Email)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<NhanVien>()
+                .Property(e => e.Perm)
+                .IsUnicode(false);
 
             modelBuilder.Entity<Phong>()
-                .HasMany(e => e.ChiTietDatPhongs)
-                .WithOptional(e => e.Phong)
-                .HasForeignKey(e => e.Phong_id);
-
-            modelBuilder.Entity<TinhTrangPhong>()
-                .Property(e => e.TinhTrang)
+                .Property(e => e.MaPhong)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<TinhTrangPhong>()
-                .HasMany(e => e.Phongs)
-                .WithOptional(e => e.TinhTrangPhong)
-                .HasForeignKey(e => e.TinhTrang_id);
+            modelBuilder.Entity<Phong>()
+                .Property(e => e.GiaPhong)
+                .HasPrecision(19, 4);
         }
     }
 }

@@ -102,6 +102,12 @@
     <Compile Include="NhanVien\frmXemPhongTrong.Designer.cs">
       <DependentUpon>frmXemPhongTrong.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLy\frmThemDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy\frmThemDV.Designer.cs">
+      <DependentUpon>frmThemDV.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLy\frmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLy\frmThemDV.resx">
+      <DependentUpon>frmThemDV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLy\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,7 +173,7 @@
     <EmbeddedResource Include="TrangChinh.resx">
       <DependentUpon>TrangChinh.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.Config" />
+    <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

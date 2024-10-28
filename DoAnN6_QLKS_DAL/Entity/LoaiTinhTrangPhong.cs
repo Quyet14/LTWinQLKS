@@ -6,19 +6,22 @@ namespace DoAnN6_QLKS_DAL.Entity
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("TinhTrangPhong")]
-    public partial class TinhTrangPhong
+    [Table("LoaiTinhTrangPhong")]
+    public partial class LoaiTinhTrangPhong
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TinhTrangPhong()
+        public LoaiTinhTrangPhong()
         {
             Phongs = new HashSet<Phong>();
         }
 
-        public int id { get; set; }
-
+        [Key]
         [StringLength(50)]
-        public string TinhTrang { get; set; }
+        public string MaTinhTrang { get; set; }
+
+        [Required]
+        [StringLength(100)]
+        public string TenTinhTrang { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Phong> Phongs { get; set; }

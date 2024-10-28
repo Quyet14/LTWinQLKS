@@ -16,12 +16,12 @@ namespace DoAnN6_QLKS_DAL.Entity
         }
 
         [Key]
-        [Column("LoaiPhong")]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int LoaiPhong1 { get; set; }
+        [StringLength(50)]
+        public string MaLoaiPhong { get; set; }
 
-        [Column(TypeName = "money")]
-        public decimal? DonGia { get; set; }
+        [Required]
+        [StringLength(100)]
+        public string TenLoaiPhong { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Phong> Phongs { get; set; }

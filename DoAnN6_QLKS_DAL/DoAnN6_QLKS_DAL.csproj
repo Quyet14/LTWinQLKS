@@ -54,23 +54,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Entity\ChamCong.cs" />
-    <Compile Include="Entity\ChiTietDatPhong.cs" />
-    <Compile Include="Entity\ChiTietDichVu.cs" />
-    <Compile Include="Entity\ChiTietHoaDon.cs" />
+    <Compile Include="Entity\BangChamCong.cs" />
+    <Compile Include="Entity\ChiTietHoaDonDichVu.cs" />
+    <Compile Include="Entity\ChiTietPhieuDatPhong.cs" />
     <Compile Include="Entity\DichVu.cs" />
-    <Compile Include="Entity\Khach_Hang.cs" />
+    <Compile Include="Entity\HoaDonDichVu.cs" />
+    <Compile Include="Entity\HoaDonThanhToan.cs" />
+    <Compile Include="Entity\KhachHang.cs" />
     <Compile Include="Entity\LoaiPhong.cs" />
+    <Compile Include="Entity\LoaiTinhTrangPhong.cs" />
     <Compile Include="Entity\Model1.cs" />
     <Compile Include="Entity\NhanVien.cs" />
+    <Compile Include="Entity\PhanHoiKhachHang.cs" />
+    <Compile Include="Entity\PhieuDatPhong.cs" />
     <Compile Include="Entity\Phong.cs" />
-    <Compile Include="Entity\TinhTrangPhong.cs" />
+    <Compile Include="Entity\sysdiagram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

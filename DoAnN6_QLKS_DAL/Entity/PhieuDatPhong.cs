@@ -6,33 +6,36 @@ namespace DoAnN6_QLKS_DAL.Entity
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Phong")]
-    public partial class Phong
+    [Table("PhieuDatPhong")]
+    public partial class PhieuDatPhong
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Phong()
+        public PhieuDatPhong()
         {
             ChiTietPhieuDatPhongs = new HashSet<ChiTietPhieuDatPhong>();
         }
 
         [Key]
-        [StringLength(10)]
-        public string MaPhong { get; set; }
+        public int MaPhieu { get; set; }
 
-        [StringLength(50)]
-        public string MaLoaiPhong { get; set; }
+        public int? MaKhachHang { get; set; }
 
-        [Column(TypeName = "money")]
-        public decimal GiaPhong { get; set; }
+        [Column(TypeName = "smalldatetime")]
+        public DateTime NgayDat { get; set; }
 
-        [StringLength(50)]
-        public string MaTinhTrang { get; set; }
+        [Column(TypeName = "smalldatetime")]
+        public DateTime? NgayNhanPhong { get; set; }
+
+        [Column(TypeName = "smalldatetime")]
+        public DateTime? NgayTraPhong { get; set; }
+
+        public int? MaNhanVien { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietPhieuDatPhong> ChiTietPhieuDatPhongs { get; set; }
 
-        public virtual LoaiPhong LoaiPhong { get; set; }
+        public virtual KhachHang KhachHang { get; set; }
 
-        public virtual LoaiTinhTrangPhong LoaiTinhTrangPhong { get; set; }
+        public virtual NhanVien NhanVien { get; set; }
     }
 }
