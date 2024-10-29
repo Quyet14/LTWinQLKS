@@ -54,12 +54,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Entities\ChamCong.cs" />
+    <Compile Include="Entities\ChiTietDichVu.cs" />
+    <Compile Include="Entities\DichVu.cs" />
+    <Compile Include="Entities\HoaDonDichVu.cs" />
+    <Compile Include="Entities\KhachHang.cs" />
+    <Compile Include="Entities\LoaiPhong.cs" />
+    <Compile Include="Entities\Model1.cs" />
+    <Compile Include="Entities\NhanVien.cs" />
+    <Compile Include="Entities\PhanHoiKhachHang.cs" />
+    <Compile Include="Entities\PhieuDatPhong.cs" />
+    <Compile Include="Entities\Phong.cs" />
+    <Compile Include="Entities\TinhTrangPhong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
