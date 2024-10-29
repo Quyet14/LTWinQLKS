@@ -48,7 +48,7 @@ namespace QuanLyKhachSan.KhachHang
 
         private void LoadInvoices()
         {
-            try
+          /*  try
             {
                 var invoices = context.HoaDonDichVus
                     .Include(h => h.ChiTietPhieuDatPhongs)
@@ -69,12 +69,12 @@ namespace QuanLyKhachSan.KhachHang
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi khi tải dữ liệu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
         }
 
         private void BindGrid(List<HoaDonDichVu> invoices)
         {
-            dgvHoaDonDV.Rows.Clear();
+            /*dgvHoaDonDV.Rows.Clear();
             foreach (var item in invoices)
             {
                 int index = dgvHoaDonDV.Rows.Add();
@@ -87,7 +87,7 @@ namespace QuanLyKhachSan.KhachHang
                 Console.WriteLine($"Đã thêm hóa đơn: MaHoaDon={item.MaHoaDon},  MaNhanVien={item.MaNhanVien}, NgayLap={item.NgayLap}, TongTien={item.TongTien}");
             }
 
-            dgvHoaDonDV.Refresh();
+            dgvHoaDonDV.Refresh();*/
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -105,7 +105,7 @@ namespace QuanLyKhachSan.KhachHang
                     var newInvoice = new HoaDonDichVu
                     {
                         MaHoaDon = maHoaDon,
-                        MaNhanVien = maNhanVien,
+                       /* MaNhanVien = maNhanVien,*/
                         NgayLap = DateTime.Now,
                         TongTien = tongTien
                     };
@@ -183,7 +183,7 @@ namespace QuanLyKhachSan.KhachHang
                 var invoice = context.HoaDonDichVus.Find(maHoaDon);
                 if (invoice != null)
                 {
-                    invoice.MaNhanVien = maNhanVien;
+                   /* invoice.MaNhanVien = maNhanVien;*/
                     invoice.TongTien = tongTien;
 
                     context.SaveChanges();
