@@ -32,7 +32,7 @@ namespace QuanLyKhachSan.QuanLy
             foreach (var item in listDichVu)
             {
                 int index = dgvDichVu.Rows.Add();
-                dgvDichVu.Rows[index].Cells[0].Value = ;
+                dgvDichVu.Rows[index].Cells[0].Value = item.MaDichVu;
                 dgvDichVu.Rows[index].Cells[1].Value = item.TenDichVu;
                 dgvDichVu.Rows[index].Cells[2].Value = item.DonGia;
             }
