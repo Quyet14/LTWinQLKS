@@ -220,7 +220,7 @@
             this.lblHome.ForeColor = System.Drawing.Color.White;
             this.lblHome.Location = new System.Drawing.Point(96, 33);
             this.lblHome.Name = "lblHome";
-            this.lblHome.Size = new System.Drawing.Size(64, 25);
+            this.lblHome.Size = new System.Drawing.Size(52, 20);
             this.lblHome.TabIndex = 1;
             this.lblHome.Text = "Home";
             // 
@@ -244,10 +244,11 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1252, 777);
             this.panelMain.TabIndex = 8;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // TrangChinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1555, 881);
             this.Controls.Add(this.panelMain);
