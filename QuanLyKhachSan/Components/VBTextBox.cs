@@ -12,7 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace QuanLyKhachSan.Components
 {
     [DefaultEvent("_TextChanged")]
-    public partial class VBTextBox : UserControl
+    public partial class VBTextBox : UserControl 
     {
         #region -> Fields
         //Fields

@@ -12,27 +12,25 @@ namespace DoAnN6_QLKS_DAL.Entity
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Phong()
         {
-            ChiTietPhieuDatPhongs = new HashSet<ChiTietPhieuDatPhong>();
+            PhieuDatPhongs = new HashSet<PhieuDatPhong>();
         }
 
         [Key]
-        [StringLength(10)]
+        [StringLength(50)]
         public string MaPhong { get; set; }
 
-        [StringLength(50)]
-        public string MaLoaiPhong { get; set; }
+        public int? MaLoaiPhong { get; set; }
+
+        public int? MaTinhTrangPhong { get; set; }
 
         [Column(TypeName = "money")]
         public decimal GiaPhong { get; set; }
 
-        [StringLength(50)]
-        public string MaTinhTrang { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietPhieuDatPhong> ChiTietPhieuDatPhongs { get; set; }
-
         public virtual LoaiPhong LoaiPhong { get; set; }
 
-        public virtual LoaiTinhTrangPhong LoaiTinhTrangPhong { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PhieuDatPhong> PhieuDatPhongs { get; set; }
+
+        public virtual TinhTrangPhong TinhTrangPhong { get; set; }
     }
 }

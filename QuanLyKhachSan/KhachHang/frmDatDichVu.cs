@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan
 {
-    public partial class DichVu : Form
+    public partial class frmDatDichVu : Form
     {
         private ListView lsvDichVu;
-        private List<DichVu> services;
-        public DichVu()
+        private List<frmDatDichVu> services;
+        public frmDatDichVu()
         {
             InitializeComponent();
             

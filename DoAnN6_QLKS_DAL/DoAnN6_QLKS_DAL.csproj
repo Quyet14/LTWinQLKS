@@ -54,21 +54,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Entity\BangChamCong.cs" />
-    <Compile Include="Entity\ChiTietHoaDonDichVu.cs" />
-    <Compile Include="Entity\ChiTietPhieuDatPhong.cs" />
+    <Compile Include="Entity\ChamCong.cs" />
+    <Compile Include="Entity\ChiTietDichVu.cs" />
     <Compile Include="Entity\DichVu.cs" />
     <Compile Include="Entity\HoaDonDichVu.cs" />
-    <Compile Include="Entity\HoaDonThanhToan.cs" />
     <Compile Include="Entity\KhachHang.cs" />
     <Compile Include="Entity\LoaiPhong.cs" />
-    <Compile Include="Entity\LoaiTinhTrangPhong.cs" />
     <Compile Include="Entity\Model1.cs" />
     <Compile Include="Entity\NhanVien.cs" />
     <Compile Include="Entity\PhanHoiKhachHang.cs" />
     <Compile Include="Entity\PhieuDatPhong.cs" />
     <Compile Include="Entity\Phong.cs" />
-    <Compile Include="Entity\sysdiagram.cs" />
+    <Compile Include="Entity\TinhTrangPhong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKhachSan
 {
-    partial class DichVu
+    partial class frmDatDichVu
     {
         /// <summary>
         /// Required designer variable.

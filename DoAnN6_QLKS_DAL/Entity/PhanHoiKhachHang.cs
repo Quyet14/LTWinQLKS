@@ -10,18 +10,18 @@ namespace DoAnN6_QLKS_DAL.Entity
     public partial class PhanHoiKhachHang
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaPhanHoi { get; set; }
 
         public int? MaKhachHang { get; set; }
 
-        [StringLength(1000)]
+        [StringLength(500)]
         public string NoiDung { get; set; }
 
-        [Column(TypeName = "smalldatetime")]
-        public DateTime? NgayPhanHoi { get; set; }
+        [StringLength(1)]
+        public string Rating { get; set; }
 
-        public int? Rating { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime? NgayPhanHoi { get; set; }
 
         public virtual KhachHang KhachHang { get; set; }
     }

@@ -12,14 +12,13 @@ namespace DoAnN6_QLKS_DAL.Entity
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public HoaDonDichVu()
         {
-            ChiTietHoaDonDichVus = new HashSet<ChiTietHoaDonDichVu>();
-            ChiTietPhieuDatPhongs = new HashSet<ChiTietPhieuDatPhong>();
+            ChiTietDichVus = new HashSet<ChiTietDichVu>();
         }
 
         [Key]
         public int MaHoaDon { get; set; }
 
-        public int? MaNhanVien { get; set; }
+        public int? MaKhachHang { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime NgayLap { get; set; }
@@ -28,11 +27,8 @@ namespace DoAnN6_QLKS_DAL.Entity
         public decimal? TongTien { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietHoaDonDichVu> ChiTietHoaDonDichVus { get; set; }
+        public virtual ICollection<ChiTietDichVu> ChiTietDichVus { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietPhieuDatPhong> ChiTietPhieuDatPhongs { get; set; }
-
-        public virtual NhanVien NhanVien { get; set; }
+        public virtual KhachHang KhachHang { get; set; }
     }
 }

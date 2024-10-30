@@ -36,7 +36,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThem = new QuanLyKhachSan.Components.VBButton();
             this.btnSua = new QuanLyKhachSan.Components.VBButton();
-            this.txtDichVu = new QuanLyKhachSan.Components.VBTextBox();
+            this.txtTenDichVu = new QuanLyKhachSan.Components.VBTextBox();
             this.txtDonGia = new QuanLyKhachSan.Components.VBTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).BeginInit();
             this.SuspendLayout();
@@ -113,6 +113,7 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextColor = System.Drawing.Color.White;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -131,28 +132,29 @@
             this.btnSua.Text = "Sửa";
             this.btnSua.TextColor = System.Drawing.Color.White;
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // txtDichVu
+            // txtTenDichVu
             // 
-            this.txtDichVu.BackColor = System.Drawing.SystemColors.Window;
-            this.txtDichVu.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtDichVu.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtDichVu.BorderRadius = 0;
-            this.txtDichVu.BorderSize = 2;
-            this.txtDichVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDichVu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDichVu.Location = new System.Drawing.Point(113, 107);
-            this.txtDichVu.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDichVu.Multiline = false;
-            this.txtDichVu.Name = "txtDichVu";
-            this.txtDichVu.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtDichVu.PasswordChar = false;
-            this.txtDichVu.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtDichVu.PlaceholderText = "";
-            this.txtDichVu.Size = new System.Drawing.Size(140, 31);
-            this.txtDichVu.TabIndex = 14;
-            this.txtDichVu.Texts = "";
-            this.txtDichVu.UnderlinedStyle = false;
+            this.txtTenDichVu.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTenDichVu.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtTenDichVu.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTenDichVu.BorderRadius = 10;
+            this.txtTenDichVu.BorderSize = 2;
+            this.txtTenDichVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDichVu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTenDichVu.Location = new System.Drawing.Point(113, 107);
+            this.txtTenDichVu.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenDichVu.Multiline = false;
+            this.txtTenDichVu.Name = "txtTenDichVu";
+            this.txtTenDichVu.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtTenDichVu.PasswordChar = false;
+            this.txtTenDichVu.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTenDichVu.PlaceholderText = "";
+            this.txtTenDichVu.Size = new System.Drawing.Size(140, 31);
+            this.txtTenDichVu.TabIndex = 14;
+            this.txtTenDichVu.Texts = "";
+            this.txtTenDichVu.UnderlinedStyle = false;
             // 
             // txtDonGia
             // 
@@ -182,7 +184,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtDonGia);
-            this.Controls.Add(this.txtDichVu);
+            this.Controls.Add(this.txtTenDichVu);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label3);
@@ -206,7 +208,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private Components.VBButton btnThem;
         private Components.VBButton btnSua;
-        private Components.VBTextBox txtDichVu;
+        private Components.VBTextBox txtTenDichVu;
         private Components.VBTextBox txtDonGia;
     }
 }

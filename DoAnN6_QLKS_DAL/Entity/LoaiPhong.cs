@@ -16,8 +16,7 @@ namespace DoAnN6_QLKS_DAL.Entity
         }
 
         [Key]
-        [StringLength(50)]
-        public string MaLoaiPhong { get; set; }
+        public int MaLoaiPhong { get; set; }
 
         [Required]
         [StringLength(100)]
