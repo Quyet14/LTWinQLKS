@@ -1,4 +1,4 @@
-﻿using DoAnN6_QLKS_DAL.Entities;
+﻿using DoAnN6_QLKS_DAL.Entity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +13,7 @@ namespace QuanLyKhachSan
 {
     public partial class frmChamCong : Form
     {
-        private readonly Model1 context = new Model1();
+        private readonly QuanLyKhachSanDB context = new QuanLyKhachSanDB();
 
         public frmChamCong()
         {
@@ -78,6 +78,22 @@ namespace QuanLyKhachSan
             else
             {
                 MessageBox.Show("Please enter a valid employee ID.");
+            }
+        }
+
+        private void frmChamCong_Load(object sender, EventArgs e)
+        {
+            List<ChamCong> ListChamCong = context.ChamCongs.ToList();
+            BindGrid(ListChamCong);
+        }
+        private void BindGrid(List<ChamCong> listChamCong)
+        {
+            foreach (var item in listChamCong)
+            {
+                int index = dgvChamCong.Rows.Add();
+                dgvChamCong.Rows[index].Cells[0].Value = item.MaChamCong;
+                dgvChamCong.Rows[index].Cells[1].Value = item.MaNhanVien;
+                dgvChamCong.Rows[index].Cells[2].Value = item.Ngay;
             }
         }
     }

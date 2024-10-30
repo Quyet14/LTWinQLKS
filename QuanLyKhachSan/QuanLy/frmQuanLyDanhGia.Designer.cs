@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvRespond = new System.Windows.Forms.DataGridView();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,19 +54,20 @@
             this.colRating,
             this.colND,
             this.colDateSent});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRespond.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvRespond.Location = new System.Drawing.Point(35, 177);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRespond.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvRespond.Location = new System.Drawing.Point(11, 88);
+            this.dgvRespond.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvRespond.Name = "dgvRespond";
             this.dgvRespond.RowHeadersWidth = 72;
             this.dgvRespond.RowTemplate.Height = 31;
-            this.dgvRespond.Size = new System.Drawing.Size(1500, 383);
+            this.dgvRespond.Size = new System.Drawing.Size(926, 268);
             this.dgvRespond.TabIndex = 0;
             // 
             // colId
@@ -106,8 +107,9 @@
             // ratingBox
             // 
             this.ratingBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ratingBox.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ratingBox.Location = new System.Drawing.Point(1263, 111);
+            this.ratingBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ratingBox.Location = new System.Drawing.Point(688, 31);
+            this.ratingBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingBox.Maximum = new decimal(new int[] {
             5,
             0,
@@ -119,7 +121,7 @@
             0,
             0});
             this.ratingBox.Name = "ratingBox";
-            this.ratingBox.Size = new System.Drawing.Size(120, 42);
+            this.ratingBox.Size = new System.Drawing.Size(87, 30);
             this.ratingBox.TabIndex = 1;
             this.ratingBox.Value = new decimal(new int[] {
             1,
@@ -131,29 +133,31 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(1155, 111);
+            this.label1.Location = new System.Drawing.Point(605, 35);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 41);
+            this.label1.Size = new System.Drawing.Size(61, 22);
             this.label1.TabIndex = 2;
             this.label1.Text = "Rating";
             // 
             // btnSearch
             // 
             this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSearch.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnSearch.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSearch.BackColor = System.Drawing.Color.Blue;
+            this.btnSearch.BackgroundColor = System.Drawing.Color.Blue;
             this.btnSearch.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSearch.BorderRadius = 20;
+            this.btnSearch.BorderRadius = 15;
             this.btnSearch.BorderSize = 0;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(1422, 109);
+            this.btnSearch.Location = new System.Drawing.Point(803, 30);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(113, 48);
+            this.btnSearch.Size = new System.Drawing.Size(82, 32);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Tìm";
             this.btnSearch.TextColor = System.Drawing.Color.White;
@@ -162,13 +166,14 @@
             // 
             // frmQuanLyDanhGia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1614, 646);
+            this.ClientSize = new System.Drawing.Size(948, 367);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ratingBox);
             this.Controls.Add(this.dgvRespond);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmQuanLyDanhGia";
             this.Text = "Quản Lý Đánh Giá";
             ((System.ComponentModel.ISupportInitialize)(this.dgvRespond)).EndInit();

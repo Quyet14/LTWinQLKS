@@ -10,3 +10,15 @@ C:\Users\ASUS\Source\Repos\LTWinQLKS\DoAnN6_QLKS_DAL\obj\Debug\DoAnN6_QLKS_DAL.c
 C:\Users\ASUS\Source\Repos\LTWinQLKS\DoAnN6_QLKS_DAL\obj\Debug\DoAnN6_Q.DA2B700F.Up2Date
 C:\Users\ASUS\Source\Repos\LTWinQLKS\DoAnN6_QLKS_DAL\obj\Debug\DoAnN6_QLKS_DAL.dll
 C:\Users\ASUS\Source\Repos\LTWinQLKS\DoAnN6_QLKS_DAL\obj\Debug\DoAnN6_QLKS_DAL.pdb
+C:\Users\ASUS\Source\LTWinQLKS\DoAnN6_QLKS_DAL\obj\Debug\DoAnN6_QLKS_DAL.csproj.AssemblyReference.cache
+C:\Users\ASUS\Source\LTWinQLKS\DoAnN6_QLKS_DAL\obj\Debug\DoAnN6_QLKS_DAL.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Source\LTWinQLKS\DoAnN6_QLKS_DAL\obj\Debug\DoAnN6_QLKS_DAL.dll
+C:\Users\ASUS\Source\LTWinQLKS\DoAnN6_QLKS_DAL\obj\Debug\DoAnN6_QLKS_DAL.pdb
+C:\Users\ASUS\Source\LTWinQLKS\DoAnN6_QLKS_DAL\bin\Debug\DoAnN6_QLKS_DAL.dll.config
+C:\Users\ASUS\Source\LTWinQLKS\DoAnN6_QLKS_DAL\bin\Debug\DoAnN6_QLKS_DAL.dll
+C:\Users\ASUS\Source\LTWinQLKS\DoAnN6_QLKS_DAL\bin\Debug\DoAnN6_QLKS_DAL.pdb
+C:\Users\ASUS\Source\LTWinQLKS\DoAnN6_QLKS_DAL\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\Source\LTWinQLKS\DoAnN6_QLKS_DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ASUS\Source\LTWinQLKS\DoAnN6_QLKS_DAL\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\Source\LTWinQLKS\DoAnN6_QLKS_DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ASUS\Source\LTWinQLKS\DoAnN6_QLKS_DAL\obj\Debug\DoAnN6_Q.DA2B700F.Up2Date

@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.dgvChamCong = new System.Windows.Forms.DataGridView();
+            this.Colum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaNV = new QuanLyKhachSan.Components.VBTextBox();
@@ -36,9 +39,6 @@
             this.txtThang = new QuanLyKhachSan.Components.VBTextBox();
             this.btnTinhLuong = new QuanLyKhachSan.Components.VBButton();
             this.btnTimKiem = new QuanLyKhachSan.Components.VBButton();
-            this.Colum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChamCong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +56,27 @@
             this.dgvChamCong.RowTemplate.Height = 24;
             this.dgvChamCong.Size = new System.Drawing.Size(776, 186);
             this.dgvChamCong.TabIndex = 0;
-          
+            // 
+            // Colum
+            // 
+            this.Colum.DataPropertyName = "MaChamCong";
+            this.Colum.HeaderText = "Mã Chấm Công";
+            this.Colum.MinimumWidth = 6;
+            this.Colum.Name = "Colum";
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaNhanVien";
+            this.Column1.HeaderText = "Mã Nhân Viên";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Ngay";
+            this.Column3.HeaderText = "Ngày";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
             // 
             // label1
             // 
@@ -134,8 +154,8 @@
             // 
             // btnTinhLuong
             // 
-            this.btnTinhLuong.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnTinhLuong.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTinhLuong.BackColor = System.Drawing.Color.Blue;
+            this.btnTinhLuong.BackgroundColor = System.Drawing.Color.Blue;
             this.btnTinhLuong.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnTinhLuong.BorderRadius = 20;
             this.btnTinhLuong.BorderSize = 0;
@@ -143,7 +163,7 @@
             this.btnTinhLuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTinhLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTinhLuong.ForeColor = System.Drawing.Color.White;
-            this.btnTinhLuong.Location = new System.Drawing.Point(307, 398);
+            this.btnTinhLuong.Location = new System.Drawing.Point(319, 398);
             this.btnTinhLuong.Name = "btnTinhLuong";
             this.btnTinhLuong.Size = new System.Drawing.Size(150, 40);
             this.btnTinhLuong.TabIndex = 4;
@@ -154,8 +174,8 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnTimKiem.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTimKiem.BackColor = System.Drawing.Color.Blue;
+            this.btnTimKiem.BackgroundColor = System.Drawing.Color.Blue;
             this.btnTimKiem.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnTimKiem.BorderRadius = 20;
             this.btnTimKiem.BorderSize = 0;
@@ -172,27 +192,6 @@
             this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // Colum
-            // 
-            this.Colum.HeaderText = "Mã Chấm Công";
-            this.Colum.MinimumWidth = 6;
-            this.Colum.Name = "Colum";
-            this.Colum.DataPropertyName = "MaChamCong";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Mã Nhân Viên";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.DataPropertyName = "MaNhanVien";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Ngày";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.DataPropertyName = "Ngay";
-            // 
             // frmChamCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -208,6 +207,7 @@
             this.Controls.Add(this.dgvChamCong);
             this.Name = "frmChamCong";
             this.Text = "frmChamCong";
+            this.Load += new System.EventHandler(this.frmChamCong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChamCong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

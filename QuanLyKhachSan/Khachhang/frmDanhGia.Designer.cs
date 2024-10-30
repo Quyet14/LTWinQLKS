@@ -58,10 +58,11 @@
             this.iconStar1.IconChar = FontAwesome.Sharp.IconChar.Star;
             this.iconStar1.IconColor = System.Drawing.Color.Yellow;
             this.iconStar1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconStar1.IconSize = 50;
-            this.iconStar1.Location = new System.Drawing.Point(231, 390);
+            this.iconStar1.IconSize = 33;
+            this.iconStar1.Location = new System.Drawing.Point(168, 260);
+            this.iconStar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconStar1.Name = "iconStar1";
-            this.iconStar1.Size = new System.Drawing.Size(50, 50);
+            this.iconStar1.Size = new System.Drawing.Size(36, 33);
             this.iconStar1.TabIndex = 0;
             this.iconStar1.TabStop = false;
             this.iconStar1.Click += new System.EventHandler(this.iconStar1_Click);
@@ -75,10 +76,11 @@
             this.iconStar3.IconChar = FontAwesome.Sharp.IconChar.Star;
             this.iconStar3.IconColor = System.Drawing.Color.Yellow;
             this.iconStar3.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconStar3.IconSize = 50;
-            this.iconStar3.Location = new System.Drawing.Point(357, 390);
+            this.iconStar3.IconSize = 33;
+            this.iconStar3.Location = new System.Drawing.Point(260, 260);
+            this.iconStar3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconStar3.Name = "iconStar3";
-            this.iconStar3.Size = new System.Drawing.Size(50, 50);
+            this.iconStar3.Size = new System.Drawing.Size(36, 33);
             this.iconStar3.TabIndex = 1;
             this.iconStar3.TabStop = false;
             this.iconStar3.Click += new System.EventHandler(this.iconStar3_Click);
@@ -93,10 +95,11 @@
             this.iconStar2.IconChar = FontAwesome.Sharp.IconChar.Star;
             this.iconStar2.IconColor = System.Drawing.Color.Yellow;
             this.iconStar2.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconStar2.IconSize = 50;
-            this.iconStar2.Location = new System.Drawing.Point(294, 390);
+            this.iconStar2.IconSize = 33;
+            this.iconStar2.Location = new System.Drawing.Point(214, 260);
+            this.iconStar2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconStar2.Name = "iconStar2";
-            this.iconStar2.Size = new System.Drawing.Size(50, 50);
+            this.iconStar2.Size = new System.Drawing.Size(36, 33);
             this.iconStar2.TabIndex = 2;
             this.iconStar2.TabStop = false;
             this.iconStar2.Click += new System.EventHandler(this.iconStar2_Click);
@@ -110,10 +113,11 @@
             this.iconStar4.IconChar = FontAwesome.Sharp.IconChar.Star;
             this.iconStar4.IconColor = System.Drawing.Color.Yellow;
             this.iconStar4.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconStar4.IconSize = 50;
-            this.iconStar4.Location = new System.Drawing.Point(420, 390);
+            this.iconStar4.IconSize = 33;
+            this.iconStar4.Location = new System.Drawing.Point(305, 260);
+            this.iconStar4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconStar4.Name = "iconStar4";
-            this.iconStar4.Size = new System.Drawing.Size(50, 50);
+            this.iconStar4.Size = new System.Drawing.Size(36, 33);
             this.iconStar4.TabIndex = 3;
             this.iconStar4.TabStop = false;
             this.iconStar4.Click += new System.EventHandler(this.iconStar4_Click);
@@ -127,10 +131,11 @@
             this.iconStar5.IconChar = FontAwesome.Sharp.IconChar.Star;
             this.iconStar5.IconColor = System.Drawing.Color.Yellow;
             this.iconStar5.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconStar5.IconSize = 50;
-            this.iconStar5.Location = new System.Drawing.Point(483, 390);
+            this.iconStar5.IconSize = 33;
+            this.iconStar5.Location = new System.Drawing.Point(351, 260);
+            this.iconStar5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconStar5.Name = "iconStar5";
-            this.iconStar5.Size = new System.Drawing.Size(50, 50);
+            this.iconStar5.Size = new System.Drawing.Size(36, 33);
             this.iconStar5.TabIndex = 4;
             this.iconStar5.TabStop = false;
             this.iconStar5.Click += new System.EventHandler(this.iconStar5_Click);
@@ -139,11 +144,12 @@
             // 
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Quicksand", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblTitle.Location = new System.Drawing.Point(211, 322);
+            this.lblTitle.Location = new System.Drawing.Point(153, 215);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(951, 55);
+            this.lblTitle.Size = new System.Drawing.Size(664, 31);
             this.lblTitle.TabIndex = 6;
             this.lblTitle.Text = "Quý khách đánh giá dịch vụ của chúng tôi như thế nào";
             // 
@@ -151,11 +157,12 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Quicksand", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(211, 443);
+            this.label1.Location = new System.Drawing.Point(153, 295);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(956, 55);
+            this.label1.Size = new System.Drawing.Size(662, 31);
             this.label1.TabIndex = 7;
             this.label1.Text = "Hãy cho chúng tôi lắng nghe thêm ý kiến từ quý khách";
             // 
@@ -163,11 +170,12 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Quicksand", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(211, 190);
+            this.label2.Location = new System.Drawing.Point(153, 127);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(343, 55);
+            this.label2.Size = new System.Drawing.Size(243, 31);
             this.label2.TabIndex = 9;
             this.label2.Text = "Tên của quý khách";
             // 
@@ -175,29 +183,31 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Quicksand", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(211, 60);
+            this.label3.Location = new System.Drawing.Point(153, 40);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(292, 55);
+            this.label3.Size = new System.Drawing.Size(202, 31);
             this.label3.TabIndex = 13;
             this.label3.Text = "Mã Khách hàng";
             // 
             // btnSearch
             // 
             this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSearch.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnSearch.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSearch.BackColor = System.Drawing.Color.Blue;
+            this.btnSearch.BackgroundColor = System.Drawing.Color.Blue;
             this.btnSearch.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnSearch.BorderRadius = 20;
             this.btnSearch.BorderSize = 0;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(624, 130);
+            this.btnSearch.Location = new System.Drawing.Point(454, 87);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(146, 56);
+            this.btnSearch.Size = new System.Drawing.Size(106, 37);
             this.btnSearch.TabIndex = 15;
             this.btnSearch.Text = "Tìm";
             this.btnSearch.TextColor = System.Drawing.Color.White;
@@ -212,17 +222,16 @@
             this.txtCustomerId.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtCustomerId.BorderRadius = 20;
             this.txtCustomerId.BorderSize = 2;
-            this.txtCustomerId.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCustomerId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCustomerId.Location = new System.Drawing.Point(221, 130);
-            this.txtCustomerId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCustomerId.Location = new System.Drawing.Point(161, 87);
             this.txtCustomerId.Multiline = false;
             this.txtCustomerId.Name = "txtCustomerId";
-            this.txtCustomerId.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCustomerId.Padding = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.txtCustomerId.PasswordChar = false;
             this.txtCustomerId.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCustomerId.PlaceholderText = "";
-            this.txtCustomerId.Size = new System.Drawing.Size(272, 56);
+            this.txtCustomerId.Size = new System.Drawing.Size(198, 36);
             this.txtCustomerId.TabIndex = 14;
             this.txtCustomerId.Texts = "";
             this.txtCustomerId.UnderlinedStyle = false;
@@ -235,17 +244,16 @@
             this.txtCustomerName.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtCustomerName.BorderRadius = 20;
             this.txtCustomerName.BorderSize = 2;
-            this.txtCustomerName.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCustomerName.Location = new System.Drawing.Point(221, 262);
-            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCustomerName.Location = new System.Drawing.Point(161, 175);
             this.txtCustomerName.Multiline = false;
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCustomerName.Padding = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.txtCustomerName.PasswordChar = false;
             this.txtCustomerName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCustomerName.PlaceholderText = "";
-            this.txtCustomerName.Size = new System.Drawing.Size(549, 56);
+            this.txtCustomerName.Size = new System.Drawing.Size(399, 36);
             this.txtCustomerName.TabIndex = 11;
             this.txtCustomerName.Texts = "";
             this.txtCustomerName.UnderlinedStyle = false;
@@ -253,18 +261,19 @@
             // btnSubmit
             // 
             this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSubmit.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnSubmit.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSubmit.BackColor = System.Drawing.Color.Blue;
+            this.btnSubmit.BackgroundColor = System.Drawing.Color.Blue;
             this.btnSubmit.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnSubmit.BorderRadius = 20;
             this.btnSubmit.BorderSize = 0;
             this.btnSubmit.FlatAppearance.BorderSize = 0;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(1180, 821);
+            this.btnSubmit.Location = new System.Drawing.Point(858, 547);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(149, 52);
+            this.btnSubmit.Size = new System.Drawing.Size(108, 35);
             this.btnSubmit.TabIndex = 10;
             this.btnSubmit.Text = "Gửi";
             this.btnSubmit.TextColor = System.Drawing.Color.White;
@@ -279,26 +288,25 @@
             this.txtFeedback.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtFeedback.BorderRadius = 20;
             this.txtFeedback.BorderSize = 2;
-            this.txtFeedback.Font = new System.Drawing.Font("Quicksand", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFeedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFeedback.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtFeedback.Location = new System.Drawing.Point(221, 513);
-            this.txtFeedback.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFeedback.Location = new System.Drawing.Point(161, 342);
             this.txtFeedback.Multiline = true;
             this.txtFeedback.Name = "txtFeedback";
-            this.txtFeedback.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtFeedback.Padding = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.txtFeedback.PasswordChar = false;
             this.txtFeedback.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtFeedback.PlaceholderText = "(optional)";
-            this.txtFeedback.Size = new System.Drawing.Size(1108, 272);
+            this.txtFeedback.Size = new System.Drawing.Size(806, 181);
             this.txtFeedback.TabIndex = 8;
             this.txtFeedback.Texts = "";
             this.txtFeedback.UnderlinedStyle = false;
             // 
             // frmDanhGia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1595, 903);
+            this.ClientSize = new System.Drawing.Size(1160, 602);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtCustomerId);
             this.Controls.Add(this.label3);
@@ -313,6 +321,7 @@
             this.Controls.Add(this.iconStar2);
             this.Controls.Add(this.iconStar3);
             this.Controls.Add(this.iconStar1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmDanhGia";
             this.Text = "Đánh gía";
             ((System.ComponentModel.ISupportInitialize)(this.iconStar1)).EndInit();

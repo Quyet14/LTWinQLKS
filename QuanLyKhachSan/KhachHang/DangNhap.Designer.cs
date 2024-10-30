@@ -73,8 +73,8 @@
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnDangNhap.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnDangNhap.BackColor = System.Drawing.Color.Blue;
+            this.btnDangNhap.BackgroundColor = System.Drawing.Color.Blue;
             this.btnDangNhap.BorderColor = System.Drawing.Color.Transparent;
             this.btnDangNhap.BorderRadius = 20;
             this.btnDangNhap.BorderSize = 1;
@@ -138,8 +138,8 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnThoat.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnThoat.BackColor = System.Drawing.Color.Blue;
+            this.btnThoat.BackgroundColor = System.Drawing.Color.Blue;
             this.btnThoat.BorderColor = System.Drawing.Color.Transparent;
             this.btnThoat.BorderRadius = 20;
             this.btnThoat.BorderSize = 1;

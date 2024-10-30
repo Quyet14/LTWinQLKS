@@ -51,11 +51,12 @@
             this.dgvRoomType.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaLP,
             this.colTenLP});
-            this.dgvRoomType.Location = new System.Drawing.Point(83, 345);
+            this.dgvRoomType.Location = new System.Drawing.Point(12, 211);
+            this.dgvRoomType.Margin = new System.Windows.Forms.Padding(2);
             this.dgvRoomType.Name = "dgvRoomType";
             this.dgvRoomType.RowHeadersWidth = 72;
             this.dgvRoomType.RowTemplate.Height = 31;
-            this.dgvRoomType.Size = new System.Drawing.Size(744, 352);
+            this.dgvRoomType.Size = new System.Drawing.Size(952, 247);
             this.dgvRoomType.TabIndex = 0;
             this.dgvRoomType.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRoomType_CellContentClick);
             // 
@@ -75,10 +76,11 @@
             // 
             this.lblMa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMa.AutoSize = true;
-            this.lblMa.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMa.Location = new System.Drawing.Point(76, 142);
+            this.lblMa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMa.Location = new System.Drawing.Point(188, 49);
+            this.lblMa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMa.Name = "lblMa";
-            this.lblMa.Size = new System.Drawing.Size(212, 41);
+            this.lblMa.Size = new System.Drawing.Size(130, 22);
             this.lblMa.TabIndex = 6;
             this.lblMa.Text = "Mã Loại Phòng";
             // 
@@ -86,12 +88,14 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(76, 226);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(187, 98);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 41);
+            this.label2.Size = new System.Drawing.Size(128, 22);
             this.label2.TabIndex = 7;
             this.label2.Text = "Tên loại phòng";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // err
             // 
@@ -107,15 +111,15 @@
             this.txtTLP.BorderSize = 2;
             this.txtTLP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTLP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTLP.Location = new System.Drawing.Point(322, 220);
+            this.txtTLP.Location = new System.Drawing.Point(341, 98);
             this.txtTLP.Margin = new System.Windows.Forms.Padding(4);
             this.txtTLP.Multiline = false;
             this.txtTLP.Name = "txtTLP";
-            this.txtTLP.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtTLP.Padding = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.txtTLP.PasswordChar = false;
             this.txtTLP.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtTLP.PlaceholderText = "";
-            this.txtTLP.Size = new System.Drawing.Size(327, 47);
+            this.txtTLP.Size = new System.Drawing.Size(343, 36);
             this.txtTLP.TabIndex = 5;
             this.txtTLP.Texts = "";
             this.txtTLP.UnderlinedStyle = false;
@@ -130,15 +134,15 @@
             this.txtMLP.BorderSize = 2;
             this.txtMLP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMLP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMLP.Location = new System.Drawing.Point(322, 142);
+            this.txtMLP.Location = new System.Drawing.Point(341, 46);
             this.txtMLP.Margin = new System.Windows.Forms.Padding(4);
             this.txtMLP.Multiline = false;
             this.txtMLP.Name = "txtMLP";
-            this.txtMLP.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtMLP.Padding = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.txtMLP.PasswordChar = false;
             this.txtMLP.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtMLP.PlaceholderText = "";
-            this.txtMLP.Size = new System.Drawing.Size(327, 47);
+            this.txtMLP.Size = new System.Drawing.Size(343, 36);
             this.txtMLP.TabIndex = 4;
             this.txtMLP.Texts = "";
             this.txtMLP.UnderlinedStyle = false;
@@ -146,18 +150,19 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDelete.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnDelete.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnDelete.BackColor = System.Drawing.Color.Blue;
+            this.btnDelete.BackgroundColor = System.Drawing.Color.Blue;
             this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDelete.BorderRadius = 20;
+            this.btnDelete.BorderRadius = 15;
             this.btnDelete.BorderSize = 0;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Quicksand", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(669, 220);
+            this.btnDelete.Location = new System.Drawing.Point(521, 161);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(158, 47);
+            this.btnDelete.Size = new System.Drawing.Size(115, 31);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Xoá";
             this.btnDelete.TextColor = System.Drawing.Color.White;
@@ -167,18 +172,19 @@
             // btnAddOrUpdate
             // 
             this.btnAddOrUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddOrUpdate.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnAddOrUpdate.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnAddOrUpdate.BackColor = System.Drawing.Color.Blue;
+            this.btnAddOrUpdate.BackgroundColor = System.Drawing.Color.Blue;
             this.btnAddOrUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAddOrUpdate.BorderRadius = 20;
+            this.btnAddOrUpdate.BorderRadius = 15;
             this.btnAddOrUpdate.BorderSize = 0;
             this.btnAddOrUpdate.FlatAppearance.BorderSize = 0;
             this.btnAddOrUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddOrUpdate.Font = new System.Drawing.Font("Quicksand", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddOrUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddOrUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnAddOrUpdate.Location = new System.Drawing.Point(669, 142);
+            this.btnAddOrUpdate.Location = new System.Drawing.Point(316, 161);
+            this.btnAddOrUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddOrUpdate.Name = "btnAddOrUpdate";
-            this.btnAddOrUpdate.Size = new System.Drawing.Size(158, 47);
+            this.btnAddOrUpdate.Size = new System.Drawing.Size(115, 31);
             this.btnAddOrUpdate.TabIndex = 1;
             this.btnAddOrUpdate.Text = "Thêm/Sửa";
             this.btnAddOrUpdate.TextColor = System.Drawing.Color.White;
@@ -187,9 +193,9 @@
             // 
             // frmQLLoaiPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(931, 795);
+            this.ClientSize = new System.Drawing.Size(974, 477);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblMa);
             this.Controls.Add(this.txtTLP);
@@ -197,6 +203,7 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAddOrUpdate);
             this.Controls.Add(this.dgvRoomType);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmQLLoaiPhong";
             this.Text = "Quản Lý Loại Phòng";
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoomType)).EndInit();

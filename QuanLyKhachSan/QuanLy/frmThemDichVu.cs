@@ -49,26 +49,6 @@ namespace Theemdv_Quan_Ly_Khach_San
             dgvGioHang.Columns.Add(btnXoa);
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            var selectedService = (DichVu)cbxDichVu.SelectedItem;
-            int soLuong = (int)numSoLuong.Value;
-
-            if (selectedService == null)
-            {
-                MessageBox.Show("Vui lòng chọn một dịch vụ!");
-                return;
-            }
-
-            decimal donGia = selectedService.DonGia;
-            decimal tongGia = donGia * soLuong;
-
-            // Thêm dịch vụ vào DataGridView
-            dgvGioHang.Rows.Add(selectedService.MaDichVu, selectedService.TenDichVu, soLuong, donGia, tongGia);
-
-            // Cập nhật tổng tiền
-            CapNhatTongTien();
-        }
 
         private void CapNhatTongTien()
         {
@@ -102,10 +82,36 @@ namespace Theemdv_Quan_Ly_Khach_San
             }
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
+        
+        private void cbxDichVu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Logic để lưu thông tin dịch vụ đã chọn
+
+        }
+
+        private void btnLuu_Click_1(object sender, EventArgs e)
+        {
             MessageBox.Show("Thông tin đã được lưu!");
+        }
+
+        private void btnThem_Click_1(object sender, EventArgs e)
+        {
+            var selectedService = (DichVu)cbxDichVu.SelectedItem;
+            int soLuong = (int)numSoLuong.Value;
+
+            if (selectedService == null)
+            {
+                MessageBox.Show("Vui lòng chọn một dịch vụ!");
+                return;
+            }
+
+            decimal donGia = selectedService.DonGia;
+            decimal tongGia = donGia * soLuong;
+
+            // Thêm dịch vụ vào DataGridView
+            dgvGioHang.Rows.Add(selectedService.MaDichVu, selectedService.TenDichVu, soLuong, donGia, tongGia);
+
+            // Cập nhật tổng tiền
+            CapNhatTongTien();
         }
     }
 

@@ -104,7 +104,7 @@ namespace QuanLyKhachSan.Khachhang
 
                 // Sử dụng customerServices để tìm kiếm khách hàng theo ID
                 customerServices customerService = new customerServices();
-                KhachHang customer = customerService.GetCustomerById(customerId);
+              /*  KhachHang customer = customerService.GetCustomerById(customerId);
 
                 if (customer != null)
                 {
@@ -116,7 +116,7 @@ namespace QuanLyKhachSan.Khachhang
                     // Xóa tên khách hàng nếu không tìm thấy
                     txtCustomerName.Texts = string.Empty;
                     MessageBox.Show("Không tìm thấy khách hàng với ID này.");
-                }
+                }*/
             }
         }
 
