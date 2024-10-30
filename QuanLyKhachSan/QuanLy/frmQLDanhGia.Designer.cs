@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKhachSan.QuanLy
 {
-    partial class frmQuanLyDanhGia
+    partial class frmQLDanhGia
     {
         /// <summary>
         /// Required designer variable.

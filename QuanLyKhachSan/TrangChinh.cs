@@ -9,6 +9,8 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NguyenKhanhLong_qlks;
+using QuanLyKhachSan.Khachhang;
 using QuanLyKhachSan.QuanLy;
 
 namespace QuanLyKhachSan
@@ -18,6 +20,10 @@ namespace QuanLyKhachSan
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+
+        public int UserId { get; private set; }
+        public string UserType { get; private set; }
+
         public TrangChinh()
         {
             InitializeComponent();
@@ -58,6 +64,7 @@ namespace QuanLyKhachSan
                 iconHome.IconColor = color;
             }
         }
+
         private void OpenChildForm(Form childForm)
         {
             //open only form
@@ -65,6 +72,7 @@ namespace QuanLyKhachSan
             {
                 currentChildForm.Close();
             }
+
             currentChildForm = childForm;
             //End
             childForm.TopLevel = false;
@@ -76,6 +84,7 @@ namespace QuanLyKhachSan
             childForm.Show();
             lblHome.Text = childForm.Text;
         }
+
         private void DisableButton()
         {
             if (currentBtn != null)
@@ -88,13 +97,6 @@ namespace QuanLyKhachSan
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
-        private void hideForm()
-        {
-            foreach (Form f in this.MdiChildren)
-            {
-                f.Hide();
-            }
-        }
         private void ShowLoginForm()
         {
             DangNhap loginForm = new DangNhap();
@@ -102,14 +104,103 @@ namespace QuanLyKhachSan
 
             if (result == DialogResult.OK && loginForm.IsLoginSuccessful)
             {
-                this.Show(); // Show the main form after successful login
-                //ShowDichVuForm();
+                this.Show();
+
+                if (loginForm.IsEmployee)
+                {
+                    UserId = loginForm.UserId;
+                    UserType = loginForm.EmployeePerm == 0 ? "Admin" : "Employee";
+                }
+                else if (loginForm.IsCustomer)
+                {
+                    UserId = loginForm.UserId;
+                    UserType = "Customer";
+                }
+
+                ConfigureButtonsForUserType();
             }
             else
             {
-                Application.Exit(); // Exit the application if login is unsuccessful
+                Application.Exit();
             }
         }
+        private void ConfigureButtonsForUserType()
+        {
+            // Reset visibility for all buttons
+            btn1.Visible = btn2.Visible = btn3.Visible = btn4.Visible = btn5.Visible = false;
+
+            switch (UserType)
+            {
+                case "Customer":
+                    // Only show buttons 1-3 for customers
+                    btn1.Visible = btn2.Visible = btn3.Visible = true;
+
+                    //btn1.Click += (s, e) =>
+                    //{
+                    //    ActivateButton(btn1, RGBColors.color);
+                    //    OpenChildForm(new frmDichVu());
+                    //};
+                    btn2.Click += (s, e) =>
+                    {
+                        ActivateButton(btn2, RGBColors.color); 
+                        OpenChildForm(new frmHoaDon());
+                    };
+                    btn3.Click += (s, e) =>
+                    {
+                        ActivateButton(btn3, RGBColors.color); 
+                        OpenChildForm(new frmDanhGia());
+                    };
+                    break;
+
+                case "Employee":
+                    // Only show buttons 1-2 for normal employees
+                    btn1.Visible = btn2.Visible = true;
+
+                    //btn1.Click += (s, e) =>
+                    //{
+                    //    ActivateButton(btn1, RGBColors.color); 
+                    //    OpenChildForm(new frmKhachHang());
+                    //};
+                    btn2.Click += (s, e) =>
+                    {
+                        ActivateButton(btn2, RGBColors.color);
+                        OpenChildForm(new frmPhong());
+                    };
+                    break;
+
+                case "Admin":
+                    // Show all buttons for admin
+                    btn1.Visible = btn2.Visible = btn3.Visible = btn4.Visible = btn5.Visible = true;
+
+                    btn1.Click += (s, e) =>
+                    {
+                        ActivateButton(btn1, RGBColors.color);
+                        OpenChildForm(new frmQLPhong());
+                    };
+                    btn2.Click += (s, e) =>
+                    {
+                        ActivateButton(btn2, RGBColors.color); 
+                        OpenChildForm(new frmQLLoaiPhong());
+                    };
+                    //btn3.Click += (s, e) =>
+                    //{
+                    //    ActivateButton(btn3, RGBColors.color);
+                    //    OpenChildForm(new frmQLDichVu());
+                    //};
+                    btn4.Click += (s, e) =>
+                    {
+                        ActivateButton(btn4, RGBColors.color);
+                        OpenChildForm(new frmNhanVien());
+                    };
+                    btn5.Click += (s, e) =>
+                    {
+                        ActivateButton(btn5, RGBColors.color); 
+                        OpenChildForm(new frmQLDanhGia());
+                    };
+                    break;
+            }
+        }
+
         private void TrangChinh_Load_1(object sender, EventArgs e)
         {
             this.Hide(); // Hide the main form initially
@@ -124,28 +215,9 @@ namespace QuanLyKhachSan
                 FormBorderStyle = FormBorderStyle.Sizable;
         }
 
-        private void btnPhong_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color);
-            OpenChildForm(new frmPhong());
-        }
-        private void btnDatPhong_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color);
-            OpenChildForm(new frmQLPhong());    
-        }
-        private void btnLoaiPhong_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color);
-            OpenChildForm(new frmQLLoaiPhong());
-        }
-
-        private void btnQLDichVu_Click(object sender, EventArgs e)
-        {
-
-        }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
@@ -172,49 +244,5 @@ namespace QuanLyKhachSan
         {
             WindowState = FormWindowState.Minimized;
         }
-
-        
-
-
-
-
-        //private void ShowDichVuForm()
-        //{
-        //    DichVu dv = new DichVu();
-        //    dv.MdiParent = this;
-        //    dv.WindowState = FormWindowState.Maximized;
-        //    dv.Show();
-        //}
     }
 }
-public partial class SearchForm : Form
-{
-    public SearchForm()
-    {
-        this.Text = "Tìm kiếm";
-        this.Size = new Size(400, 300);
-        this.FormBorderStyle = FormBorderStyle.FixedSingle;
-        this.MaximizeBox = false;
-        this.MinimizeBox = false;
-
-        Label label = new Label();
-        label.Text = "Nhập từ khóa tìm kiếm:";
-        label.Location = new Point(10, 10);
-        label.Size = new Size(200, 20);
-        this.Controls.Add(label);
-
-        TextBox textBox = new TextBox();
-        textBox.Location = new Point(10, 40);
-        textBox.Size = new Size(200, 20);
-        this.Controls.Add(textBox);
-
-        Button button = new Button();
-        button.Text = "Tìm kiếm";
-        button.Location = new Point(10, 70);
-        button.Size = new Size(100, 20);
-        button.Click += (sender, e) => MessageBox.Show("Tìm kiếm thành công!");
-        this.Controls.Add(button);
-    }
-}
-
-        

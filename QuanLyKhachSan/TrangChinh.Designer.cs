@@ -1,4 +1,4 @@
-namespace QuanLyKhachSan
+﻿namespace QuanLyKhachSan
 {
     partial class TrangChinh
     {
@@ -29,10 +29,10 @@ namespace QuanLyKhachSan
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnQLDichVu = new FontAwesome.Sharp.IconButton();
-            this.btnLoaiPhong = new FontAwesome.Sharp.IconButton();
-            this.btnDatPhong = new FontAwesome.Sharp.IconButton();
-            this.btnPhong = new FontAwesome.Sharp.IconButton();
+            this.btn4 = new FontAwesome.Sharp.IconButton();
+            this.btn3 = new FontAwesome.Sharp.IconButton();
+            this.btn2 = new FontAwesome.Sharp.IconButton();
+            this.btn1 = new FontAwesome.Sharp.IconButton();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.btnMaximize = new FontAwesome.Sharp.IconPictureBox();
             this.btnExit = new FontAwesome.Sharp.IconPictureBox();
@@ -40,6 +40,7 @@ namespace QuanLyKhachSan
             this.lblHome = new System.Windows.Forms.Label();
             this.iconHome = new FontAwesome.Sharp.IconPictureBox();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.btn5 = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
@@ -51,10 +52,11 @@ namespace QuanLyKhachSan
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panelMenu.Controls.Add(this.btnQLDichVu);
-            this.panelMenu.Controls.Add(this.btnLoaiPhong);
-            this.panelMenu.Controls.Add(this.btnDatPhong);
-            this.panelMenu.Controls.Add(this.btnPhong);
+            this.panelMenu.Controls.Add(this.btn5);
+            this.panelMenu.Controls.Add(this.btn4);
+            this.panelMenu.Controls.Add(this.btn3);
+            this.panelMenu.Controls.Add(this.btn2);
+            this.panelMenu.Controls.Add(this.btn1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.ForeColor = System.Drawing.SystemColors.Highlight;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -62,93 +64,89 @@ namespace QuanLyKhachSan
             this.panelMenu.Size = new System.Drawing.Size(303, 944);
             this.panelMenu.TabIndex = 4;
             // 
-            // btnQLDichVu
+            // btn4
             // 
-            this.btnQLDichVu.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnQLDichVu.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnQLDichVu.FlatAppearance.BorderSize = 0;
-            this.btnQLDichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLDichVu.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLDichVu.ForeColor = System.Drawing.Color.White;
-            this.btnQLDichVu.IconChar = FontAwesome.Sharp.IconChar.ListCheck;
-            this.btnQLDichVu.IconColor = System.Drawing.Color.White;
-            this.btnQLDichVu.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnQLDichVu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLDichVu.Location = new System.Drawing.Point(0, 553);
-            this.btnQLDichVu.Name = "btnQLDichVu";
-            this.btnQLDichVu.Size = new System.Drawing.Size(303, 99);
-            this.btnQLDichVu.TabIndex = 5;
-            this.btnQLDichVu.Text = "QL Dịch vụ";
-            this.btnQLDichVu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLDichVu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQLDichVu.UseVisualStyleBackColor = false;
-            this.btnQLDichVu.Click += new System.EventHandler(this.btnQLDichVu_Click);
+            this.btn4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn4.FlatAppearance.BorderSize = 0;
+            this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn4.ForeColor = System.Drawing.Color.White;
+            this.btn4.IconChar = FontAwesome.Sharp.IconChar.ListCheck;
+            this.btn4.IconColor = System.Drawing.Color.White;
+            this.btn4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn4.Location = new System.Drawing.Point(0, 553);
+            this.btn4.Name = "btn4";
+            this.btn4.Size = new System.Drawing.Size(303, 99);
+            this.btn4.TabIndex = 5;
+            this.btn4.Text = "QL Dịch vụ";
+            this.btn4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn4.UseVisualStyleBackColor = false;
             // 
-            // btnLoaiPhong
+            // btn3
             // 
-            this.btnLoaiPhong.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnLoaiPhong.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnLoaiPhong.FlatAppearance.BorderSize = 0;
-            this.btnLoaiPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoaiPhong.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoaiPhong.ForeColor = System.Drawing.Color.White;
-            this.btnLoaiPhong.IconChar = FontAwesome.Sharp.IconChar.Pen;
-            this.btnLoaiPhong.IconColor = System.Drawing.Color.White;
-            this.btnLoaiPhong.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLoaiPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoaiPhong.Location = new System.Drawing.Point(0, 448);
-            this.btnLoaiPhong.Name = "btnLoaiPhong";
-            this.btnLoaiPhong.Size = new System.Drawing.Size(303, 99);
-            this.btnLoaiPhong.TabIndex = 2;
-            this.btnLoaiPhong.Text = "QL Loại Phòng";
-            this.btnLoaiPhong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoaiPhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLoaiPhong.UseVisualStyleBackColor = false;
-            this.btnLoaiPhong.Click += new System.EventHandler(this.btnLoaiPhong_Click);
+            this.btn3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn3.FlatAppearance.BorderSize = 0;
+            this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn3.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn3.ForeColor = System.Drawing.Color.White;
+            this.btn3.IconChar = FontAwesome.Sharp.IconChar.Pen;
+            this.btn3.IconColor = System.Drawing.Color.White;
+            this.btn3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn3.Location = new System.Drawing.Point(0, 448);
+            this.btn3.Name = "btn3";
+            this.btn3.Size = new System.Drawing.Size(303, 99);
+            this.btn3.TabIndex = 2;
+            this.btn3.Text = "QL Loại Phòng";
+            this.btn3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn3.UseVisualStyleBackColor = false;
             // 
-            // btnDatPhong
+            // btn2
             // 
-            this.btnDatPhong.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnDatPhong.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnDatPhong.FlatAppearance.BorderSize = 0;
-            this.btnDatPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatPhong.ForeColor = System.Drawing.Color.White;
-            this.btnDatPhong.IconChar = FontAwesome.Sharp.IconChar.Bed;
-            this.btnDatPhong.IconColor = System.Drawing.Color.White;
-            this.btnDatPhong.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDatPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDatPhong.Location = new System.Drawing.Point(0, 343);
-            this.btnDatPhong.Name = "btnDatPhong";
-            this.btnDatPhong.Size = new System.Drawing.Size(303, 99);
-            this.btnDatPhong.TabIndex = 1;
-            this.btnDatPhong.Text = "QL Phòng";
-            this.btnDatPhong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDatPhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDatPhong.UseVisualStyleBackColor = false;
-            this.btnDatPhong.Click += new System.EventHandler(this.btnDatPhong_Click);
+            this.btn2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn2.FlatAppearance.BorderSize = 0;
+            this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn2.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn2.ForeColor = System.Drawing.Color.White;
+            this.btn2.IconChar = FontAwesome.Sharp.IconChar.Bed;
+            this.btn2.IconColor = System.Drawing.Color.White;
+            this.btn2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn2.Location = new System.Drawing.Point(0, 343);
+            this.btn2.Name = "btn2";
+            this.btn2.Size = new System.Drawing.Size(303, 99);
+            this.btn2.TabIndex = 1;
+            this.btn2.Text = "QL Phòng";
+            this.btn2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn2.UseVisualStyleBackColor = false;
             // 
-            // btnPhong
+            // btn1
             // 
-            this.btnPhong.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnPhong.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnPhong.FlatAppearance.BorderSize = 0;
-            this.btnPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhong.ForeColor = System.Drawing.Color.White;
-            this.btnPhong.IconChar = FontAwesome.Sharp.IconChar.Hotel;
-            this.btnPhong.IconColor = System.Drawing.Color.White;
-            this.btnPhong.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPhong.Location = new System.Drawing.Point(0, 238);
-            this.btnPhong.Name = "btnPhong";
-            this.btnPhong.Size = new System.Drawing.Size(303, 99);
-            this.btnPhong.TabIndex = 0;
-            this.btnPhong.Text = "Phòng";
-            this.btnPhong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPhong.UseVisualStyleBackColor = false;
-            this.btnPhong.Click += new System.EventHandler(this.btnPhong_Click);
+            this.btn1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn1.FlatAppearance.BorderSize = 0;
+            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn1.ForeColor = System.Drawing.Color.White;
+            this.btn1.IconChar = FontAwesome.Sharp.IconChar.Hotel;
+            this.btn1.IconColor = System.Drawing.Color.White;
+            this.btn1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn1.Location = new System.Drawing.Point(0, 238);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(303, 99);
+            this.btn1.TabIndex = 0;
+            this.btn1.Text = "Phòng";
+            this.btn1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn1.UseVisualStyleBackColor = false;
             // 
             // panelTitle
             // 
@@ -219,11 +217,11 @@ namespace QuanLyKhachSan
             // lblHome
             // 
             this.lblHome.AutoSize = true;
-            this.lblHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHome.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHome.ForeColor = System.Drawing.Color.White;
             this.lblHome.Location = new System.Drawing.Point(96, 33);
             this.lblHome.Name = "lblHome";
-            this.lblHome.Size = new System.Drawing.Size(64, 25);
+            this.lblHome.Size = new System.Drawing.Size(97, 41);
             this.lblHome.TabIndex = 1;
             this.lblHome.Text = "Home";
             // 
@@ -249,6 +247,27 @@ namespace QuanLyKhachSan
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1465, 840);
             this.panelMain.TabIndex = 8;
+            // 
+            // btn5
+            // 
+            this.btn5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn5.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn5.FlatAppearance.BorderSize = 0;
+            this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn5.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn5.ForeColor = System.Drawing.Color.White;
+            this.btn5.IconChar = FontAwesome.Sharp.IconChar.ListCheck;
+            this.btn5.IconColor = System.Drawing.Color.White;
+            this.btn5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn5.Location = new System.Drawing.Point(0, 658);
+            this.btn5.Name = "btn5";
+            this.btn5.Size = new System.Drawing.Size(303, 99);
+            this.btn5.TabIndex = 6;
+            this.btn5.Text = "QL Dịch vụ";
+            this.btn5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn5.UseVisualStyleBackColor = false;
             // 
             // TrangChinh
             // 
@@ -278,10 +297,10 @@ namespace QuanLyKhachSan
 
         #endregion
         private System.Windows.Forms.Panel panelMenu;
-        private FontAwesome.Sharp.IconButton btnQLDichVu;
-        private FontAwesome.Sharp.IconButton btnLoaiPhong;
-        private FontAwesome.Sharp.IconButton btnDatPhong;
-        private FontAwesome.Sharp.IconButton btnPhong;
+        private FontAwesome.Sharp.IconButton btn4;
+        private FontAwesome.Sharp.IconButton btn3;
+        private FontAwesome.Sharp.IconButton btn2;
+        private FontAwesome.Sharp.IconButton btn1;
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Panel panelMain;
         private FontAwesome.Sharp.IconPictureBox iconHome;
@@ -289,5 +308,6 @@ namespace QuanLyKhachSan
         private FontAwesome.Sharp.IconPictureBox btnMaximize;
         private FontAwesome.Sharp.IconPictureBox btnExit;
         private FontAwesome.Sharp.IconPictureBox btnMinimize;
+        private FontAwesome.Sharp.IconButton btn5;
     }
 }
