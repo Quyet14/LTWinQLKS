@@ -107,30 +107,17 @@
     <Compile Include="KhachHang\DichVu.Designer.cs">
       <DependentUpon>DichVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanVien.cs" />
     <Compile Include="NhanVien\frmPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NhanVien\frmPhong.Designer.cs">
       <DependentUpon>frmPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanVien\frmXemPhongTrong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NhanVien\frmXemPhongTrong.Designer.cs">
-      <DependentUpon>frmXemPhongTrong.cs</DependentUpon>
-    </Compile>
     <Compile Include="QuanLy\frmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QuanLy\frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanVien\frmQuanLyPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NhanVien\frmQuanLyPhong.Designer.cs">
-      <DependentUpon>frmQuanLyPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLy\frmQLLoaiPhong.cs">
       <SubType>Form</SubType>
@@ -144,11 +131,11 @@
     <Compile Include="QuanLy\frmQLPhong.Designer.cs">
       <DependentUpon>frmQLPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLy\frmQuanLyDanhGia.cs">
+    <Compile Include="QuanLy\frmQLDanhGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLy\frmQuanLyDanhGia.Designer.cs">
-      <DependentUpon>frmQuanLyDanhGia.cs</DependentUpon>
+    <Compile Include="QuanLy\frmQLDanhGia.Designer.cs">
+      <DependentUpon>frmQLDanhGia.cs</DependentUpon>
     </Compile>
     <Compile Include="TrangChinh.cs">
       <SubType>Form</SubType>
@@ -179,12 +166,6 @@
     <EmbeddedResource Include="NhanVien\frmPhong.resx">
       <DependentUpon>frmPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhanVien\frmQuanLyPhong.resx">
-      <DependentUpon>frmQuanLyPhong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NhanVien\frmXemPhongTrong.resx">
-      <DependentUpon>frmXemPhongTrong.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -203,8 +184,8 @@
     <EmbeddedResource Include="QuanLy\frmQLPhong.resx">
       <DependentUpon>frmQLPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanLy\frmQuanLyDanhGia.resx">
-      <DependentUpon>frmQuanLyDanhGia.cs</DependentUpon>
+    <EmbeddedResource Include="QuanLy\frmQLDanhGia.resx">
+      <DependentUpon>frmQLDanhGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChinh.resx">
       <DependentUpon>TrangChinh.cs</DependentUpon>
