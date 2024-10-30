@@ -11,9 +11,9 @@ using DoAnN6_QLKS_DAL.Entity;
 
 namespace QuanLyKhachSan.QuanLy
 {
-    public partial class frmQuanLyDanhGia : Form
+    public partial class frmQLDanhGia : Form
     {
-        public frmQuanLyDanhGia()
+        public frmQLDanhGia()
         {
             InitializeComponent();
             QuanLyKhachSanDB context = new QuanLyKhachSanDB();

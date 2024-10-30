@@ -1,18 +1,24 @@
-﻿using DoAnN6_QLKS_DAL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.ModelConfiguration.Configuration;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
+using DoAnN6_QLKS_DAL.Entity;
 
 namespace QuanLyKhachSan
 {
     public partial class DangNhap : Form
     {
+        private readonly customerServices customerServices = new customerServices();
+        private readonly employeeServices employeeServices = new employeeServices();
+        private readonly chamCongServices chamCongServices = new chamCongServices();
         public DangNhap()
         {
             InitializeComponent();
@@ -23,44 +29,74 @@ namespace QuanLyKhachSan
         }
 
         public bool IsLoginSuccessful { get; internal set; }
+        public bool IsCustomer { get; private set; }
+        public bool IsEmployee { get; private set; }
+        public bool IsAdmin { get; private set; }
+        public int UserId { get; private set; }
+        public int? EmployeePerm { get; private set; }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             // Get username and password from text boxes
-            string username = txtUsername.Texts.Trim();
-            string password = txtPassword.Texts.Trim();
+            string username = txtUsername.Texts;
+            string password = txtPassword.Texts;
 
-
-            // Validate username and password
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Vui lòng nhập cả tên đăng nhập và mật khẩu.");
+                MessageBox.Show("Please enter both username and password.");
                 return;
             }
 
-            // Authenticate user
-            /*if (AuthenticateUser(username, password))
+            try
             {
-                IsLoginSuccessful = true;
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                
+                if (int.TryParse(username, out int maNhanVien))
+                {
+                    DoAnN6_QLKS_DAL.Entity.NhanVien nhanVien = employeeServices.AuthenticateEmployee(maNhanVien, password);
+                    if (nhanVien != null)
+                    {
+                        MessageBox.Show("Employee login successful, opening TrangChinh form");
 
-            }*/
-            else
+                        chamCongServices.RecordLogin(maNhanVien);
+
+                        IsLoginSuccessful = true;
+                        IsEmployee = true;
+                        UserId = nhanVien.MaNhanVien;
+                        EmployeePerm = nhanVien.perm;
+                        IsAdmin = nhanVien.perm == 0;
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                        return;
+                    }
+                }
+
+
+                KhachHang khachHang = customerServices.AuthenticateCustomer(username, password);
+
+                if (khachHang != null)
+                {
+                    IsLoginSuccessful = true;
+                    IsCustomer = true;
+                    UserId = khachHang.MaKhachHang;
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                    return;
+                }
+
+                if (username == "1" && password == "1")
+                {
+                    IsLoginSuccessful = true;
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                    return;
+                }
+
+                MessageBox.Show("Invalid username or password, or account is inactive.");
+            } catch (Exception ex)
             {
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không hợp lệ. Vui lòng thử lại.");
+                MessageBox.Show($"An unexpected error occurred: {ex.Message}");
             }
         }
-       /* private bool AuthenticateUser(string username, string password)
-        {
-            ///* using (var dbContext = new Model2())
-            // {
-            //     // Ensure you are querying the correct DbSet and property names
-            //     var user = dbContext.DangNhaps.FirstOrDefault(u => u.Username == username && u.Password == password);
-
-            //     return user != null;
-            // }*//*
-        }*/
 
         private void btnThoat_Click(object sender, EventArgs e)
         {

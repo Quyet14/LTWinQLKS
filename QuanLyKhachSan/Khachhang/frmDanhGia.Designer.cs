@@ -296,8 +296,8 @@
             // 
             // frmDanhGia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(168F, 168F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1595, 903);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtCustomerId);
@@ -314,7 +314,7 @@
             this.Controls.Add(this.iconStar3);
             this.Controls.Add(this.iconStar1);
             this.Name = "frmDanhGia";
-            this.Text = "Đánh gía";
+            this.Text = "Đánh giá";
             ((System.ComponentModel.ISupportInitialize)(this.iconStar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconStar3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconStar2)).EndInit();

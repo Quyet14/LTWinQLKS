@@ -9,7 +9,7 @@ namespace BUS
 {
     public class customerServices
     {
-        List<KhachHang> GetAll()
+        public List<KhachHang> GetAll()
         {
             QuanLyKhachSanDB context = new QuanLyKhachSanDB();
             return context.KhachHangs.ToList();
@@ -23,6 +23,11 @@ namespace BUS
         {
             QuanLyKhachSanDB context = new QuanLyKhachSanDB();
             return context.KhachHangs.Where(kh => kh.HoTen.Contains(name)).ToList();
+        }
+        public KhachHang AuthenticateCustomer(string soDienThoai, string password)
+        {
+            QuanLyKhachSanDB context = new QuanLyKhachSanDB();
+            return context.KhachHangs.FirstOrDefault(kh => kh.SoDienThoai == soDienThoai && kh.SoDienThoai == password);
         }
     }
 }
