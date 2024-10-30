@@ -38,6 +38,7 @@
             this.btnSua = new QuanLyKhachSan.Components.VBButton();
             this.txtTenDichVu = new QuanLyKhachSan.Components.VBTextBox();
             this.txtDonGia = new QuanLyKhachSan.Components.VBTextBox();
+            this.vbButton1 = new QuanLyKhachSan.Components.VBButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,11 +179,31 @@
             this.txtDonGia.Texts = "";
             this.txtDonGia.UnderlinedStyle = false;
             // 
+            // vbButton1
+            // 
+            this.vbButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.vbButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.vbButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.vbButton1.BorderRadius = 0;
+            this.vbButton1.BorderSize = 0;
+            this.vbButton1.FlatAppearance.BorderSize = 0;
+            this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vbButton1.ForeColor = System.Drawing.Color.White;
+            this.vbButton1.Location = new System.Drawing.Point(144, 324);
+            this.vbButton1.Name = "vbButton1";
+            this.vbButton1.Size = new System.Drawing.Size(150, 40);
+            this.vbButton1.TabIndex = 16;
+            this.vbButton1.Text = "vbButton1";
+            this.vbButton1.TextColor = System.Drawing.Color.White;
+            this.vbButton1.UseVisualStyleBackColor = false;
+            this.vbButton1.Click += new System.EventHandler(this.vbButton1_Click);
+            // 
             // frmThemDV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.vbButton1);
             this.Controls.Add(this.txtDonGia);
             this.Controls.Add(this.txtTenDichVu);
             this.Controls.Add(this.btnSua);
@@ -210,5 +231,6 @@
         private Components.VBButton btnSua;
         private Components.VBTextBox txtTenDichVu;
         private Components.VBTextBox txtDonGia;
+        private Components.VBButton vbButton1;
     }
 }

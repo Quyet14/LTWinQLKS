@@ -158,5 +158,10 @@ namespace QuanLyKhachSan.QuanLy
                 MessageBox.Show("Có lỗi xảy ra: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void vbButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
