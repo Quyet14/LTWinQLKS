@@ -59,13 +59,11 @@ namespace NguyenKhanhLong_qlks
         {
             txtHoten.Text = "";
             txtDiaChi.Text = "";
-            dtpNgaySinh.Value = DateTime.Now;
         }
 
         private void setButton(bool val)
         {
             btnThem.Enabled = val;
-            btnXoa.Enabled = val;
             btnSua.Enabled = val;
         }
 
@@ -96,7 +94,6 @@ namespace NguyenKhanhLong_qlks
             DataRow newRow = dtNhanVien.NewRow();
             newRow["MaNV"] = txtMaNhanVien.Text; // Lấy mã nhân viên từ textbox
             newRow["HoTen"] = txtHoten.Text;
-            newRow["NgaySinh"] = dtpNgaySinh.Value;
             newRow["DiaChi"] = txtDiaChi.Text;
             newRow["SĐT"] = txtSDT.Text;
             dtNhanVien.Rows.Add(newRow);
@@ -118,7 +115,6 @@ namespace NguyenKhanhLong_qlks
 
                 // Cập nhật thông tin của nhân viên
                 updatedRow["HoTen"] = txtHoten.Text;
-                updatedRow["NgaySinh"] = dtpNgaySinh.Value;
                 updatedRow["DiaChi"] = txtDiaChi.Text;
                 updatedRow["SĐT"] = txtSDT.Text; // Cập nhật số điện thoại
 
@@ -141,7 +137,7 @@ namespace NguyenKhanhLong_qlks
                 int selectedIndex = dgvNhanVien.SelectedRows[0].Index;
                 DataRow selectedRow = dtNhanVien.Rows[selectedIndex]; // Đổi tên biến ở đây
                 txtHoten.Text = selectedRow["HoTen"].ToString();
-                dtpNgaySinh.Value = (DateTime)selectedRow["NgaySinh"];
+                
                 txtDiaChi.Text = selectedRow["DiaChi"].ToString();
                 txtSDT.Text = selectedRow["SĐT"].ToString();
             }
@@ -151,24 +147,10 @@ namespace NguyenKhanhLong_qlks
             }
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+
+        private void frmNhanVien_Load_1(object sender, EventArgs e)
         {
-            if (dgvNhanVien.SelectedRows.Count > 0)
-            {
-                DialogResult dr = MessageBox.Show("Bạn có chắc xóa không?", "Xóa nhân viên", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dr == DialogResult.Yes)
-                {
-                    int selectedIndex = dgvNhanVien.SelectedRows[0].Index;
-                    dtNhanVien.Rows.RemoveAt(selectedIndex);
-                    hienThiNhanVien();
-                    setNull();
-                    MessageBox.Show("Xóa nhân viên thành công");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Bạn phải chọn mẫu tin cần xóa");
-            }
+
         }
     }
 
