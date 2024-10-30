@@ -10,3 +10,7 @@ C:\Users\ASUS\Source\Repos\LTWinQLKS\DoAnN6_QLKS_DAL\obj\Debug\DoAnN6_QLKS_DAL.c
 C:\Users\ASUS\Source\Repos\LTWinQLKS\DoAnN6_QLKS_DAL\obj\Debug\DoAnN6_Q.DA2B700F.Up2Date
 C:\Users\ASUS\Source\Repos\LTWinQLKS\DoAnN6_QLKS_DAL\obj\Debug\DoAnN6_QLKS_DAL.dll
 C:\Users\ASUS\Source\Repos\LTWinQLKS\DoAnN6_QLKS_DAL\obj\Debug\DoAnN6_QLKS_DAL.pdb
+C:\Users\dangngocanhthu\Source\Repos\LTWinQLKS\DoAnN6_QLKS_DAL\obj\Debug\DoAnN6_QLKS_DAL.csproj.AssemblyReference.cache
+C:\Users\dangngocanhthu\Source\Repos\LTWinQLKS\DoAnN6_QLKS_DAL\obj\Debug\DoAnN6_QLKS_DAL.csproj.CoreCompileInputs.cache
+C:\Users\dangngocanhthu\Source\Repos\LTWinQLKS\DoAnN6_QLKS_DAL\obj\Debug\DoAnN6_QLKS_DAL.dll
+C:\Users\dangngocanhthu\Source\Repos\LTWinQLKS\DoAnN6_QLKS_DAL\obj\Debug\DoAnN6_QLKS_DAL.pdb

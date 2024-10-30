@@ -1,6 +1,4 @@
-﻿using System.Data;
-
-namespace QuanLyKhachSan.NhanVien
+﻿namespace QuanLyKhachSan.NhanVien
 {
     partial class frmQuanLyPhong
     {
@@ -30,348 +28,284 @@ namespace QuanLyKhachSan.NhanVien
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCustomerName = new System.Windows.Forms.Label();
-            this.lblPhoneNumber = new System.Windows.Forms.Label();
-            this.lblRoomType = new System.Windows.Forms.Label();
-            this.cmbRoomType = new System.Windows.Forms.ComboBox();
-            this.lblBedType = new System.Windows.Forms.Label();
-            this.cmbBedType = new System.Windows.Forms.ComboBox();
-            this.lblCheckIn = new System.Windows.Forms.Label();
-            this.dtpCheckIn = new System.Windows.Forms.DateTimePicker();
-            this.lblCheckOut = new System.Windows.Forms.Label();
-            this.dtpCheckOut = new System.Windows.Forms.DateTimePicker();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.dgvBookings = new System.Windows.Forms.DataGridView();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnAdd = new QuanLyKhachSan.Components.VBButton();
-            this.btnEdit = new QuanLyKhachSan.Components.VBButton();
-            this.btnDelete = new QuanLyKhachSan.Components.VBButton();
-            this.txtCustomerName = new QuanLyKhachSan.Components.VBTextBox();
-            this.txtPhoneNumber = new QuanLyKhachSan.Components.VBTextBox();
-            this.txtPrice = new QuanLyKhachSan.Components.VBTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBookings)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtTimKhachHang = new System.Windows.Forms.TextBox();
+            this.cbLoaiPhong = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbPhong = new System.Windows.Forms.ComboBox();
+            this.txtTenKhachHang = new System.Windows.Forms.TextBox();
+            this.txtSoDienThoai = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtGiaTien = new System.Windows.Forms.TextBox();
+            this.dtpNgayNhan = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayTra = new System.Windows.Forms.DateTimePicker();
+            this.dgvQuanLyPhong = new System.Windows.Forms.DataGridView();
+            this.btnSave = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyPhong)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblCustomerName
+            // label1
             // 
-            this.lblCustomerName.AutoSize = true;
-            this.lblCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerName.Location = new System.Drawing.Point(39, 49);
-            this.lblCustomerName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(160, 25);
-            this.lblCustomerName.TabIndex = 0;
-            this.lblCustomerName.Text = "Tên khách hàng:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(84, 112);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(247, 37);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tìm khách hàng";
             // 
-            // lblPhoneNumber
+            // btnSearch
             // 
-            this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNumber.Location = new System.Drawing.Point(39, 116);
-            this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(132, 25);
-            this.lblPhoneNumber.TabIndex = 2;
-            this.lblPhoneNumber.Text = "Số điện thoại:";
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(524, 166);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(118, 50);
+            this.btnSearch.TabIndex = 1;
+            this.btnSearch.Text = "Tìm";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // lblRoomType
+            // txtTimKhachHang
             // 
-            this.lblRoomType.AutoSize = true;
-            this.lblRoomType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoomType.Location = new System.Drawing.Point(39, 188);
-            this.lblRoomType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblRoomType.Name = "lblRoomType";
-            this.lblRoomType.Size = new System.Drawing.Size(115, 25);
-            this.lblRoomType.TabIndex = 4;
-            this.lblRoomType.Text = "Loại phòng:";
+            this.txtTimKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKhachHang.Location = new System.Drawing.Point(352, 112);
+            this.txtTimKhachHang.Name = "txtTimKhachHang";
+            this.txtTimKhachHang.Size = new System.Drawing.Size(488, 44);
+            this.txtTimKhachHang.TabIndex = 2;
+            this.txtTimKhachHang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTimKhachHang_KeyPress);
             // 
-            // cmbRoomType
+            // cbLoaiPhong
             // 
-            this.cmbRoomType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbRoomType.FormattingEnabled = true;
-            this.cmbRoomType.Items.AddRange(new object[] {
-            "Single Bedroom",
-            "Twin Bedroom",
-            "Double Bedroom",
-            "Triple Bedroom"});
-            this.cmbRoomType.Location = new System.Drawing.Point(213, 182);
-            this.cmbRoomType.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbRoomType.Name = "cmbRoomType";
-            this.cmbRoomType.Size = new System.Drawing.Size(325, 33);
-            this.cmbRoomType.TabIndex = 3;
+            this.cbLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLoaiPhong.FormattingEnabled = true;
+            this.cbLoaiPhong.Location = new System.Drawing.Point(352, 430);
+            this.cbLoaiPhong.Name = "cbLoaiPhong";
+            this.cbLoaiPhong.Size = new System.Drawing.Size(488, 45);
+            this.cbLoaiPhong.TabIndex = 3;
+            this.cbLoaiPhong.SelectedIndexChanged += new System.EventHandler(this.cbLoaiPhong_SelectedIndexChanged);
             // 
-            // lblBedType
+            // label2
             // 
-            this.lblBedType.AutoSize = true;
-            this.lblBedType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBedType.Location = new System.Drawing.Point(39, 262);
-            this.lblBedType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblBedType.Name = "lblBedType";
-            this.lblBedType.Size = new System.Drawing.Size(119, 25);
-            this.lblBedType.TabIndex = 6;
-            this.lblBedType.Text = "Loại giường:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(26, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(333, 51);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Quản Lý Phòng";
             // 
-            // cmbBedType
+            // label3
             // 
-            this.cmbBedType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbBedType.FormattingEnabled = true;
-            this.cmbBedType.Items.AddRange(new object[] {
-            "Single bed",
-            "Double bed",
-            "Queen size bed",
-            "King size bed",
-            "Super king size bed"});
-            this.cmbBedType.Location = new System.Drawing.Point(213, 262);
-            this.cmbBedType.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbBedType.Name = "cmbBedType";
-            this.cmbBedType.Size = new System.Drawing.Size(325, 33);
-            this.cmbBedType.TabIndex = 4;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(84, 266);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(248, 37);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Tên khách hàng";
             // 
-            // lblCheckIn
+            // label4
             // 
-            this.lblCheckIn.AutoSize = true;
-            this.lblCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCheckIn.Location = new System.Drawing.Point(614, 54);
-            this.lblCheckIn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCheckIn.Name = "lblCheckIn";
-            this.lblCheckIn.Size = new System.Drawing.Size(113, 25);
-            this.lblCheckIn.TabIndex = 8;
-            this.lblCheckIn.Text = "Ngày nhận:";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(84, 345);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(205, 37);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Số điện thoại";
             // 
-            // dtpCheckIn
+            // label5
             // 
-            this.dtpCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpCheckIn.Location = new System.Drawing.Point(741, 50);
-            this.dtpCheckIn.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpCheckIn.Name = "dtpCheckIn";
-            this.dtpCheckIn.Size = new System.Drawing.Size(333, 30);
-            this.dtpCheckIn.TabIndex = 9;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(84, 430);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(180, 37);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Loại Phòng";
             // 
-            // lblCheckOut
+            // label6
             // 
-            this.lblCheckOut.AutoSize = true;
-            this.lblCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCheckOut.Location = new System.Drawing.Point(618, 110);
-            this.lblCheckOut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCheckOut.Name = "lblCheckOut";
-            this.lblCheckOut.Size = new System.Drawing.Size(91, 25);
-            this.lblCheckOut.TabIndex = 10;
-            this.lblCheckOut.Text = "Ngày trả:";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(84, 525);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 37);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Phòng";
             // 
-            // dtpCheckOut
+            // cbPhong
             // 
-            this.dtpCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpCheckOut.Location = new System.Drawing.Point(741, 110);
-            this.dtpCheckOut.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpCheckOut.Name = "dtpCheckOut";
-            this.dtpCheckOut.Size = new System.Drawing.Size(333, 30);
-            this.dtpCheckOut.TabIndex = 11;
+            this.cbPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPhong.FormattingEnabled = true;
+            this.cbPhong.Location = new System.Drawing.Point(352, 517);
+            this.cbPhong.Name = "cbPhong";
+            this.cbPhong.Size = new System.Drawing.Size(488, 45);
+            this.cbPhong.TabIndex = 3;
             // 
-            // lblPrice
+            // txtTenKhachHang
             // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(614, 184);
-            this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(84, 25);
-            this.lblPrice.TabIndex = 12;
-            this.lblPrice.Text = "Giá tiền:";
+            this.txtTenKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenKhachHang.Location = new System.Drawing.Point(352, 259);
+            this.txtTenKhachHang.Name = "txtTenKhachHang";
+            this.txtTenKhachHang.Size = new System.Drawing.Size(488, 44);
+            this.txtTenKhachHang.TabIndex = 2;
             // 
-            // dgvBookings
+            // txtSoDienThoai
             // 
-            this.dgvBookings.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvBookings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBookings.Location = new System.Drawing.Point(11, 411);
-            this.dgvBookings.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvBookings.Name = "dgvBookings";
-            this.dgvBookings.RowHeadersWidth = 51;
-            this.dgvBookings.RowTemplate.Height = 29;
-            this.dgvBookings.Size = new System.Drawing.Size(1117, 315);
-            this.dgvBookings.TabIndex = 17;
-            this.dgvBookings.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBookings_CellClick);
+            this.txtSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoDienThoai.Location = new System.Drawing.Point(352, 345);
+            this.txtSoDienThoai.Name = "txtSoDienThoai";
+            this.txtSoDienThoai.Size = new System.Drawing.Size(488, 44);
+            this.txtSoDienThoai.TabIndex = 2;
+            this.txtSoDienThoai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoDienThoai_KeyPress);
             // 
-            // btnAdd
+            // label7
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnAdd.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAdd.BorderRadius = 20;
-            this.btnAdd.BorderSize = 0;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(290, 340);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(150, 40);
-            this.btnAdd.TabIndex = 18;
-            this.btnAdd.Text = "Thêm";
-            this.btnAdd.TextColor = System.Drawing.Color.White;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(1200, 266);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(173, 37);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Ngày nhận";
             // 
-            // btnEdit
+            // label8
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnEdit.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnEdit.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnEdit.BorderRadius = 20;
-            this.btnEdit.BorderSize = 0;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(529, 340);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(150, 40);
-            this.btnEdit.TabIndex = 19;
-            this.btnEdit.Text = "Sửa";
-            this.btnEdit.TextColor = System.Drawing.Color.White;
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(1200, 345);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(139, 37);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Ngay tra";
             // 
-            // btnDelete
+            // label9
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDelete.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDelete.BorderRadius = 20;
-            this.btnDelete.BorderSize = 0;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(767, 340);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(150, 40);
-            this.btnDelete.TabIndex = 20;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.TextColor = System.Drawing.Color.White;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(1200, 430);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(127, 37);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Gía tiền";
             // 
-            // txtCustomerName
+            // txtGiaTien
             // 
-            this.txtCustomerName.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCustomerName.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtCustomerName.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtCustomerName.BorderRadius = 15;
-            this.txtCustomerName.BorderSize = 2;
-            this.txtCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCustomerName.Location = new System.Drawing.Point(213, 45);
-            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCustomerName.Multiline = false;
-            this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtCustomerName.PasswordChar = false;
-            this.txtCustomerName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtCustomerName.PlaceholderText = "";
-            this.txtCustomerName.Size = new System.Drawing.Size(325, 35);
-            this.txtCustomerName.TabIndex = 1;
-            this.txtCustomerName.Texts = "";
-            this.txtCustomerName.UnderlinedStyle = false;
-            this.txtCustomerName._TextChanged += new System.EventHandler(this.txtCustomerName__TextChanged);
+            this.txtGiaTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGiaTien.Location = new System.Drawing.Point(1436, 427);
+            this.txtGiaTien.Name = "txtGiaTien";
+            this.txtGiaTien.ReadOnly = true;
+            this.txtGiaTien.Size = new System.Drawing.Size(518, 44);
+            this.txtGiaTien.TabIndex = 2;
             // 
-            // txtPhoneNumber
+            // dtpNgayNhan
             // 
-            this.txtPhoneNumber.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPhoneNumber.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtPhoneNumber.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtPhoneNumber.BorderRadius = 15;
-            this.txtPhoneNumber.BorderSize = 2;
-            this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(213, 110);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPhoneNumber.Multiline = false;
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtPhoneNumber.PasswordChar = false;
-            this.txtPhoneNumber.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPhoneNumber.PlaceholderText = "";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(325, 35);
-            this.txtPhoneNumber.TabIndex = 2;
-            this.txtPhoneNumber.Texts = "";
-            this.txtPhoneNumber.UnderlinedStyle = false;
-            this.txtPhoneNumber._TextChanged += new System.EventHandler(this.txtPhoneNumber__TextChanged);
+            this.dtpNgayNhan.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayNhan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayNhan.Location = new System.Drawing.Point(1436, 256);
+            this.dtpNgayNhan.Name = "dtpNgayNhan";
+            this.dtpNgayNhan.Size = new System.Drawing.Size(518, 44);
+            this.dtpNgayNhan.TabIndex = 4;
+            this.dtpNgayNhan.ValueChanged += new System.EventHandler(this.dtpNgayNhan_ValueChanged);
             // 
-            // txtPrice
+            // dtpNgayTra
             // 
-            this.txtPrice.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPrice.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtPrice.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtPrice.BorderRadius = 15;
-            this.txtPrice.BorderSize = 2;
-            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPrice.Location = new System.Drawing.Point(741, 184);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPrice.Multiline = false;
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtPrice.PasswordChar = false;
-            this.txtPrice.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPrice.PlaceholderText = "";
-            this.txtPrice.Size = new System.Drawing.Size(340, 35);
-            this.txtPrice.TabIndex = 5;
-            this.txtPrice.Texts = "";
-            this.txtPrice.UnderlinedStyle = false;
-            this.txtPrice._TextChanged += new System.EventHandler(this.txtPrice__TextChanged);
+            this.dtpNgayTra.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayTra.Location = new System.Drawing.Point(1436, 339);
+            this.dtpNgayTra.Name = "dtpNgayTra";
+            this.dtpNgayTra.Size = new System.Drawing.Size(518, 44);
+            this.dtpNgayTra.TabIndex = 4;
+            this.dtpNgayTra.ValueChanged += new System.EventHandler(this.dtpNgayTra_ValueChanged);
+            // 
+            // dgvQuanLyPhong
+            // 
+            this.dgvQuanLyPhong.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvQuanLyPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvQuanLyPhong.Location = new System.Drawing.Point(92, 692);
+            this.dgvQuanLyPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvQuanLyPhong.Name = "dgvQuanLyPhong";
+            this.dgvQuanLyPhong.RowHeadersWidth = 51;
+            this.dgvQuanLyPhong.RowTemplate.Height = 24;
+            this.dgvQuanLyPhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvQuanLyPhong.Size = new System.Drawing.Size(2106, 992);
+            this.dgvQuanLyPhong.TabIndex = 5;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(1034, 597);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(196, 72);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // frmQuanLyPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1139, 737);
-            this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.txtPhoneNumber);
-            this.Controls.Add(this.txtCustomerName);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dgvBookings);
-            this.Controls.Add(this.lblPrice);
-            this.Controls.Add(this.dtpCheckOut);
-            this.Controls.Add(this.lblCheckOut);
-            this.Controls.Add(this.dtpCheckIn);
-            this.Controls.Add(this.lblCheckIn);
-            this.Controls.Add(this.cmbBedType);
-            this.Controls.Add(this.lblBedType);
-            this.Controls.Add(this.cmbRoomType);
-            this.Controls.Add(this.lblRoomType);
-            this.Controls.Add(this.lblPhoneNumber);
-            this.Controls.Add(this.lblCustomerName);
-            this.Cursor = System.Windows.Forms.Cursors.Help;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.ClientSize = new System.Drawing.Size(2306, 1648);
+            this.Controls.Add(this.dgvQuanLyPhong);
+            this.Controls.Add(this.dtpNgayTra);
+            this.Controls.Add(this.dtpNgayNhan);
+            this.Controls.Add(this.cbPhong);
+            this.Controls.Add(this.cbLoaiPhong);
+            this.Controls.Add(this.txtGiaTien);
+            this.Controls.Add(this.txtSoDienThoai);
+            this.Controls.Add(this.txtTenKhachHang);
+            this.Controls.Add(this.txtTimKhachHang);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
             this.Name = "frmQuanLyPhong";
-            this.Text = "Quản lý đặt phòng";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBookings)).EndInit();
+            this.Text = "Ngày trả";
+            this.Load += new System.EventHandler(this.frmQuanLyPhong_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyPhong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lblCustomerName;
-        private System.Windows.Forms.Label lblPhoneNumber;
-        private System.Windows.Forms.Label lblRoomType;
-        private System.Windows.Forms.ComboBox cmbRoomType;
-        private System.Windows.Forms.Label lblBedType;
-        private System.Windows.Forms.ComboBox cmbBedType;
-        private System.Windows.Forms.Label lblCheckIn;
-        private System.Windows.Forms.DateTimePicker dtpCheckIn;
-        private System.Windows.Forms.Label lblCheckOut;
-        private System.Windows.Forms.DateTimePicker dtpCheckOut;
-        private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.DataGridView dgvBookings;
-        private DataTable bookingTable; // Khai báo DataTable để lưu trữ dữ liệu
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private Components.VBButton btnAdd;
-        private Components.VBButton btnEdit;
-        private Components.VBButton btnDelete;
-        private Components.VBTextBox txtCustomerName;
-        private Components.VBTextBox txtPhoneNumber;
-        private Components.VBTextBox txtPrice;
-    }
 
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtTimKhachHang;
+        private System.Windows.Forms.ComboBox cbLoaiPhong;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbPhong;
+        private System.Windows.Forms.TextBox txtTenKhachHang;
+        private System.Windows.Forms.TextBox txtSoDienThoai;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtGiaTien;
+        private System.Windows.Forms.DateTimePicker dtpNgayNhan;
+        private System.Windows.Forms.DateTimePicker dtpNgayTra;
+        private System.Windows.Forms.DataGridView dgvQuanLyPhong;
+        private System.Windows.Forms.Button btnSave;
+    }
 }

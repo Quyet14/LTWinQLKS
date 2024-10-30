@@ -96,6 +96,12 @@
       <DependentUpon>DichVu.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanVien.cs" />
+    <Compile Include="NhanVien\frmQuanLyPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\frmQuanLyPhong.Designer.cs">
+      <DependentUpon>frmQuanLyPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanVien\frmXemPhongTrong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,12 +113,6 @@
     </Compile>
     <Compile Include="QuanLy\frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanVien\frmQuanLyPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NhanVien\frmQuanLyPhong.Designer.cs">
-      <DependentUpon>frmQuanLyPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLy\frmThemDichVu.cs">
       <SubType>Form</SubType>
