@@ -31,6 +31,7 @@ namespace QuanLyKhachSan
             {
                 rooms = rooms.Where(room => room.LoaiTinhTrangPhong?.TenTinhTrang == filter).ToList();
             }
+            rooms = rooms.Where(room => room.LoaiTinhTrangPhong?.TenTinhTrang != "Sửa chữa").ToList();
 
             // Clear any existing controls
             fpnlRoom.Controls.Clear();
@@ -52,7 +53,7 @@ namespace QuanLyKhachSan
                 card.lblRoom.Text = room.MaPhong;
 
                 // Set status based on TenTinhTrang
-                card.RoomStatus = room.LoaiTinhTrangPhong?.TenTinhTrang ?? "Phòng trống";
+                card.RoomStatus = room.LoaiTinhTrangPhong?.TenTinhTrang;
 
                 switch (card.RoomStatus)
                 {

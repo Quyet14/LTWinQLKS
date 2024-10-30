@@ -65,6 +65,15 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\CardRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\CardRoom.Designer.cs">
+      <DependentUpon>CardRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\RoundedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Components\VBButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -80,6 +89,12 @@
     <Compile Include="KhachHang\DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhachHang\frmDanhGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang\frmDanhGia.Designer.cs">
+      <DependentUpon>frmDanhGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="KhachHang\frmHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +108,12 @@
       <DependentUpon>DichVu.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanVien.cs" />
+    <Compile Include="NhanVien\frmPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\frmPhong.Designer.cs">
+      <DependentUpon>frmPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanVien\frmXemPhongTrong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +132,24 @@
     <Compile Include="NhanVien\frmQuanLyPhong.Designer.cs">
       <DependentUpon>frmQuanLyPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLy\frmQLLoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy\frmQLLoaiPhong.Designer.cs">
+      <DependentUpon>frmQLLoaiPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLy\frmQLPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy\frmQLPhong.Designer.cs">
+      <DependentUpon>frmQLPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLy\frmQuanLyDanhGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy\frmQuanLyDanhGia.Designer.cs">
+      <DependentUpon>frmQuanLyDanhGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrangChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,17 +158,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Components\CardRoom.resx">
+      <DependentUpon>CardRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\VBTextBox.resx">
       <DependentUpon>VBTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHang\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\frmDanhGia.resx">
+      <DependentUpon>frmDanhGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KhachHang\frmHoaDon.resx">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHang\DichVu.resx">
       <DependentUpon>DichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\frmPhong.resx">
+      <DependentUpon>frmPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\frmQuanLyPhong.resx">
       <DependentUpon>frmQuanLyPhong.cs</DependentUpon>
@@ -148,6 +196,15 @@
     </Compile>
     <EmbeddedResource Include="QuanLy\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLy\frmQLLoaiPhong.resx">
+      <DependentUpon>frmQLLoaiPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLy\frmQLPhong.resx">
+      <DependentUpon>frmQLPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLy\frmQuanLyDanhGia.resx">
+      <DependentUpon>frmQuanLyDanhGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChinh.resx">
       <DependentUpon>TrangChinh.cs</DependentUpon>

@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyKhachSan.QuanLy;
 
 namespace QuanLyKhachSan
 {
@@ -32,10 +33,7 @@ namespace QuanLyKhachSan
 
         private struct RGBColors
         {
-            public static Color color1 = Color.FromArgb(126, 245, 249);
-            public static Color color2 = Color.FromArgb(126, 245, 249);
-            public static Color color3 = Color.FromArgb(126, 245, 249);
-            public static Color color4 = Color.FromArgb(126, 245, 249);
+            public static Color color = Color.FromArgb(126, 245, 249);
         }
 
         private void ActivateButton(object senderBtn, Color color)
@@ -82,7 +80,7 @@ namespace QuanLyKhachSan
         {
             if (currentBtn != null)
             {
-                currentBtn.BackColor = Color.FromArgb(31, 30, 68);
+                currentBtn.BackColor = Color.FromArgb(51, 153, 255);
                 currentBtn.ForeColor = Color.Gainsboro;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = Color.Gainsboro;
@@ -126,12 +124,26 @@ namespace QuanLyKhachSan
                 FormBorderStyle = FormBorderStyle.Sizable;
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void btnPhong_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new frmXemPhongTrong());
+            ActivateButton(sender, RGBColors.color);
+            OpenChildForm(new frmPhong());
+        }
+        private void btnDatPhong_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color);
+            OpenChildForm(new frmQLPhong());    
+        }
+        private void btnLoaiPhong_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color);
+            OpenChildForm(new frmQLLoaiPhong());
         }
 
+        private void btnQLDichVu_Click(object sender, EventArgs e)
+        {
+
+        }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -160,6 +172,10 @@ namespace QuanLyKhachSan
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        
+
+
 
 
         //private void ShowDichVuForm()
