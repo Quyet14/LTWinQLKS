@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -117,6 +117,12 @@
     <Compile Include="NhanVien\frmPhong.Designer.cs">
       <DependentUpon>frmPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVien\frmQuanLyKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\frmQuanLyKhachHang.Designer.cs">
+      <DependentUpon>frmQuanLyKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanVien\frmXemPhongTrong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,7 @@
     </Compile>
     <Compile Include="QuanLy\frmQuanLyDanhGia.Designer.cs">
       <DependentUpon>frmQuanLyDanhGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLy\frmThemDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +194,9 @@
     <EmbeddedResource Include="NhanVien\frmPhong.resx">
       <DependentUpon>frmPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\frmQuanLyKhachHang.resx">
+      <DependentUpon>frmQuanLyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\frmQuanLyPhong.resx">
       <DependentUpon>frmQuanLyPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,13 +223,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLy\frmQuanLyDanhGia.resx">
       <DependentUpon>frmQuanLyDanhGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLy\frmThemDichVu.resx">
       <DependentUpon>frmThemDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChinh.resx">
       <DependentUpon>TrangChinh.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.Config" />
+    <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -151,24 +151,10 @@ namespace NguyenKhanhLong_qlks
             }
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+
+        private void frmNhanVien_Load_1(object sender, EventArgs e)
         {
-            if (dgvNhanVien.SelectedRows.Count > 0)
-            {
-                DialogResult dr = MessageBox.Show("Bạn có chắc xóa không?", "Xóa nhân viên", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dr == DialogResult.Yes)
-                {
-                    int selectedIndex = dgvNhanVien.SelectedRows[0].Index;
-                    dtNhanVien.Rows.RemoveAt(selectedIndex);
-                    hienThiNhanVien();
-                    setNull();
-                    MessageBox.Show("Xóa nhân viên thành công");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Bạn phải chọn mẫu tin cần xóa");
-            }
+
         }
     }
 
