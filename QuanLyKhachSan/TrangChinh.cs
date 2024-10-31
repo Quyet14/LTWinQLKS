@@ -164,10 +164,11 @@ namespace QuanLyKhachSan
                     btn1.Visible = btn2.Visible = true;
                     btn1.Text = "Khách Hàng";
                     btn2.Text = "Đặt Phòng";
+                    btn3.Text = "Hóa Đơn";
 
                     btn1.IconChar = IconChar.UserPlus;
                     btn2.IconChar = IconChar.DoorClosed;
-
+                    btn3.IconChar = IconChar.MoneyBill;
                     btn1.Click += (s, e) =>
                     {
                         ActivateButton(btn1, RGBColors.color);
@@ -177,6 +178,11 @@ namespace QuanLyKhachSan
                     {
                         ActivateButton(btn2, RGBColors.color);
                         OpenChildForm(new frmPhong(UserId));
+                    };
+                    btn3.Click += (s, e) =>
+                    {
+                        ActivateButton(btn3, RGBColors.color);
+                        OpenChildForm(new XuatHoaDon());
                     };
                     break;
 
