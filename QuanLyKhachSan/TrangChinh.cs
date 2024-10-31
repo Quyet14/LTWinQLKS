@@ -9,7 +9,6 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using NguyenKhanhLong_qlks;
 using QuanLyKhachSan.Khachhang;
 using QuanLyKhachSan.NhanVien;
 using QuanLyKhachSan.QuanLy;
@@ -146,12 +145,12 @@ namespace QuanLyKhachSan
                     btn1.Click += (s, e) =>
                     {
                         ActivateButton(btn1, RGBColors.color);
-                        OpenChildForm(new DichVu());
+                        OpenChildForm(new DichVu(UserId));
                     };
                     btn2.Click += (s, e) =>
                     {
                         ActivateButton(btn2, RGBColors.color); 
-                        OpenChildForm(new frmHoaDon());
+                        OpenChildForm(new frmHoaDon(UserId));
                     };
                     btn3.Click += (s, e) =>
                     {

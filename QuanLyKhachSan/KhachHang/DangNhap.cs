@@ -110,5 +110,9 @@ namespace QuanLyKhachSan
             Application.Exit();
         }
 
+        private void DangNhap_Load(object sender, EventArgs e)
+        {
+            QuanLyKhachSanDB context = new QuanLyKhachSanDB(); 
+        }
     }
 }
