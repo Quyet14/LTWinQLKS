@@ -86,6 +86,7 @@ namespace QuanLyKhachSan
             BindGrid(listPhieuDatPhong);
             List<ChiTietDichVu> listChiTietDichVu = context.ChiTietDichVus.ToList();
             BindGrid2(listChiTietDichVu);
+            int b;
         }
 
         private void dgvDichVu_CellContentClick(object sender, DataGridViewCellEventArgs e)

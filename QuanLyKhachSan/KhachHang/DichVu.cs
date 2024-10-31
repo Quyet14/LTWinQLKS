@@ -93,6 +93,7 @@ namespace QuanLyKhachSan
         {
             List<DoAnN6_QLKS_DAL.Entity.DichVu> listDichVu = context.DichVus.ToList();
             FillDichVuCombobox(listDichVu);
+            int a;
 
         }
 
