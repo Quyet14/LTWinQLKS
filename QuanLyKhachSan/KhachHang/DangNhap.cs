@@ -6,6 +6,7 @@ using System.Data.Entity.ModelConfiguration.Configuration;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.Remoting;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -39,7 +40,7 @@ namespace QuanLyKhachSan
         {
             // Get username and password from text boxes
             string username = txtUsername.Texts;
-            string password = txtPassword.Texts;
+            string password = HashPasswordSHA256(txtPassword.Texts);
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
@@ -109,6 +110,22 @@ namespace QuanLyKhachSan
         {
             Application.Exit();
         }
+        public static string HashPasswordSHA256(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                foreach (byte b in bytes)
+                {
+                    builder.Append(b.ToString("x2"));
+                }
+                return builder.ToString().Substring(0, 50); // Truncate to 50 characters
+            }
+        }
+        private void DangNhap_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

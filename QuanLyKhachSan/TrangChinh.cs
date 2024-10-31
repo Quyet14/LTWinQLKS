@@ -9,7 +9,6 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using NguyenKhanhLong_qlks;
 using QuanLyKhachSan.Khachhang;
 using QuanLyKhachSan.NhanVien;
 using QuanLyKhachSan.QuanLy;
@@ -146,12 +145,12 @@ namespace QuanLyKhachSan
                     btn1.Click += (s, e) =>
                     {
                         ActivateButton(btn1, RGBColors.color);
-                        OpenChildForm(new DichVu());
+                        OpenChildForm(new DichVu(UserId));
                     };
                     btn2.Click += (s, e) =>
                     {
                         ActivateButton(btn2, RGBColors.color); 
-                        OpenChildForm(new frmHoaDon());
+                        OpenChildForm(new frmHoaDon(UserId));
                     };
                     btn3.Click += (s, e) =>
                     {
@@ -165,10 +164,11 @@ namespace QuanLyKhachSan
                     btn1.Visible = btn2.Visible = true;
                     btn1.Text = "Khách Hàng";
                     btn2.Text = "Đặt Phòng";
+                    btn3.Text = "Hóa Đơn";
 
                     btn1.IconChar = IconChar.UserPlus;
                     btn2.IconChar = IconChar.DoorClosed;
-
+                    btn3.IconChar = IconChar.MoneyBill;
                     btn1.Click += (s, e) =>
                     {
                         ActivateButton(btn1, RGBColors.color);
@@ -178,6 +178,11 @@ namespace QuanLyKhachSan
                     {
                         ActivateButton(btn2, RGBColors.color);
                         OpenChildForm(new frmPhong(UserId));
+                    };
+                    btn3.Click += (s, e) =>
+                    {
+                        ActivateButton(btn3, RGBColors.color);
+                        OpenChildForm(new XuatHoaDon());
                     };
                     break;
 
@@ -282,6 +287,11 @@ namespace QuanLyKhachSan
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

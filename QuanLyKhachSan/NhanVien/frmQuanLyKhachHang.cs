@@ -20,6 +20,7 @@ namespace QuanLyKhachSan.NhanVien
             InitializeComponent();
         }
         QuanLyKhachSanDB context = new QuanLyKhachSanDB();
+
         private void frmQuanLyKhachSan_Load(object sender, EventArgs e)
         {
             List<DoAnN6_QLKS_DAL.Entity.KhachHang> listKhachHang = context.KhachHangs.ToList();
@@ -86,11 +87,33 @@ namespace QuanLyKhachSan.NhanVien
                 MessageBox.Show("Số điện thoại không hợp lệ. Số điện thoại Việt Nam phải bắt đầu bằng 0 và có từ 10 đến 11 chữ số.");
                 return false;
             }
-
+            DoAnN6_QLKS_DAL.Entity.KhachHang NV = context.KhachHangs.FirstOrDefault(p => p.SoDienThoai == txtSDT.Texts);
+            if (NV != null)
+            {
+                MessageBox.Show("Số điện thoại không được trùng. Vui lòng chọn số điện thoại khác");
+                return false;
+            }
             // Kiểm tra txtEmail (Email phải đúng định dạng)
             if (!Regex.IsMatch(txtEmail.Texts, @"^[^@\s]+@[^@\s]+\.[^@\s]+$")) // Định dạng email cơ bản
             {
                 MessageBox.Show("Email không hợp lệ. Vui lòng nhập đúng định dạng email.");
+                return false;
+            }
+            DoAnN6_QLKS_DAL.Entity.KhachHang NV1 = context.KhachHangs.FirstOrDefault(p => p.Email == txtEmail.Texts);
+            if (NV1 != null)
+            {
+                MessageBox.Show("Email không được trùng, vui lòng chọn Email khác ");
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(txtCMND.Texts))
+            {
+                MessageBox.Show("CMND không được để trống, vui lòng nhập");
+                return false;
+            }
+            DoAnN6_QLKS_DAL.Entity.KhachHang NV2 = context.KhachHangs.FirstOrDefault(p => p.CMND == txtCMND.Texts);
+            if (NV2 != null)
+            {
+                MessageBox.Show("CMND không được trùng, vui lòng nhập CMND khác");
                 return false;
             }
 
