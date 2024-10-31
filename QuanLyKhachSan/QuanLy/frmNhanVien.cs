@@ -76,9 +76,10 @@ namespace QuanLyKhachSan.QuanLy
                     GioiTinh = rbFemale.Checked ? "Nữ" : "Nam",
                     DiaChi = txtDiaChi.Texts,
                     SoDienThoai = txtSDT.Texts,
-                    Email = txtEmail.Text,
-                    CMND = txtCMND.Text,
-                    perm = a
+                    Email = txtEmail.Texts,
+                    CMND = txtCMND.Texts,
+                    perm = a,
+                    Active = default
                 };
                 context.NhanViens.Add(NV);
                 context.SaveChanges();
@@ -154,6 +155,7 @@ namespace QuanLyKhachSan.QuanLy
                 {
                     NV.perm = 1;
                 }
+                NV.Active = default;
                 context.SaveChanges();
                 MessageBox.Show("Thay đổi dữ liệu thành công!", "Thông Báo", MessageBoxButtons.OK);
 
