@@ -1,156 +1,175 @@
-﻿using System;
+﻿using DoAnN6_QLKS_DAL.Entity;
+using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 
-namespace NguyenKhanhLong_qlks
+namespace QuanLyKhachSan.QuanLy
 {
     public partial class frmNhanVien : Form
     {
-        public bool themmoi = false;
-        private DataTable dtNhanVien = new DataTable();
-
+        //public bool themmoi = false;
+        //private DataTable dtNhanVien = new DataTable();
+        QuanLyKhachSanDB context = new QuanLyKhachSanDB();
         public frmNhanVien()
         {
             InitializeComponent();
 
             // Khởi tạo DataGridView
-            dgvNhanVien.ColumnCount = 5;
-            dgvNhanVien.Columns[0].Name = "Mã NV";
-            dgvNhanVien.Columns[1].Name = "Họ tên";
-            dgvNhanVien.Columns[2].Name = "Ngày sinh";
-            dgvNhanVien.Columns[3].Name = "Địa chỉ";
-            dgvNhanVien.Columns[4].Name = "SĐT";
+            //dgvNhanVien.ColumnCount = 5;
+            //dgvNhanVien.Columns[0].Name = "Mã NV";
+            //dgvNhanVien.Columns[1].Name = "Họ tên";
+            //dgvNhanVien.Columns[2].Name = "Ngày sinh";
+            //dgvNhanVien.Columns[3].Name = "Địa chỉ";
+            //dgvNhanVien.Columns[4].Name = "SĐT";
 
-            // Khởi tạo cột cho DataTable
-            dtNhanVien.Columns.Add("MaNV", typeof(string));
-            dtNhanVien.Columns.Add("HoTen", typeof(string));
-            dtNhanVien.Columns.Add("NgaySinh", typeof(DateTime));
-            dtNhanVien.Columns.Add("DiaChi", typeof(string));
-            dtNhanVien.Columns.Add("SĐT", typeof(string));
+            //// Khởi tạo cột cho DataTable
+            //dtNhanVien.Columns.Add("MaNV", typeof(string));
+            //dtNhanVien.Columns.Add("HoTen", typeof(string));
+            //dtNhanVien.Columns.Add("NgaySinh", typeof(DateTime));
+            //dtNhanVien.Columns.Add("DiaChi", typeof(string));
+            //dtNhanVien.Columns.Add("SĐT", typeof(string));
         }
-
-        private void frmNhanVien_Load(object sender, EventArgs e)
+        private int GetSelectedRow(string MaKhachHang)
         {
-            hienThiNhanVien(); // Gọi hàm để hiển thị danh sách nhân viên
-        }
-
-        private DataTable LayDSChucVu()
-        {
-            DataTable dtChucVu = new DataTable();
-            dtChucVu.Columns.Add("MaChucVu", typeof(string));
-            dtChucVu.Columns.Add("TenChucVu", typeof(string));
-            dtChucVu.Rows.Add("CV01", "Quản lý");
-            dtChucVu.Rows.Add("CV02", "Nhân viên lễ tân");
-            dtChucVu.Rows.Add("CV03", "Nhân viên dọn phòng");
-
-            return dtChucVu;
-        }
-
-        private void hienThiNhanVien()
-        {
-            dgvNhanVien.Rows.Clear();
-            foreach (DataRow row in dtNhanVien.Rows)
+            for (int i = 0; i < dgvNhanVien.Rows.Count; i++)
             {
-                dgvNhanVien.Rows.Add(row["MaNV"], row["HoTen"], ((DateTime)row["NgaySinh"]).ToString("MM/dd/yyyy"), row["DiaChi"], row["SĐT"]);
-            }
-        }
-
-        private void setNull()
-        {
-            txtHoten.Text = "";
-            txtDiaChi.Text = "";
-        }
-
-        private void setButton(bool val)
-        {
-            btnThem.Enabled = val;
-            btnSua.Enabled = val;
-        }
-
-       
-
-        private void btnThem_Click_1(object sender, EventArgs e)
-        {
-            // Kiểm tra thông tin đã được nhập đầy đủ
-            if (string.IsNullOrWhiteSpace(txtMaNhanVien.Text) ||
-                string.IsNullOrWhiteSpace(txtHoten.Text) ||
-                string.IsNullOrWhiteSpace(txtDiaChi.Text))
-            {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Kiểm tra xem mã nhân viên đã tồn tại hay chưa
-            foreach (DataRow existingRow in dtNhanVien.Rows) // Đổi tên biến thành existingRow
-            {
-                if (existingRow["MaNV"].ToString() == txtMaNhanVien.Text)
+                if (dgvNhanVien.Rows[i].Cells[0].Value != null)
                 {
-                    MessageBox.Show("Mã nhân viên đã tồn tại. Vui lòng nhập mã khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
+                    if (dgvNhanVien.Rows[i].Cells[0].Value.ToString() == MaKhachHang)
+                    {
+                        return i;
+                    }
                 }
             }
-
-            // Tạo một dòng mới và thêm vào DataTable
-            DataRow newRow = dtNhanVien.NewRow();
-            newRow["MaNV"] = txtMaNhanVien.Text; // Lấy mã nhân viên từ textbox
-            newRow["HoTen"] = txtHoten.Text;
-            newRow["DiaChi"] = txtDiaChi.Text;
-            newRow["SĐT"] = txtSDT.Text;
-            dtNhanVien.Rows.Add(newRow);
-
-            // Cập nhật DataGridView
-            hienThiNhanVien();
-            setNull(); // Xóa các trường nhập liệu
-            setButton(true); // Kích hoạt lại các nút
-
-            MessageBox.Show("Thêm mới nhân viên thành công");
+            return -1;
         }
-
-        private void btnLuu_Click(object sender, EventArgs e)
+        public void clearData()
         {
-            if (dgvNhanVien.SelectedRows.Count > 0)
+            txtMaNhanVien.Texts = String.Empty;
+            txtHoten.Texts = String.Empty;
+            txtCMND.Texts = String.Empty;
+            txtDiaChi.Texts = String.Empty;
+            txtEmail.Texts = String.Empty;
+            txtMatKhau.Texts = String.Empty;
+            rbMale.Checked = true;
+        }
+        private void btnThem_Click_1(object sender, EventArgs e)
+        {
+            int selectedRow = GetSelectedRow(txtMaNhanVien.Text);
+            if (selectedRow == -1)
             {
-                int selectedIndex = dgvNhanVien.SelectedRows[0].Index;
-                DataRow updatedRow = dtNhanVien.Rows[selectedIndex]; // Đổi tên biến ở đây
+                int a;
+                if(cmbQuyen.Text == "Quản lý")
+                {
+                    a = 0;
+                }
+                else
+                {
+                    a = 1;
+                }
+                DoAnN6_QLKS_DAL.Entity.NhanVien NV = new DoAnN6_QLKS_DAL.Entity.NhanVien()
+                {
+                    MaNhanVien = int.Parse(txtMaNhanVien.Texts),
+                    HoTen = txtHoten.Texts,
+                    GioiTinh = rbFemale.Checked ? "Nữ" : "Nam",
+                    DiaChi = txtDiaChi.Texts,
+                    SoDienThoai = txtSDT.Texts,
+                    Email = txtEmail.Texts,
+                    CMND = txtCMND.Texts,
+                    perm = a,
+                    Active = default
+                };
+                context.NhanViens.Add(NV);
+                context.SaveChanges();
 
-                // Cập nhật thông tin của nhân viên
-                updatedRow["HoTen"] = txtHoten.Text;
-                updatedRow["DiaChi"] = txtDiaChi.Text;
-                updatedRow["SĐT"] = txtSDT.Text; // Cập nhật số điện thoại
+                MessageBox.Show("Thêm mới dữ liệu thành công!", "Thông Báo", MessageBoxButtons.OK);
 
-                // Cập nhật DataGridView
-                hienThiNhanVien();
-                setNull(); // Xóa các trường nhập liệu
-                MessageBox.Show("Cập nhật nhân viên thành công");
-            }
-            else
-            {
-                MessageBox.Show("Bạn phải chọn mẫu tin cần cập nhật");
+                List<DoAnN6_QLKS_DAL.Entity.NhanVien> listNhanVien = context.NhanViens.ToList();
+                BindGrid(listNhanVien);
+                clearData();
             }
         }
-
-        private void btnSua_Click(object sender, EventArgs e)
+        private void BindGrid(List<DoAnN6_QLKS_DAL.Entity.NhanVien> listNhanVien)
         {
-            if (dgvNhanVien.SelectedRows.Count > 0)
+            dgvNhanVien.Rows.Clear();
+            foreach (var item in listNhanVien)
             {
-                // Lấy thông tin nhân viên đã chọn và điền vào form
-                int selectedIndex = dgvNhanVien.SelectedRows[0].Index;
-                DataRow selectedRow = dtNhanVien.Rows[selectedIndex]; // Đổi tên biến ở đây
-                txtHoten.Text = selectedRow["HoTen"].ToString();
-                
-                txtDiaChi.Text = selectedRow["DiaChi"].ToString();
-                txtSDT.Text = selectedRow["SĐT"].ToString();
-            }
-            else
-            {
-                MessageBox.Show("Bạn phải chọn mẫu tin cập nhật", "Sửa mẫu tin");
+                if(item.Active) { 
+                    int index = dgvNhanVien.Rows.Add();
+                    dgvNhanVien.Rows[index].Cells[0].Value = item.MaNhanVien;
+                    dgvNhanVien.Rows[index].Cells[1].Value = item.HoTen;
+                    dgvNhanVien.Rows[index].Cells[2].Value = item.GioiTinh;
+                    dgvNhanVien.Rows[index].Cells[3].Value = item.DiaChi;
+                    dgvNhanVien.Rows[index].Cells[4].Value = item.SoDienThoai;
+                    dgvNhanVien.Rows[index].Cells[5].Value = item.Email;
+                    dgvNhanVien.Rows[index].Cells[6].Value = item.CMND;
+                    if(item.perm == 0)
+                    {
+                        dgvNhanVien.Rows[index].Cells[7].Value = "Quản lý";
+                    }
+                    else
+                    {
+                        dgvNhanVien.Rows[index].Cells[7].Value = "Nhân viên";
+                    }
+                }
             }
         }
 
 
         private void frmNhanVien_Load_1(object sender, EventArgs e)
         {
+            List<DoAnN6_QLKS_DAL.Entity.NhanVien> listNhanVien = context.NhanViens.ToList();
+            BindGrid(listNhanVien);
+            rbMale.Checked = true;
 
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            int selectedRow = GetSelectedRow(txtMaNhanVien.Texts);
+            if (selectedRow != -1)
+            {
+                int a = int.Parse(txtMaNhanVien.Texts);
+                DoAnN6_QLKS_DAL.Entity.NhanVien NV = context.NhanViens.FirstOrDefault(p => p.MaNhanVien == a);
+                NV.HoTen = txtHoten.Texts;
+                if (rbFemale.Checked)
+                {
+                    NV.GioiTinh = "Nữ";
+                }
+                else
+                {
+                    NV.GioiTinh = "Nam";
+                }
+                NV.DiaChi = txtDiaChi.Text;
+                NV.Email = txtEmail.Text;
+                NV.SoDienThoai = txtSDT.Text;
+                NV.CMND = txtCMND.Text;
+                NV.Password = txtMatKhau.Texts;
+                if(cmbQuyen.Text == "Quản lý")
+                {
+                    NV.perm = 0;
+                }
+                else
+                {
+                    NV.perm = 1;
+                }
+                NV.Active = default;
+                context.SaveChanges();
+                MessageBox.Show("Thay đổi dữ liệu thành công!", "Thông Báo", MessageBoxButtons.OK);
+
+                List<DoAnN6_QLKS_DAL.Entity.NhanVien> listNhanVien = context.NhanViens.ToList();
+                BindGrid(listNhanVien);
+                clearData();
+            }
+        }
+
+        private void btnActive_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(txtMaNhanVien.Texts);
+            DoAnN6_QLKS_DAL.Entity.NhanVien NV = context.NhanViens.FirstOrDefault(p => p.MaNhanVien == a);
+            NV.Active = false;
         }
     }
 

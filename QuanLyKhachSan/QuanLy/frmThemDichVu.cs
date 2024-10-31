@@ -56,15 +56,15 @@ namespace QuanLyKhachSan.QuanLy
         {
             // Kiểm tra bắt buộc phải nhập
             if (
-                string.IsNullOrWhiteSpace(txtTenDichVu.Text) ||
-                string.IsNullOrWhiteSpace(txtDonGia.Text))
+                string.IsNullOrWhiteSpace(txtTenDichVu.Texts) ||
+                string.IsNullOrWhiteSpace(txtDonGia.Texts))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             // Kiểm tra giá có phải là số hợp lệ không
-            if (!decimal.TryParse(txtDonGia.Text, out decimal donGia))
+            if (!decimal.TryParse(txtDonGia.Texts, out decimal donGia))
             {
                 MessageBox.Show("Đơn giá phải là số!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
