@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btn5 = new FontAwesome.Sharp.IconButton();
             this.btn4 = new FontAwesome.Sharp.IconButton();
             this.btn3 = new FontAwesome.Sharp.IconButton();
             this.btn2 = new FontAwesome.Sharp.IconButton();
@@ -40,7 +41,6 @@
             this.lblHome = new System.Windows.Forms.Label();
             this.iconHome = new FontAwesome.Sharp.IconPictureBox();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.btn5 = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
@@ -63,6 +63,27 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(303, 944);
             this.panelMenu.TabIndex = 4;
+            // 
+            // btn5
+            // 
+            this.btn5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn5.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn5.FlatAppearance.BorderSize = 0;
+            this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn5.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn5.ForeColor = System.Drawing.Color.White;
+            this.btn5.IconChar = FontAwesome.Sharp.IconChar.ListCheck;
+            this.btn5.IconColor = System.Drawing.Color.White;
+            this.btn5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn5.Location = new System.Drawing.Point(0, 658);
+            this.btn5.Name = "btn5";
+            this.btn5.Size = new System.Drawing.Size(303, 99);
+            this.btn5.TabIndex = 6;
+            this.btn5.Text = "QL Dịch vụ";
+            this.btn5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn5.UseVisualStyleBackColor = false;
             // 
             // btn4
             // 
@@ -247,27 +268,6 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1465, 840);
             this.panelMain.TabIndex = 8;
-            // 
-            // btn5
-            // 
-            this.btn5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn5.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn5.FlatAppearance.BorderSize = 0;
-            this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn5.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5.ForeColor = System.Drawing.Color.White;
-            this.btn5.IconChar = FontAwesome.Sharp.IconChar.ListCheck;
-            this.btn5.IconColor = System.Drawing.Color.White;
-            this.btn5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn5.Location = new System.Drawing.Point(0, 658);
-            this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(303, 99);
-            this.btn5.TabIndex = 6;
-            this.btn5.Text = "QL Dịch vụ";
-            this.btn5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn5.UseVisualStyleBackColor = false;
             // 
             // TrangChinh
             // 

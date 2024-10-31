@@ -70,16 +70,23 @@ namespace QuanLyKhachSan
                     }
                 }
 
-
-                KhachHang khachHang = customerServices.AuthenticateCustomer(username, password);
+                bool hasActiveBooking;
+                KhachHang khachHang = customerServices.AuthenticateCustomer(username, password,out hasActiveBooking);
 
                 if (khachHang != null)
                 {
-                    IsLoginSuccessful = true;
-                    IsCustomer = true;
-                    UserId = khachHang.MaKhachHang;
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
+                    if (hasActiveBooking)
+                    {
+                        IsLoginSuccessful = true;
+                        IsCustomer = true;
+                        UserId = khachHang.MaKhachHang;
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("You can only log in during your booked stay. Please check your booking dates.");
+                    }
                     return;
                 }
 

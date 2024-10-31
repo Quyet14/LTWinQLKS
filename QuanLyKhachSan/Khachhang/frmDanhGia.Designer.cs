@@ -35,11 +35,6 @@
             this.iconStar5 = new FontAwesome.Sharp.IconPictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnSearch = new QuanLyKhachSan.Components.VBButton();
-            this.txtCustomerId = new QuanLyKhachSan.Components.VBTextBox();
-            this.txtCustomerName = new QuanLyKhachSan.Components.VBTextBox();
             this.btnSubmit = new QuanLyKhachSan.Components.VBButton();
             this.txtFeedback = new QuanLyKhachSan.Components.VBTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.iconStar1)).BeginInit();
@@ -59,7 +54,7 @@
             this.iconStar1.IconColor = System.Drawing.Color.Yellow;
             this.iconStar1.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconStar1.IconSize = 50;
-            this.iconStar1.Location = new System.Drawing.Point(231, 390);
+            this.iconStar1.Location = new System.Drawing.Point(57, 110);
             this.iconStar1.Name = "iconStar1";
             this.iconStar1.Size = new System.Drawing.Size(50, 50);
             this.iconStar1.TabIndex = 0;
@@ -76,7 +71,7 @@
             this.iconStar3.IconColor = System.Drawing.Color.Yellow;
             this.iconStar3.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconStar3.IconSize = 50;
-            this.iconStar3.Location = new System.Drawing.Point(357, 390);
+            this.iconStar3.Location = new System.Drawing.Point(183, 110);
             this.iconStar3.Name = "iconStar3";
             this.iconStar3.Size = new System.Drawing.Size(50, 50);
             this.iconStar3.TabIndex = 1;
@@ -94,7 +89,7 @@
             this.iconStar2.IconColor = System.Drawing.Color.Yellow;
             this.iconStar2.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconStar2.IconSize = 50;
-            this.iconStar2.Location = new System.Drawing.Point(294, 390);
+            this.iconStar2.Location = new System.Drawing.Point(120, 110);
             this.iconStar2.Name = "iconStar2";
             this.iconStar2.Size = new System.Drawing.Size(50, 50);
             this.iconStar2.TabIndex = 2;
@@ -111,7 +106,7 @@
             this.iconStar4.IconColor = System.Drawing.Color.Yellow;
             this.iconStar4.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconStar4.IconSize = 50;
-            this.iconStar4.Location = new System.Drawing.Point(420, 390);
+            this.iconStar4.Location = new System.Drawing.Point(246, 110);
             this.iconStar4.Name = "iconStar4";
             this.iconStar4.Size = new System.Drawing.Size(50, 50);
             this.iconStar4.TabIndex = 3;
@@ -128,7 +123,7 @@
             this.iconStar5.IconColor = System.Drawing.Color.Yellow;
             this.iconStar5.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconStar5.IconSize = 50;
-            this.iconStar5.Location = new System.Drawing.Point(483, 390);
+            this.iconStar5.Location = new System.Drawing.Point(309, 110);
             this.iconStar5.Name = "iconStar5";
             this.iconStar5.Size = new System.Drawing.Size(50, 50);
             this.iconStar5.TabIndex = 4;
@@ -141,7 +136,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Quicksand", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblTitle.Location = new System.Drawing.Point(211, 322);
+            this.lblTitle.Location = new System.Drawing.Point(37, 42);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(951, 55);
             this.lblTitle.TabIndex = 6;
@@ -153,102 +148,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Quicksand", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(211, 443);
+            this.label1.Location = new System.Drawing.Point(37, 163);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(956, 55);
             this.label1.TabIndex = 7;
             this.label1.Text = "Hãy cho chúng tôi lắng nghe thêm ý kiến từ quý khách";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Quicksand", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(211, 190);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(343, 55);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Tên của quý khách";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Quicksand", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(211, 60);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(292, 55);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Mã Khách hàng";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSearch.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnSearch.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnSearch.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSearch.BorderRadius = 20;
-            this.btnSearch.BorderSize = 0;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(624, 130);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(146, 56);
-            this.btnSearch.TabIndex = 15;
-            this.btnSearch.Text = "Tìm";
-            this.btnSearch.TextColor = System.Drawing.Color.White;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // txtCustomerId
-            // 
-            this.txtCustomerId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCustomerId.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCustomerId.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtCustomerId.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtCustomerId.BorderRadius = 20;
-            this.txtCustomerId.BorderSize = 2;
-            this.txtCustomerId.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCustomerId.Location = new System.Drawing.Point(221, 130);
-            this.txtCustomerId.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCustomerId.Multiline = false;
-            this.txtCustomerId.Name = "txtCustomerId";
-            this.txtCustomerId.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtCustomerId.PasswordChar = false;
-            this.txtCustomerId.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtCustomerId.PlaceholderText = "";
-            this.txtCustomerId.Size = new System.Drawing.Size(272, 56);
-            this.txtCustomerId.TabIndex = 14;
-            this.txtCustomerId.Texts = "";
-            this.txtCustomerId.UnderlinedStyle = false;
-            // 
-            // txtCustomerName
-            // 
-            this.txtCustomerName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCustomerName.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCustomerName.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtCustomerName.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtCustomerName.BorderRadius = 20;
-            this.txtCustomerName.BorderSize = 2;
-            this.txtCustomerName.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCustomerName.Location = new System.Drawing.Point(221, 262);
-            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCustomerName.Multiline = false;
-            this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtCustomerName.PasswordChar = false;
-            this.txtCustomerName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtCustomerName.PlaceholderText = "";
-            this.txtCustomerName.Size = new System.Drawing.Size(549, 56);
-            this.txtCustomerName.TabIndex = 11;
-            this.txtCustomerName.Texts = "";
-            this.txtCustomerName.UnderlinedStyle = false;
             // 
             // btnSubmit
             // 
@@ -262,7 +166,7 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(1180, 821);
+            this.btnSubmit.Location = new System.Drawing.Point(1006, 541);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(149, 52);
             this.btnSubmit.TabIndex = 10;
@@ -281,7 +185,7 @@
             this.txtFeedback.BorderSize = 2;
             this.txtFeedback.Font = new System.Drawing.Font("Quicksand", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFeedback.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtFeedback.Location = new System.Drawing.Point(221, 513);
+            this.txtFeedback.Location = new System.Drawing.Point(47, 233);
             this.txtFeedback.Margin = new System.Windows.Forms.Padding(4);
             this.txtFeedback.Multiline = true;
             this.txtFeedback.Name = "txtFeedback";
@@ -298,13 +202,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(168F, 168F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1595, 903);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.txtCustomerId);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCustomerName);
+            this.ClientSize = new System.Drawing.Size(1209, 623);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtFeedback);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitle);
@@ -335,11 +234,6 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label1;
         private Components.VBTextBox txtFeedback;
-        private System.Windows.Forms.Label label2;
         private Components.VBButton btnSubmit;
-        private Components.VBTextBox txtCustomerName;
-        private System.Windows.Forms.Label label3;
-        private Components.VBTextBox txtCustomerId;
-        private Components.VBButton btnSearch;
     }
 }

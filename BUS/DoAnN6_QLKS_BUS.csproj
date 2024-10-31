@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bookingServices.cs" />
     <Compile Include="chamCongServices.cs" />
     <Compile Include="customerServices.cs" />
     <Compile Include="DanhGiaServices.cs" />
