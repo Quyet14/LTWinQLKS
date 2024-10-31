@@ -113,6 +113,12 @@
     <Compile Include="KhachHang\DichVu.Designer.cs">
       <DependentUpon>DichVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVien\frmDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\frmDatPhong.Designer.cs">
+      <DependentUpon>frmDatPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanVien\frmPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,12 @@
     <Compile Include="QuanLy\frmQLDanhGia.Designer.cs">
       <DependentUpon>frmQLDanhGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLy\frmThemDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy\frmThemDichVu.Designer.cs">
+      <DependentUpon>frmThemDichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrangChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +181,9 @@
     <EmbeddedResource Include="KhachHang\DichVu.resx">
       <DependentUpon>DichVu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\frmDatPhong.resx">
+      <DependentUpon>frmDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\frmPhong.resx">
       <DependentUpon>frmPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLy\frmQLDanhGia.resx">
       <DependentUpon>frmQLDanhGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLy\frmThemDichVu.resx">
+      <DependentUpon>frmThemDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChinh.resx">
       <DependentUpon>TrangChinh.cs</DependentUpon>

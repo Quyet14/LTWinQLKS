@@ -10,15 +10,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyKhachSan.NhanVien;
 
 namespace QuanLyKhachSan
 {
     public partial class frmPhong : Form
     {
         private readonly roomServices roomServices = new roomServices();
-        public frmPhong()
+        private frmDatPhong activeBookingDialog = null;
+        private int employeeId { get; set; }
+        public frmPhong(int employeeId)
         {
             InitializeComponent();
+            this.employeeId = employeeId;
             LoadRooms();
         }
         private void LoadRooms(string filter = null)
@@ -46,7 +50,8 @@ namespace QuanLyKhachSan
                 CardRoom card = new CardRoom
                 {
                     Size = new System.Drawing.Size(200, 120), // Smaller card size
-                    Margin = new Padding(10) // Gap between cards
+                    Margin = new Padding(10), // Gap between cards
+                    MaPhong = room.MaPhong
                 };
 
                 // Set room ID
@@ -72,11 +77,59 @@ namespace QuanLyKhachSan
                         card.iconTinhTrang.IconColor = System.Drawing.Color.SaddleBrown;
                         break;
                 }
+                card.CardClicked += CardRoom_CardClicked;
 
-                // Add the card to the flow panel
                 fpnlRoom.Controls.Add(card);
             }
         }
+        private void CardRoom_CardClicked(object sender, string maPhong)
+        {
+            CardRoom clickedCard = sender as CardRoom;
+
+            // If the room is being cleaned, don't open any dialog
+            if (clickedCard != null && clickedCard.RoomStatus == "Đang vệ sinh")
+            {
+                MessageBox.Show("Room is cleaning!.");
+                return; // Do nothing for rooms being cleaned
+            }
+
+            // Check if there's already an active booking dialog
+            if (activeBookingDialog != null && !activeBookingDialog.IsDisposed)
+            {
+                activeBookingDialog.Focus(); // Bring existing dialog to front
+                return;
+            }
+
+            Phong room = roomServices.FindRoomById(maPhong);
+
+            if (room != null)
+            {
+                try
+                {
+                    bool isOccupied = clickedCard.RoomStatus == "Đang được sử dụng";
+                    activeBookingDialog = new frmDatPhong(room.MaPhong, room.GiaPhong, employeeId, isOccupied);
+
+                    activeBookingDialog.FormClosed += (s, args) =>
+                    {
+                        activeBookingDialog = null; // Clear the reference when form is closed
+                        LoadRooms(); // Refresh the room list after booking
+                    };
+                    activeBookingDialog.Show();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error opening booking dialog: {ex.Message}", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    activeBookingDialog = null;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Room not found.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         private void rbtnRoom_CheckedChanged(object sender, EventArgs e)
         {

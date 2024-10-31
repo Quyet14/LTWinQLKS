@@ -15,9 +15,12 @@ namespace QuanLyKhachSan.Khachhang
         private int Star = 0;
         private readonly customerServices customerServices = new customerServices();
         private readonly DanhGiaServices danhGiaServices = new DanhGiaServices();
-        public frmDanhGia()
+        private int customerId { get; set; }
+
+        public frmDanhGia(int customerId)
         {
             InitializeComponent();
+            this.customerId = customerId;
             this.AutoScaleMode = AutoScaleMode.None;
             this.StartPosition = FormStartPosition.CenterParent;
             this.WindowState = FormWindowState.Normal;
@@ -87,88 +90,74 @@ namespace QuanLyKhachSan.Khachhang
 
         private bool ValidateInput()
         {
-
-            if (!string.IsNullOrEmpty(txtFeedback.Texts) && !txtFeedback.Texts.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+            if (!string.IsNullOrEmpty(txtFeedback.Texts) &&
+                !txtFeedback.Texts.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
             {
-                MessageBox.Show("Không hợp lệ. Vui lòng nhập đúng ký tự và không chứa ký tự đặc biệt.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Không hợp lệ. Vui lòng nhập đúng ký tự và không chứa ký tự đặc biệt.",
+                    "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            return true; // Return true if all validations pass
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (int.TryParse(txtCustomerId.Texts.Trim(), out int customerId))
+            if (Star == 0)
             {
-
-                // Sử dụng customerServices để tìm kiếm khách hàng theo ID
-                customerServices customerService = new customerServices();
-                KhachHang customer = customerService.GetCustomerById(customerId);
-
-                if (customer != null)
-                {
-                    // Hiển thị tên khách hàng trong txtCustomerName
-                    txtCustomerName.Texts = customer.HoTen;
-                }
-                else
-                {
-                    // Xóa tên khách hàng nếu không tìm thấy
-                    txtCustomerName.Texts = string.Empty;
-                    MessageBox.Show("Không tìm thấy khách hàng với ID này.");
-                }
+                MessageBox.Show("Vui lòng chọn số sao đánh giá.",
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
+
+            return true;
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             if (!ValidateInput())
             {
-                return; // Exit the method if the validation fails
+                return;
             }
 
             try
             {
-                // Validate the customer ID input and Star rating
-                if (int.TryParse(txtCustomerId.Texts.Trim(), out int customerId) && Star > 0)
+                // Check if customer can submit review
+                if (!danhGiaServices.CanCustomerReview(this.customerId))
                 {
-                    // Check if the customer ID exists in the database
-                    var customer = customerServices.GetCustomerById(customerId);
-                    if (customer != null)
-                    {
-                        // Create new review object
-                        PhanHoiKhachHang review = new PhanHoiKhachHang
-                        {
-                            MaKhachHang = customerId,
-                            NoiDung = txtFeedback.Texts.Trim(),
-                            NgayPhanHoi = DateTime.Now,
-                            Rating = Star
-                        };
+                    MessageBox.Show("Bạn chỉ có thể đánh giá một lần trong thời gian lưu trú.",
+                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-                        // Attempt to save the review
-                        danhGiaServices.AddReview(review);
+                // Create new review object
+                PhanHoiKhachHang review = new PhanHoiKhachHang
+                {
+                    MaKhachHang = this.customerId,
+                    NoiDung = txtFeedback.Texts.Trim(),
+                    NgayPhanHoi = DateTime.Now,
+                    Rating = Star
+                };
 
-                        MessageBox.Show("Đánh giá của bạn đã được lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Attempt to save the review
+                if (danhGiaServices.AddReview(review))
+                {
+                    MessageBox.Show("Đánh giá của bạn đã được lưu thành công!",
+                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        // Clear inputs after successful submission
-                        txtCustomerId.Texts = string.Empty;
-                        txtCustomerName.Texts = string.Empty;
-                        txtFeedback.Texts = string.Empty;
-                        ResetStars();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Mã khách hàng không hợp lệ. Không tìm thấy khách hàng với ID này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                    // Clear inputs after successful submission
+                    txtFeedback.Texts = string.Empty;
+                    ResetStars();
+                    Star = 0;
+
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng nhập mã khách hàng hợp lệ và chọn sao đánh giá.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không thể lưu đánh giá. Vui lòng kiểm tra lại thời gian lưu trú của bạn.",
+                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}",
+                    "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
