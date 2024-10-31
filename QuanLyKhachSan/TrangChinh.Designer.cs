@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btn7 = new FontAwesome.Sharp.IconButton();
+            this.btn6 = new FontAwesome.Sharp.IconButton();
             this.btn5 = new FontAwesome.Sharp.IconButton();
             this.btn4 = new FontAwesome.Sharp.IconButton();
             this.btn3 = new FontAwesome.Sharp.IconButton();
@@ -41,8 +43,7 @@
             this.lblHome = new System.Windows.Forms.Label();
             this.iconHome = new FontAwesome.Sharp.IconPictureBox();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.btn6 = new FontAwesome.Sharp.IconButton();
-            this.btn7 = new FontAwesome.Sharp.IconButton();
+            this.btnLogout = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
@@ -54,6 +55,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panelMenu.Controls.Add(this.btnLogout);
             this.panelMenu.Controls.Add(this.btn7);
             this.panelMenu.Controls.Add(this.btn6);
             this.panelMenu.Controls.Add(this.btn5);
@@ -68,6 +70,48 @@
             this.panelMenu.Size = new System.Drawing.Size(303, 1017);
             this.panelMenu.TabIndex = 4;
             // 
+            // btn7
+            // 
+            this.btn7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn7.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn7.FlatAppearance.BorderSize = 0;
+            this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn7.ForeColor = System.Drawing.Color.White;
+            this.btn7.IconChar = FontAwesome.Sharp.IconChar.ListCheck;
+            this.btn7.IconColor = System.Drawing.Color.White;
+            this.btn7.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7.Location = new System.Drawing.Point(0, 802);
+            this.btn7.Name = "btn7";
+            this.btn7.Size = new System.Drawing.Size(303, 99);
+            this.btn7.TabIndex = 8;
+            this.btn7.Text = "button 7";
+            this.btn7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn7.UseVisualStyleBackColor = false;
+            // 
+            // btn6
+            // 
+            this.btn6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn6.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn6.FlatAppearance.BorderSize = 0;
+            this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn6.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn6.ForeColor = System.Drawing.Color.White;
+            this.btn6.IconChar = FontAwesome.Sharp.IconChar.ListCheck;
+            this.btn6.IconColor = System.Drawing.Color.White;
+            this.btn6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn6.Location = new System.Drawing.Point(0, 697);
+            this.btn6.Name = "btn6";
+            this.btn6.Size = new System.Drawing.Size(303, 99);
+            this.btn6.TabIndex = 7;
+            this.btn6.Text = "button 6";
+            this.btn6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn6.UseVisualStyleBackColor = false;
+            // 
             // btn5
             // 
             this.btn5.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -80,7 +124,7 @@
             this.btn5.IconColor = System.Drawing.Color.White;
             this.btn5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn5.Location = new System.Drawing.Point(0, 658);
+            this.btn5.Location = new System.Drawing.Point(0, 592);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(303, 99);
             this.btn5.TabIndex = 6;
@@ -101,7 +145,7 @@
             this.btn4.IconColor = System.Drawing.Color.White;
             this.btn4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn4.Location = new System.Drawing.Point(0, 553);
+            this.btn4.Location = new System.Drawing.Point(0, 487);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(303, 99);
             this.btn4.TabIndex = 5;
@@ -122,7 +166,7 @@
             this.btn3.IconColor = System.Drawing.Color.White;
             this.btn3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn3.Location = new System.Drawing.Point(0, 448);
+            this.btn3.Location = new System.Drawing.Point(0, 382);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(303, 99);
             this.btn3.TabIndex = 2;
@@ -143,7 +187,7 @@
             this.btn2.IconColor = System.Drawing.Color.White;
             this.btn2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn2.Location = new System.Drawing.Point(0, 343);
+            this.btn2.Location = new System.Drawing.Point(0, 277);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(303, 99);
             this.btn2.TabIndex = 1;
@@ -164,7 +208,7 @@
             this.btn1.IconColor = System.Drawing.Color.White;
             this.btn1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn1.Location = new System.Drawing.Point(0, 238);
+            this.btn1.Location = new System.Drawing.Point(0, 172);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(303, 99);
             this.btn1.TabIndex = 0;
@@ -273,47 +317,29 @@
             this.panelMain.Size = new System.Drawing.Size(1465, 913);
             this.panelMain.TabIndex = 8;
             // 
-            // btn6
+            // btnLogout
             // 
-            this.btn6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn6.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn6.FlatAppearance.BorderSize = 0;
-            this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn6.ForeColor = System.Drawing.Color.White;
-            this.btn6.IconChar = FontAwesome.Sharp.IconChar.ListCheck;
-            this.btn6.IconColor = System.Drawing.Color.White;
-            this.btn6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6.Location = new System.Drawing.Point(0, 763);
-            this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(303, 99);
-            this.btn6.TabIndex = 7;
-            this.btn6.Text = "button 6";
-            this.btn6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn6.UseVisualStyleBackColor = false;
-            // 
-            // btn7
-            // 
-            this.btn7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn7.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn7.FlatAppearance.BorderSize = 0;
-            this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn7.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn7.ForeColor = System.Drawing.Color.White;
-            this.btn7.IconChar = FontAwesome.Sharp.IconChar.ListCheck;
-            this.btn7.IconColor = System.Drawing.Color.White;
-            this.btn7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn7.Location = new System.Drawing.Point(0, 868);
-            this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(303, 99);
-            this.btn7.TabIndex = 8;
-            this.btn7.Text = "button 7";
-            this.btn7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn7.UseVisualStyleBackColor = false;
+            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLogout.AutoSize = true;
+            this.btnLogout.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
+            this.btnLogout.IconColor = System.Drawing.Color.White;
+            this.btnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLogout.IconSize = 40;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(0, 952);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(303, 65);
+            this.btnLogout.TabIndex = 9;
+            this.btnLogout.Text = "Đăng xuất";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // TrangChinh
             // 
@@ -331,6 +357,7 @@
             this.Load += new System.EventHandler(this.TrangChinh_Load_1);
             this.Resize += new System.EventHandler(this.TrangChinh_Resize);
             this.panelMenu.ResumeLayout(false);
+            this.panelMenu.PerformLayout();
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).EndInit();
@@ -357,5 +384,6 @@
         private FontAwesome.Sharp.IconButton btn5;
         private FontAwesome.Sharp.IconButton btn6;
         private FontAwesome.Sharp.IconButton btn7;
+        private FontAwesome.Sharp.IconButton btnLogout;
     }
 }
