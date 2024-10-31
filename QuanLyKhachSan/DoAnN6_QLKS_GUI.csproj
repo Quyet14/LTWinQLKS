@@ -52,6 +52,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -83,11 +84,23 @@
     <Compile Include="Components\VBTextBox.Designer.cs">
       <DependentUpon>VBTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKe.Designer.cs">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="KhachHang\DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KhachHang\DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang\frmChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang\frmChamCong.Designer.cs">
+      <DependentUpon>frmChamCong.cs</DependentUpon>
     </Compile>
     <Compile Include="KhachHang\frmDanhGia.cs">
       <SubType>Form</SubType>
@@ -107,11 +120,23 @@
     <Compile Include="KhachHang\DichVu.Designer.cs">
       <DependentUpon>DichVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhachHang\frmHoaDonDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang\frmHoaDonDichVu.Designer.cs">
+      <DependentUpon>frmHoaDonDichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanVien\frmPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NhanVien\frmPhong.Designer.cs">
       <DependentUpon>frmPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien\frmQuanLyKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\frmQuanLyKhachHang.Designer.cs">
+      <DependentUpon>frmQuanLyKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLy\frmNhanVien.cs">
       <SubType>Form</SubType>
@@ -151,8 +176,14 @@
     <EmbeddedResource Include="Components\VBTextBox.resx">
       <DependentUpon>VBTextBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKe.resx">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KhachHang\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\frmChamCong.resx">
+      <DependentUpon>frmChamCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHang\frmDanhGia.resx">
       <DependentUpon>frmDanhGia.cs</DependentUpon>
@@ -163,8 +194,14 @@
     <EmbeddedResource Include="KhachHang\DichVu.resx">
       <DependentUpon>DichVu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\frmHoaDonDichVu.resx">
+      <DependentUpon>frmHoaDonDichVu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\frmPhong.resx">
       <DependentUpon>frmPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\frmQuanLyKhachHang.resx">
+      <DependentUpon>frmQuanLyKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
