@@ -26,17 +26,18 @@ namespace QuanLyKhachSan.NhanVien
 
         private void btnXuat_Click(object sender, EventArgs e)
         {
+            int w = int.Parse(txtMaKhachHang.Texts);
             PhieuDatPhong PDP = context.PhieuDatPhongs
-                           .Where(p => p.MaKhachHang == int.Parse(txtMaKhachHang.Texts))
+                           .Where(p => p.MaKhachHang == w)
                            .OrderByDescending(p => p.NgayDatPhong)
                            .FirstOrDefault();
             HoaDonDichVu HDDV = context.HoaDonDichVus
-                           .Where(p => p.NgayLap > PDP.NgayDatPhong && p.NgayLap < PDP.NgayTraPhong)
+                           .Where(q => (q.MaKhachHang == w) && (q.NgayLap < PDP.NgayTraPhong))
                            .OrderByDescending(p => p.MaHoaDon)
                            .FirstOrDefault();
             int a = (int)HDDV.TongTien + (int)PDP.TongTien;
 
-            MessageBox.Show("Hóa đơn tiền phòng :" + PDP.TongTien.ToString() + "\nHóa đơn dịch vụ :" +HDDV.TongTien.ToString()+"\"Tổng tiền :"+a.ToString());
+            MessageBox.Show("Hóa đơn tiền phòng :" + PDP.TongTien.ToString() + "\nHóa đơn dịch vụ :" +HDDV.TongTien.ToString()+"\nTổng tiền :"+a.ToString());
 
 
         }
