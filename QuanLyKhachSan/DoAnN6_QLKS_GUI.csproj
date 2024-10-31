@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -55,6 +55,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -95,12 +96,6 @@
     <Compile Include="KhachHang\DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhachHang\frmChamCong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KhachHang\frmChamCong.Designer.cs">
-      <DependentUpon>frmChamCong.cs</DependentUpon>
-    </Compile>
     <Compile Include="KhachHang\frmDanhGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +132,12 @@
     <Compile Include="NhanVien\frmQuanLyKhachHang.Designer.cs">
       <DependentUpon>frmQuanLyKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLy\frmChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy\frmChamCong.Designer.cs">
+      <DependentUpon>frmChamCong.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLy\frmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +168,12 @@
     <Compile Include="QuanLy\frmThemDichVu.Designer.cs">
       <DependentUpon>frmThemDichVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLy\frmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy\frmThongKe.Designer.cs">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrangChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,9 +190,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHang\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KhachHang\frmChamCong.resx">
-      <DependentUpon>frmChamCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHang\frmDanhGia.resx">
       <DependentUpon>frmDanhGia.cs</DependentUpon>
@@ -214,6 +218,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLy\frmChamCong.resx">
+      <DependentUpon>frmChamCong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLy\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLy\frmThemDichVu.resx">
       <DependentUpon>frmThemDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLy\frmThongKe.resx">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChinh.resx">
       <DependentUpon>TrangChinh.cs</DependentUpon>

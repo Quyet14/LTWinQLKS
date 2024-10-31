@@ -1,5 +1,4 @@
-﻿using DoAnN6_QLKS_DAL.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAnN6_QLKS_DAL.Entity;
 
 namespace QuanLyKhachSan
 {
     public partial class frmChamCong : Form
     {
-        private readonly Model1 context = new Model1();
+        private readonly QuanLyKhachSanDB context = new QuanLyKhachSanDB();
 
         public frmChamCong()
         {
