@@ -51,7 +51,7 @@
             this.Column1,
             this.Column3});
             this.dgvChamCong.Location = new System.Drawing.Point(13, 234);
-            this.dgvChamCong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvChamCong.Margin = new System.Windows.Forms.Padding(4);
             this.dgvChamCong.Name = "dgvChamCong";
             this.dgvChamCong.RowHeadersWidth = 51;
             this.dgvChamCong.RowTemplate.Height = 24;
@@ -102,7 +102,7 @@
             this.txtMaNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMaNV.Location = new System.Drawing.Point(389, 141);
-            this.txtMaNV.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(6);
             this.txtMaNV.Multiline = false;
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Padding = new System.Windows.Forms.Padding(14, 10, 14, 10);
@@ -137,7 +137,7 @@
             this.txtThang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtThang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtThang.Location = new System.Drawing.Point(389, 59);
-            this.txtThang.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtThang.Margin = new System.Windows.Forms.Padding(6);
             this.txtThang.Multiline = false;
             this.txtThang.Name = "txtThang";
             this.txtThang.Padding = new System.Windows.Forms.Padding(14, 10, 14, 10);
@@ -162,7 +162,7 @@
             this.btnTinhLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTinhLuong.ForeColor = System.Drawing.Color.White;
             this.btnTinhLuong.Location = new System.Drawing.Point(859, 141);
-            this.btnTinhLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTinhLuong.Margin = new System.Windows.Forms.Padding(4);
             this.btnTinhLuong.Name = "btnTinhLuong";
             this.btnTinhLuong.Size = new System.Drawing.Size(206, 60);
             this.btnTinhLuong.TabIndex = 4;
@@ -184,7 +184,7 @@
             this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.Location = new System.Drawing.Point(859, 54);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(206, 60);
             this.btnTimKiem.TabIndex = 3;
@@ -205,9 +205,10 @@
             this.Controls.Add(this.txtMaNV);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvChamCong);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmChamCong";
             this.Text = "Chấm công";
+            this.Load += new System.EventHandler(this.frmChamCong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChamCong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
