@@ -170,10 +170,10 @@ namespace QuanLyKhachSan.NhanVien
 
         private void btnThemSua_Click(object sender, EventArgs e)
         {
-            if (ValidateInput())
-            {
                 int selectedRow = GetSelectedRow(txtMaKhachHang.Texts);
-                if (selectedRow == -1)
+            if (selectedRow == -1)
+            {
+                if (ValidateInput())
                 {
                     DoAnN6_QLKS_DAL.Entity.KhachHang KH = new DoAnN6_QLKS_DAL.Entity.KhachHang()
                     {
@@ -194,30 +194,31 @@ namespace QuanLyKhachSan.NhanVien
                     BindGrid(listKhachHang);
                     ClearData();
                 }
+            }
+            else
+            {
+                int a = int.Parse(txtMaKhachHang.Texts);
+                DoAnN6_QLKS_DAL.Entity.KhachHang KH = context.KhachHangs.FirstOrDefault(p => p.MaKhachHang == a);
+                KH.HoTen = txtHoTen.Texts;
+                if (rbFemale.Checked)
+                {
+                    KH.GioiTinh = "Nữ";
+                }
                 else
                 {
-                    int a = int.Parse(txtMaKhachHang.Texts);
-                    DoAnN6_QLKS_DAL.Entity.KhachHang KH = context.KhachHangs.FirstOrDefault(p => p.MaKhachHang == a);
-                    KH.HoTen = txtHoTen.Texts;
-                    if (rbFemale.Checked)
-                    {
-                        KH.GioiTinh = "Nữ";
-                    }
-                    else
-                    {
-                        KH.GioiTinh = "Nam";
-                    }
-                    KH.DiaChi = txtDiaChi.Texts;
-                    KH.Email = txtEmail.Texts;
-                    KH.SoDienThoai = txtSDT.Texts;
-                    KH.CMND = txtCMND.Texts;
-                    context.SaveChanges();
-                    MessageBox.Show("Thay đổi dữ liệu thành công!", "Thông Báo", MessageBoxButtons.OK);
-                    List<DoAnN6_QLKS_DAL.Entity.KhachHang> listStudent = context.KhachHangs.ToList();
-                    BindGrid(listStudent);
-                    ClearData();
+                    KH.GioiTinh = "Nam";
                 }
+                KH.DiaChi = txtDiaChi.Texts;
+                KH.Email = txtEmail.Texts;
+                KH.SoDienThoai = txtSDT.Texts;
+                KH.CMND = txtCMND.Texts;
+                context.SaveChanges();
+                MessageBox.Show("Thay đổi dữ liệu thành công!", "Thông Báo", MessageBoxButtons.OK);
+                List<DoAnN6_QLKS_DAL.Entity.KhachHang> listStudent = context.KhachHangs.ToList();
+                BindGrid(listStudent);
+                ClearData();
             }
+            
         }
     }
 }
