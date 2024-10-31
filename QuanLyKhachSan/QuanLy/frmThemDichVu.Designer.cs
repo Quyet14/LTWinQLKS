@@ -1,4 +1,4 @@
-﻿namespace Theemdv_Quan_Ly_Khach_San
+﻿namespace QuanLyKhachSan.QuanLy
 {
     partial class frmThemDichVu
     {

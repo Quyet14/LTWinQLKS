@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NguyenKhanhLong_qlks;
 using QuanLyKhachSan.Khachhang;
+using QuanLyKhachSan.NhanVien;
 using QuanLyKhachSan.QuanLy;
 
 namespace QuanLyKhachSan
@@ -127,19 +128,26 @@ namespace QuanLyKhachSan
         private void ConfigureButtonsForUserType()
         {
             // Reset visibility for all buttons
-            btn1.Visible = btn2.Visible = btn3.Visible = btn4.Visible = btn5.Visible = false;
+            btn1.Visible = btn2.Visible = btn3.Visible = btn4.Visible = btn5.Visible = btn6.Visible = btn7.Visible = false;
 
             switch (UserType)
             {
                 case "Customer":
                     // Only show buttons 1-3 for customers
                     btn1.Visible = btn2.Visible = btn3.Visible = true;
+                    btn1.Text = "Dịch Vụ";
+                    btn2.Text = "Hoá Đơn";
+                    btn3.Text = "Đánh Giá";
 
-                    //btn1.Click += (s, e) =>
-                    //{
-                    //    ActivateButton(btn1, RGBColors.color);
-                    //    OpenChildForm(new frmDichVu());
-                    //};
+                    btn1.IconChar = IconChar.BellConcierge;
+                    btn2.IconChar = IconChar.Receipt;
+                    btn3.IconChar = IconChar.Pen;
+
+                    btn1.Click += (s, e) =>
+                    {
+                        ActivateButton(btn1, RGBColors.color);
+                        OpenChildForm(new DichVu());
+                    };
                     btn2.Click += (s, e) =>
                     {
                         ActivateButton(btn2, RGBColors.color); 
@@ -155,15 +163,19 @@ namespace QuanLyKhachSan
                 case "Employee":
                     // Only show buttons 1-2 for normal employees
                     btn1.Visible = btn2.Visible = true;
+                    btn1.Text = "Khách Hàng";
+                    btn2.Text = "Đặt Phòng";
 
-                    //btn1.Click += (s, e) =>
-                    //{
-                    //    ActivateButton(btn1, RGBColors.color); 
-                    //    OpenChildForm(new frmKhachHang());
-                    //};
+                    btn1.IconChar = IconChar.UserPlus;
+                    btn2.IconChar = IconChar.DoorClosed;
+
+                    btn1.Click += (s, e) =>
+                    {
+                        ActivateButton(btn1, RGBColors.color);
+                        OpenChildForm(new frmQuanLyKhachHang());
+                    };
                     btn2.Click += (s, e) =>
                     {
-                        Console.WriteLine($"Opening frmPhong with UserId: {UserId}");
                         ActivateButton(btn2, RGBColors.color);
                         OpenChildForm(new frmPhong(UserId));
                     };
@@ -171,7 +183,23 @@ namespace QuanLyKhachSan
 
                 case "Admin":
                     // Show all buttons for admin
-                    btn1.Visible = btn2.Visible = btn3.Visible = btn4.Visible = btn5.Visible = true;
+                    btn1.Visible = btn2.Visible = btn3.Visible = btn4.Visible = btn5.Visible = btn6.Visible = btn7.Visible = true;
+                    btn1.Text = "QL Phòng";
+                    btn2.Text = "QL Loại Phòng";
+                    btn3.Text = "QL Dịch Vụ";
+                    btn4.Text = "QL Nhân Viên";
+                    btn5.Text = "QL Đánh Giá";
+                    btn6.Text = "Chấm Công";
+                    btn7.Text = "Thống Kê";
+
+                    btn1.IconChar = IconChar.Hotel;
+                    btn2.IconChar = IconChar.Bed;
+                    btn3.IconChar = IconChar.MugSaucer;
+                    btn4.IconChar = IconChar.IdCard;
+                    btn5.IconChar = IconChar.Message;
+                    btn6.IconChar = IconChar.UserPen;
+                    btn7.IconChar = IconChar.ChartLine;
+
 
                     btn1.Click += (s, e) =>
                     {
@@ -183,11 +211,11 @@ namespace QuanLyKhachSan
                         ActivateButton(btn2, RGBColors.color); 
                         OpenChildForm(new frmQLLoaiPhong());
                     };
-                    //btn3.Click += (s, e) =>
-                    //{
-                    //    ActivateButton(btn3, RGBColors.color);
-                    //    OpenChildForm(new frmQLDichVu());
-                    //};
+                    btn3.Click += (s, e) =>
+                    {
+                        ActivateButton(btn3, RGBColors.color);
+                        OpenChildForm(new frmThemDichVu());
+                    };
                     btn4.Click += (s, e) =>
                     {
                         ActivateButton(btn4, RGBColors.color);
@@ -197,6 +225,16 @@ namespace QuanLyKhachSan
                     {
                         ActivateButton(btn5, RGBColors.color); 
                         OpenChildForm(new frmQLDanhGia());
+                    };
+                    btn6.Click += (s, e) =>
+                    {
+                        ActivateButton(btn6, RGBColors.color);
+                        OpenChildForm(new frmChamCong());
+                    };
+                    btn7.Click += (s, e) =>
+                    {
+                        ActivateButton(btn7, RGBColors.color);
+                        OpenChildForm(new frmThongKe());
                     };
                     break;
             }
