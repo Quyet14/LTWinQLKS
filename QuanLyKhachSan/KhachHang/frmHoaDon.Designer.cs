@@ -29,19 +29,22 @@
         private void InitializeComponent()
         {
             this.dgvPhong1 = new System.Windows.Forms.DataGridView();
-            this.dgvDichVu = new System.Windows.Forms.DataGridView();
-            this.colMaDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGiaDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDichVu = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnDatDV = new QuanLyKhachSan.Components.VBButton();
+            this.colMaDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGiaDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).BeginInit();
             this.SuspendLayout();
@@ -57,13 +60,38 @@
             this.Column4,
             this.Column5});
             this.dgvPhong1.Location = new System.Drawing.Point(74, 69);
-            this.dgvPhong1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPhong1.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPhong1.Name = "dgvPhong1";
             this.dgvPhong1.RowHeadersWidth = 51;
             this.dgvPhong1.RowTemplate.Height = 24;
             this.dgvPhong1.Size = new System.Drawing.Size(500, 197);
             this.dgvPhong1.TabIndex = 0;
             this.dgvPhong1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhong1_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Mã Phiếu";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Mã Phòng";
+            this.Column2.Name = "Column2";
+            // 
+            // column3
+            // 
+            this.column3.HeaderText = "Ngày Đặt Phòng";
+            this.column3.Name = "column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Ngày Trả Phòng";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Tổng Tiền";
+            this.Column5.Name = "Column5";
             // 
             // dgvDichVu
             // 
@@ -72,32 +100,18 @@
             this.dgvDichVu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaDichVu,
             this.colTenDichVu,
-            this.colGiaDichVu});
+            this.colGiaDichVu,
+            this.Column6,
+            this.Column7,
+            this.Column8});
             this.dgvDichVu.Location = new System.Drawing.Point(74, 296);
-            this.dgvDichVu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDichVu.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDichVu.Name = "dgvDichVu";
             this.dgvDichVu.RowHeadersWidth = 51;
             this.dgvDichVu.RowTemplate.Height = 24;
             this.dgvDichVu.Size = new System.Drawing.Size(500, 176);
             this.dgvDichVu.TabIndex = 0;
-            // 
-            // colMaDichVu
-            // 
-            this.colMaDichVu.HeaderText = "Mã DỊch Vụ";
-            this.colMaDichVu.MinimumWidth = 6;
-            this.colMaDichVu.Name = "colMaDichVu";
-            // 
-            // colTenDichVu
-            // 
-            this.colTenDichVu.HeaderText = "Tên Dịch Vụ";
-            this.colTenDichVu.MinimumWidth = 6;
-            this.colTenDichVu.Name = "colTenDichVu";
-            // 
-            // colGiaDichVu
-            // 
-            this.colGiaDichVu.HeaderText = "Giá Dịch Vụ";
-            this.colGiaDichVu.MinimumWidth = 6;
-            this.colGiaDichVu.Name = "colGiaDichVu";
+            this.dgvDichVu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDichVu_CellContentClick);
             // 
             // label1
             // 
@@ -135,31 +149,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Phòng";
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Mã Phiếu";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Mã Phòng";
-            this.Column2.Name = "Column2";
-            // 
-            // column3
-            // 
-            this.column3.HeaderText = "Ngày Đặt Phòng";
-            this.column3.Name = "column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Ngày Trả Phòng";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Tổng Tiền";
-            this.Column5.Name = "Column5";
-            // 
             // btnDatDV
             // 
             this.btnDatDV.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -181,6 +170,39 @@
             this.btnDatDV.UseVisualStyleBackColor = false;
             this.btnDatDV.Click += new System.EventHandler(this.btnDatDV_Click);
             // 
+            // colMaDichVu
+            // 
+            this.colMaDichVu.HeaderText = "Mã Chi Tiết Dịch Vụ";
+            this.colMaDichVu.MinimumWidth = 6;
+            this.colMaDichVu.Name = "colMaDichVu";
+            // 
+            // colTenDichVu
+            // 
+            this.colTenDichVu.HeaderText = "Mã hóa đơn";
+            this.colTenDichVu.MinimumWidth = 6;
+            this.colTenDichVu.Name = "colTenDichVu";
+            // 
+            // colGiaDichVu
+            // 
+            this.colGiaDichVu.HeaderText = "Mã dịch vụ";
+            this.colGiaDichVu.MinimumWidth = 6;
+            this.colGiaDichVu.Name = "colGiaDichVu";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Số lượng";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Đơn giá";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Thành tiền";
+            this.Column8.Name = "Column8";
+            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,7 +214,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvDichVu);
             this.Controls.Add(this.dgvPhong1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmHoaDon";
             this.Text = "Hóa Đơn";
             this.Load += new System.EventHandler(this.frmHoaDon_Load);
@@ -211,13 +233,16 @@
         private Components.VBButton btnDatDV;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaDichVu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTenDichVu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colGiaDichVu;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaDichVu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenDichVu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colGiaDichVu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }

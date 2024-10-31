@@ -14,17 +14,66 @@ namespace QuanLyKhachSan
     public partial class DichVu : Form
     {
         QuanLyKhachSanDB context = new QuanLyKhachSanDB();
-        public DichVu()
+        int UserId;
+        public DichVu(int UserId)
         {
             InitializeComponent();
-            
+            this.UserId = UserId;
 
         }
 
         private void btnDat_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                //HoaDonDichVu HDDV = context.HoaDonDichVus.LastOrDefault(p => p.NgayLap < DateTime.Now && p.MaKhachHang == UserId);
+                //int a = HDDV.MaHoaDon;
+                //ChiTietDichVu CTDV = new ChiTietDichVu();
+                //CTDV.MaHoaDon = a;
+                //CTDV.MaDichVu = int.Parse(cmbDichVu.ValueMember)+1;
+                //CTDV.SoLuong = int.Parse(txtSoLuong.Texts);
+                //int maDichVu = (int)CTDV.MaDichVu;
+                //DoAnN6_QLKS_DAL.Entity.DichVu DV = context.DichVus.FirstOrDefault(p => p.MaDichVu == maDichVu);
+                //if (DV != null)
+                //{
+                //    CTDV.DonGia = DV.DonGia;
+                //}
+                //context.ChiTietDichVus.Add(CTDV);
+                //context.SaveChanges();
+                HoaDonDichVu HDDV = context.HoaDonDichVus
+                           .LastOrDefault(p => p.NgayLap < DateTime.Now && p.MaKhachHang == UserId);
+                if (HDDV == null)
+                {
+                    throw new Exception("No matching HoaDonDichVu found.");
+                }
 
+                int a = HDDV.MaHoaDon;
+                ChiTietDichVu CTDV = new ChiTietDichVu
+                {
+                    MaHoaDon = a,
+                    MaDichVu = int.Parse(cmbDichVu.ValueMember),  // Adjust if necessary, remove +1 if IDs are direct
+                    SoLuong = int.Parse(txtSoLuong.Texts)
+                };
+
+                int maDichVu = (int)CTDV.MaDichVu;
+                DoAnN6_QLKS_DAL.Entity.DichVu DV = context.DichVus.FirstOrDefault(p => p.MaDichVu == maDichVu);
+                if (DV != null)
+                {
+                    CTDV.DonGia = DV.DonGia;
+                }
+                else
+                {
+                    throw new Exception("DichVu not found for the given MaDichVu.");
+                }
+
+                context.ChiTietDichVus.Add(CTDV);
+                context.SaveChanges();
+
+            }
+            catch (Exception ex) 
+            {
+                    MessageBox.Show(ex.Message);
+            }
             // TODO: Implement order placement logic
 
             //MessageBox.Show($"Đã đặt dịch vụ: {tenDichVu}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -49,8 +98,47 @@ namespace QuanLyKhachSan
 
         private void txtSoLuong__TextChanged(object sender, EventArgs e)
         {
-            DoAnN6_QLKS_DAL.Entity.DichVu DV = context.DichVus.FirstOrDefault(p => p.MaDichVu == int.Parse(cmbDichVu.ValueMember));
-            //txtGia = DV.DonGia * int.Parse(txtSoLuong.Texts);
+            //DoAnN6_QLKS_DAL.Entity.DichVu DV = context.DichVus.FirstOrDefault(p => p.MaDichVu == int.Parse(cmbDichVu.ValueMember));
+            //txtGia.Text = DV.DonGia * int.Parse(txtSoLuong.Texts);
+        }
+        private void UpdateHoaDonDV(int a)
+        {
+            HoaDonDichVu HDDV = context.HoaDonDichVus.FirstOrDefault(p=>p.MaHoaDon == a);
+            if(HDDV != null)
+            {
+                List<ChiTietDichVu> listChiTietDichVu = context.ChiTietDichVus.ToList();
+                foreach(var item  in listChiTietDichVu)
+                {
+                    if(item.MaHoaDon == a)
+                    {
+                        HDDV.TongTien += item.ThanhTien;
+                    }
+                }
+                context.SaveChanges();
+            }
+        }
+        private void btnDat_Click_1(object sender, EventArgs e)
+        {
+            //HoaDonDichVu HDDV = context.HoaDonDichVus.LastOrDefault(p => p.NgayLap < DateTime.Now && p.MaKhachHang == UserId);
+            HoaDonDichVu HDDV = context.HoaDonDichVus
+                           .Where(p => p.NgayLap < DateTime.Now && p.MaKhachHang == UserId)
+                           .OrderByDescending(p => p.NgayLap)
+                           .FirstOrDefault();
+            int a = HDDV.MaHoaDon;
+            ChiTietDichVu CTDV = new ChiTietDichVu();
+            CTDV.MaHoaDon = a;
+            DoAnN6_QLKS_DAL.Entity.DichVu DV = context.DichVus.FirstOrDefault(p => p.TenDichVu == cmbDichVu.Text);
+            CTDV.MaDichVu = DV.MaDichVu;
+            CTDV.SoLuong = int.Parse(txtSoLuong.Texts);
+            int maDichVu = (int)CTDV.MaDichVu;
+            DoAnN6_QLKS_DAL.Entity.DichVu DV2 = context.DichVus.FirstOrDefault(p => p.MaDichVu == maDichVu);
+            if (DV2 != null)
+            {
+                CTDV.DonGia = DV2.DonGia;
+            }
+            context.ChiTietDichVus.Add(CTDV);
+            context.SaveChanges();
+            UpdateHoaDonDV(a);
         }
     }
 }

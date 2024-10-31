@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbQuyen = new System.Windows.Forms.ComboBox();
             this.txtCMND = new QuanLyKhachSan.Components.VBTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtEmail = new QuanLyKhachSan.Components.VBTextBox();
@@ -59,8 +60,6 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmbQuyen = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.SuspendLayout();
@@ -98,11 +97,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhân viên";
             // 
+            // cmbQuyen
+            // 
+            this.cmbQuyen.FormattingEnabled = true;
+            this.cmbQuyen.Items.AddRange(new object[] {
+            "Quản lý",
+            "Nhân viên"});
+            this.cmbQuyen.Location = new System.Drawing.Point(76, 307);
+            this.cmbQuyen.Name = "cmbQuyen";
+            this.cmbQuyen.Size = new System.Drawing.Size(121, 21);
+            this.cmbQuyen.TabIndex = 25;
+            // 
             // txtCMND
             // 
             this.txtCMND.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCMND.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtCMND.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtCMND.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtCMND.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtCMND.BorderRadius = 10;
             this.txtCMND.BorderSize = 2;
             this.txtCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -133,8 +143,8 @@
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.SystemColors.Window;
-            this.txtEmail.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtEmail.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtEmail.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtEmail.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtEmail.BorderRadius = 10;
             this.txtEmail.BorderSize = 2;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -175,8 +185,8 @@
             // txtMatKhau
             // 
             this.txtMatKhau.BackColor = System.Drawing.SystemColors.Window;
-            this.txtMatKhau.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtMatKhau.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtMatKhau.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtMatKhau.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtMatKhau.BorderRadius = 10;
             this.txtMatKhau.BorderSize = 2;
             this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -196,8 +206,8 @@
             // 
             // btnActive
             // 
-            this.btnActive.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnActive.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnActive.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnActive.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnActive.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnActive.BorderRadius = 10;
             this.btnActive.BorderSize = 0;
@@ -248,8 +258,8 @@
             // 
             // btnSua
             // 
-            this.btnSua.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnSua.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSua.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSua.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSua.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnSua.BorderRadius = 10;
             this.btnSua.BorderSize = 0;
@@ -277,8 +287,8 @@
             // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnThem.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnThem.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnThem.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnThem.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnThem.BorderRadius = 10;
             this.btnThem.BorderSize = 0;
@@ -298,8 +308,8 @@
             // txtDiaChi
             // 
             this.txtDiaChi.BackColor = System.Drawing.SystemColors.Window;
-            this.txtDiaChi.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtDiaChi.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtDiaChi.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtDiaChi.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtDiaChi.BorderRadius = 10;
             this.txtDiaChi.BorderSize = 2;
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -320,8 +330,8 @@
             // txtSDT
             // 
             this.txtSDT.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSDT.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtSDT.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtSDT.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtSDT.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtSDT.BorderRadius = 10;
             this.txtSDT.BorderSize = 2;
             this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -342,8 +352,8 @@
             // txtHoten
             // 
             this.txtHoten.BackColor = System.Drawing.SystemColors.Window;
-            this.txtHoten.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtHoten.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtHoten.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtHoten.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtHoten.BorderRadius = 10;
             this.txtHoten.BorderSize = 2;
             this.txtHoten.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -364,8 +374,8 @@
             // txtMaNhanVien
             // 
             this.txtMaNhanVien.BackColor = System.Drawing.SystemColors.Window;
-            this.txtMaNhanVien.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtMaNhanVien.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtMaNhanVien.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtMaNhanVien.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtMaNhanVien.BorderRadius = 10;
             this.txtMaNhanVien.BorderSize = 2;
             this.txtMaNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -443,6 +453,7 @@
             this.dgvNhanVien.RowTemplate.Height = 24;
             this.dgvNhanVien.Size = new System.Drawing.Size(695, 258);
             this.dgvNhanVien.TabIndex = 4;
+            this.dgvNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellContentClick);
             // 
             // Column1
             // 
@@ -489,45 +500,21 @@
             this.Column7.HeaderText = "perm";
             this.Column7.Name = "Column7";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(554, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Quản lý Nhân Viên";
-            // 
-            // cmbQuyen
-            // 
-            this.cmbQuyen.FormattingEnabled = true;
-            this.cmbQuyen.Items.AddRange(new object[] {
-            "Quản Lý",
-            "Nhân Viên"});
-            this.cmbQuyen.Location = new System.Drawing.Point(76, 307);
-            this.cmbQuyen.Name = "cmbQuyen";
-            this.cmbQuyen.Size = new System.Drawing.Size(121, 21);
-            this.cmbQuyen.TabIndex = 25;
-            // 
             // frmNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1005, 453);
             this.Controls.Add(this.dgvNhanVien);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmNhanVien";
-            this.Text = "frmNhanVien";
+            this.Text = "Quản lý nhân viên";
             this.Load += new System.EventHandler(this.frmNhanVien_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -539,7 +526,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvNhanVien;
-        private System.Windows.Forms.Label label1;
         private QuanLyKhachSan.Components.VBButton btnSua;
         private QuanLyKhachSan.Components.VBButton btnActive;
         private QuanLyKhachSan.Components.VBButton btnThem;
