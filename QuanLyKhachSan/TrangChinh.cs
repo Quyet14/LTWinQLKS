@@ -161,7 +161,7 @@ namespace QuanLyKhachSan
 
                 case "Employee":
                     // Only show buttons 1-2 for normal employees
-                    btn1.Visible = btn2.Visible = true;
+                    btn1.Visible = btn2.Visible = btn3.Visible = true;
                     btn1.Text = "Khách Hàng";
                     btn2.Text = "Đặt Phòng";
                     btn3.Text = "Hóa Đơn";
@@ -169,6 +169,7 @@ namespace QuanLyKhachSan
                     btn1.IconChar = IconChar.UserPlus;
                     btn2.IconChar = IconChar.DoorClosed;
                     btn3.IconChar = IconChar.MoneyBill;
+
                     btn1.Click += (s, e) =>
                     {
                         ActivateButton(btn1, RGBColors.color);
