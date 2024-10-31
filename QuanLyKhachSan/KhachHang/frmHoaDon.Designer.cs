@@ -30,13 +30,13 @@
         {
             this.dgvPhong1 = new System.Windows.Forms.DataGridView();
             this.dgvDichVu = new System.Windows.Forms.DataGridView();
+            this.colMaDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGiaDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDatDV = new QuanLyKhachSan.Components.VBButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.colMaDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGiaDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,27 @@
             this.dgvDichVu.Size = new System.Drawing.Size(666, 216);
             this.dgvDichVu.TabIndex = 0;
             // 
+            // colMaDichVu
+            // 
+            this.colMaDichVu.HeaderText = "Mã DỊch Vụ";
+            this.colMaDichVu.MinimumWidth = 6;
+            this.colMaDichVu.Name = "colMaDichVu";
+            this.colMaDichVu.Width = 125;
+            // 
+            // colTenDichVu
+            // 
+            this.colTenDichVu.HeaderText = "Tên Dịch Vụ";
+            this.colTenDichVu.MinimumWidth = 6;
+            this.colTenDichVu.Name = "colTenDichVu";
+            this.colTenDichVu.Width = 125;
+            // 
+            // colGiaDichVu
+            // 
+            this.colGiaDichVu.HeaderText = "Giá Dịch Vụ";
+            this.colGiaDichVu.MinimumWidth = 6;
+            this.colGiaDichVu.Name = "colGiaDichVu";
+            this.colGiaDichVu.Width = 125;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -78,8 +99,8 @@
             // 
             // btnDatDV
             // 
-            this.btnDatDV.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDatDV.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnDatDV.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnDatDV.BackgroundColor = System.Drawing.SystemColors.Highlight;
             this.btnDatDV.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnDatDV.BorderRadius = 20;
             this.btnDatDV.BorderSize = 0;
@@ -117,27 +138,6 @@
             this.label3.Size = new System.Drawing.Size(58, 22);
             this.label3.TabIndex = 5;
             this.label3.Text = "Phòng";
-            // 
-            // colMaDichVu
-            // 
-            this.colMaDichVu.HeaderText = "Mã DỊch Vụ";
-            this.colMaDichVu.MinimumWidth = 6;
-            this.colMaDichVu.Name = "colMaDichVu";
-            this.colMaDichVu.Width = 125;
-            // 
-            // colTenDichVu
-            // 
-            this.colTenDichVu.HeaderText = "Tên Dịch Vụ";
-            this.colTenDichVu.MinimumWidth = 6;
-            this.colTenDichVu.Name = "colTenDichVu";
-            this.colTenDichVu.Width = 125;
-            // 
-            // colGiaDichVu
-            // 
-            this.colGiaDichVu.HeaderText = "Giá Dịch Vụ";
-            this.colGiaDichVu.MinimumWidth = 6;
-            this.colGiaDichVu.Name = "colGiaDichVu";
-            this.colGiaDichVu.Width = 125;
             // 
             // frmHoaDon
             // 

@@ -136,8 +136,8 @@
             // 
             // btnSua
             // 
-            this.btnSua.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnSua.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSua.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnSua.BackgroundColor = System.Drawing.SystemColors.Highlight;
             this.btnSua.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnSua.BorderRadius = 20;
             this.btnSua.BorderSize = 0;
@@ -156,8 +156,8 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnXoa.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnXoa.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnXoa.BackgroundColor = System.Drawing.SystemColors.Highlight;
             this.btnXoa.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnXoa.BorderRadius = 20;
             this.btnXoa.BorderSize = 0;
@@ -176,8 +176,8 @@
             // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnThem.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnThem.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnThem.BackgroundColor = System.Drawing.SystemColors.Highlight;
             this.btnThem.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnThem.BorderRadius = 20;
             this.btnThem.BorderSize = 0;

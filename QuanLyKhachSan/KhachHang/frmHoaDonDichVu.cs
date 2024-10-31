@@ -1,4 +1,4 @@
-﻿using DoAnN6_QLKS_DAL.Entities;
+﻿using DoAnN6_QLKS_DAL.Entity;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -10,7 +10,7 @@ namespace QuanLyKhachSan.KhachHang
 {
     public partial class frmHoaDonDichVu : Form
     {
-        private readonly Model1 context = new Model1();
+        private readonly QuanLyKhachSanDB context = new QuanLyKhachSanDB();
 
         public frmHoaDonDichVu()
         {

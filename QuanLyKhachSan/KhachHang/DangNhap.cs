@@ -71,7 +71,7 @@ namespace QuanLyKhachSan
                 }
 
 
-                KhachHang khachHang = customerServices.AuthenticateCustomer(username, password);
+                /*KhachHang khachHang = customerServices.AuthenticateCustomer(username, password);
 
                 if (khachHang != null)
                 {
@@ -81,7 +81,7 @@ namespace QuanLyKhachSan
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                     return;
-                }
+                }*/
 
                 if (username == "1" && password == "1")
                 {

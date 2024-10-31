@@ -85,8 +85,8 @@
             // 
             // btnDat
             // 
-            this.btnDat.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDat.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnDat.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnDat.BackgroundColor = System.Drawing.SystemColors.Highlight;
             this.btnDat.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnDat.BorderRadius = 20;
             this.btnDat.BorderSize = 0;

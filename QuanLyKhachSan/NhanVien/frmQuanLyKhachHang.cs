@@ -22,11 +22,11 @@ namespace QuanLyKhachSan.NhanVien
         QuanLyKhachSanDB context = new QuanLyKhachSanDB();
         private void frmQuanLyKhachSan_Load(object sender, EventArgs e)
         {
-            List<KhachHang> listKhachHang = context.KhachHangs.ToList();
+            List<DoAnN6_QLKS_DAL.Entity.KhachHang> listKhachHang = context.KhachHangs.ToList();
             BindGrid(listKhachHang);
             rbMale.Checked = true;
         }
-        private void BindGrid(List<KhachHang> listKhachHang)
+        private void BindGrid(List<DoAnN6_QLKS_DAL.Entity.KhachHang> listKhachHang)
         {
             dgvKhachHang.Rows.Clear();
             foreach (var item in listKhachHang)
@@ -152,7 +152,7 @@ namespace QuanLyKhachSan.NhanVien
                 int selectedRow = GetSelectedRow(txtMaKhachHang.Text);
                 if (selectedRow == -1)
                 {
-                    KhachHang KH = new KhachHang()
+                    DoAnN6_QLKS_DAL.Entity.KhachHang KH = new DoAnN6_QLKS_DAL.Entity.KhachHang()
                     {
                         MaKhachHang = int.Parse(txtMaKhachHang.Text),
                         HoTen = txtHoTen.Texts,
@@ -167,14 +167,14 @@ namespace QuanLyKhachSan.NhanVien
 
                     MessageBox.Show("Thêm mới dữ liệu thành công!", "Thông Báo", MessageBoxButtons.OK);
 
-                    List<KhachHang> listStudent = context.KhachHangs.ToList();
+                    List<DoAnN6_QLKS_DAL.Entity.KhachHang> listStudent = context.KhachHangs.ToList();
                     BindGrid(listStudent);
                     ClearData();
                 }
                 else
                 {
                     int a = int.Parse(txtMaKhachHang.Text);
-                    KhachHang KH = context.KhachHangs.FirstOrDefault(p => p.MaKhachHang == a);
+                    DoAnN6_QLKS_DAL.Entity.KhachHang KH = context.KhachHangs.FirstOrDefault(p => p.MaKhachHang == a);
                     KH.HoTen = txtHoTen.Texts;
                     if (rbFemale.Checked)
                     {
@@ -190,7 +190,7 @@ namespace QuanLyKhachSan.NhanVien
                     KH.CMND = txtCMND.Texts;
                     context.SaveChanges();
                     MessageBox.Show("Thay đổi dữ liệu thành công!", "Thông Báo", MessageBoxButtons.OK);
-                    List<KhachHang> listStudent = context.KhachHangs.ToList();
+                    List<DoAnN6_QLKS_DAL.Entity.KhachHang> listStudent = context.KhachHangs.ToList();
                     BindGrid(listStudent);
                     ClearData();
                 }

@@ -197,6 +197,11 @@ namespace QuanLyKhachSan
                         ActivateButton(btn5, RGBColors.color); 
                         OpenChildForm(new frmQLDanhGia());
                     };
+                    btn6.Click += (s, e) =>
+                    {
+                        ActivateButton(btn6, RGBColors.color);
+                        OpenChildForm(new frmThongKe());
+                    };
                     break;
             }
         }
@@ -244,5 +249,7 @@ namespace QuanLyKhachSan
         {
             WindowState = FormWindowState.Minimized;
         }
+
+       
     }
 }

@@ -58,11 +58,12 @@
             this.colTLP,
             this.colPrice,
             this.colStatus});
-            this.dgvRoom.Location = new System.Drawing.Point(71, 333);
+            this.dgvRoom.Location = new System.Drawing.Point(52, 222);
+            this.dgvRoom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvRoom.Name = "dgvRoom";
             this.dgvRoom.RowHeadersWidth = 72;
             this.dgvRoom.RowTemplate.Height = 31;
-            this.dgvRoom.Size = new System.Drawing.Size(944, 325);
+            this.dgvRoom.Size = new System.Drawing.Size(687, 217);
             this.dgvRoom.TabIndex = 0;
             this.dgvRoom.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRoom_CellContentClick);
             // 
@@ -96,15 +97,16 @@
             this.btnAddorUpdate.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnAddorUpdate.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnAddorUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAddorUpdate.BorderRadius = 20;
+            this.btnAddorUpdate.BorderRadius = 15;
             this.btnAddorUpdate.BorderSize = 0;
             this.btnAddorUpdate.FlatAppearance.BorderSize = 0;
             this.btnAddorUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddorUpdate.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddorUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddorUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnAddorUpdate.Location = new System.Drawing.Point(71, 210);
+            this.btnAddorUpdate.Location = new System.Drawing.Point(52, 140);
+            this.btnAddorUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddorUpdate.Name = "btnAddorUpdate";
-            this.btnAddorUpdate.Size = new System.Drawing.Size(170, 49);
+            this.btnAddorUpdate.Size = new System.Drawing.Size(124, 33);
             this.btnAddorUpdate.TabIndex = 1;
             this.btnAddorUpdate.Text = "Thêm/Sửa";
             this.btnAddorUpdate.TextColor = System.Drawing.Color.White;
@@ -117,15 +119,16 @@
             this.btnSearch.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSearch.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSearch.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSearch.BorderRadius = 20;
+            this.btnSearch.BorderRadius = 15;
             this.btnSearch.BorderSize = 0;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(558, 269);
+            this.btnSearch.Location = new System.Drawing.Point(406, 179);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(170, 49);
+            this.btnSearch.Size = new System.Drawing.Size(124, 33);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Tìm";
             this.btnSearch.TextColor = System.Drawing.Color.White;
@@ -135,21 +138,23 @@
             // cmbTLP
             // 
             this.cmbTLP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbTLP.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTLP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTLP.FormattingEnabled = true;
-            this.cmbTLP.Location = new System.Drawing.Point(799, 74);
+            this.cmbTLP.Location = new System.Drawing.Point(581, 49);
+            this.cmbTLP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTLP.Name = "cmbTLP";
-            this.cmbTLP.Size = new System.Drawing.Size(216, 49);
+            this.cmbTLP.Size = new System.Drawing.Size(158, 33);
             this.cmbTLP.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(551, 74);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(401, 49);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 41);
+            this.label4.Size = new System.Drawing.Size(109, 25);
             this.label4.TabIndex = 13;
             this.label4.Text = "Loại phòng";
             // 
@@ -157,10 +162,11 @@
             // 
             this.lblMa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMa.AutoSize = true;
-            this.lblMa.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMa.Location = new System.Drawing.Point(64, 74);
+            this.lblMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMa.Location = new System.Drawing.Point(47, 49);
+            this.lblMa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMa.Name = "lblMa";
-            this.lblMa.Size = new System.Drawing.Size(149, 41);
+            this.lblMa.Size = new System.Drawing.Size(100, 25);
             this.lblMa.TabIndex = 12;
             this.lblMa.Text = "Mã phòng";
             // 
@@ -170,19 +176,18 @@
             this.txtPrice.BackColor = System.Drawing.SystemColors.Window;
             this.txtPrice.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtPrice.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtPrice.BorderRadius = 20;
+            this.txtPrice.BorderRadius = 15;
             this.txtPrice.BorderSize = 2;
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPrice.Location = new System.Drawing.Point(319, 151);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrice.Location = new System.Drawing.Point(232, 101);
             this.txtPrice.Multiline = false;
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPrice.Padding = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.txtPrice.PasswordChar = false;
             this.txtPrice.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPrice.PlaceholderText = "";
-            this.txtPrice.Size = new System.Drawing.Size(190, 47);
+            this.txtPrice.Size = new System.Drawing.Size(138, 36);
             this.txtPrice.TabIndex = 10;
             this.txtPrice.Texts = "";
             this.txtPrice.UnderlinedStyle = false;
@@ -191,31 +196,34 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 151);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(47, 101);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 41);
+            this.label1.Size = new System.Drawing.Size(102, 25);
             this.label1.TabIndex = 14;
             this.label1.Text = "Giá phòng";
             // 
             // cmbTLP1
             // 
             this.cmbTLP1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbTLP1.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTLP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTLP1.FormattingEnabled = true;
-            this.cmbTLP1.Location = new System.Drawing.Point(319, 269);
+            this.cmbTLP1.Location = new System.Drawing.Point(232, 179);
+            this.cmbTLP1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTLP1.Name = "cmbTLP1";
-            this.cmbTLP1.Size = new System.Drawing.Size(190, 49);
+            this.cmbTLP1.Size = new System.Drawing.Size(139, 33);
             this.cmbTLP1.TabIndex = 15;
             // 
             // checkEmpty
             // 
             this.checkEmpty.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkEmpty.AutoSize = true;
-            this.checkEmpty.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkEmpty.Location = new System.Drawing.Point(810, 282);
+            this.checkEmpty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkEmpty.Location = new System.Drawing.Point(589, 188);
+            this.checkEmpty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkEmpty.Name = "checkEmpty";
-            this.checkEmpty.Size = new System.Drawing.Size(205, 45);
+            this.checkEmpty.Size = new System.Drawing.Size(140, 29);
             this.checkEmpty.TabIndex = 16;
             this.checkEmpty.Text = "Phòng trống";
             this.checkEmpty.UseVisualStyleBackColor = true;
@@ -227,19 +235,18 @@
             this.txtMTP.BackColor = System.Drawing.SystemColors.Window;
             this.txtMTP.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtMTP.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtMTP.BorderRadius = 20;
+            this.txtMTP.BorderRadius = 15;
             this.txtMTP.BorderSize = 2;
             this.txtMTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMTP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMTP.Location = new System.Drawing.Point(319, 74);
-            this.txtMTP.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMTP.Location = new System.Drawing.Point(232, 49);
             this.txtMTP.Multiline = false;
             this.txtMTP.Name = "txtMTP";
-            this.txtMTP.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtMTP.Padding = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.txtMTP.PasswordChar = false;
             this.txtMTP.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtMTP.PlaceholderText = "";
-            this.txtMTP.Size = new System.Drawing.Size(190, 47);
+            this.txtMTP.Size = new System.Drawing.Size(138, 36);
             this.txtMTP.TabIndex = 17;
             this.txtMTP.Texts = "";
             this.txtMTP.UnderlinedStyle = false;
@@ -248,28 +255,30 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(551, 151);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(401, 101);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(242, 41);
+            this.label2.Size = new System.Drawing.Size(160, 25);
             this.label2.TabIndex = 19;
             this.label2.Text = "Tình trạng phòng";
             // 
             // cmbStatus
             // 
             this.cmbStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbStatus.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(799, 151);
+            this.cmbStatus.Location = new System.Drawing.Point(581, 101);
+            this.cmbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(216, 49);
+            this.cmbStatus.Size = new System.Drawing.Size(158, 33);
             this.cmbStatus.TabIndex = 18;
             // 
             // frmQLPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1108, 686);
+            this.ClientSize = new System.Drawing.Size(806, 457);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.txtMTP);
@@ -283,6 +292,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnAddorUpdate);
             this.Controls.Add(this.dgvRoom);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmQLPhong";
             this.Text = "Quản lý Phòng";
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoom)).EndInit();

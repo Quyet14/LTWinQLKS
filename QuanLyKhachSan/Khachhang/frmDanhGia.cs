@@ -104,7 +104,7 @@ namespace QuanLyKhachSan.Khachhang
 
                 // Sử dụng customerServices để tìm kiếm khách hàng theo ID
                 customerServices customerService = new customerServices();
-                KhachHang customer = customerService.GetCustomerById(customerId);
+                DoAnN6_QLKS_DAL.Entity.KhachHang customer = customerService.GetCustomerById(customerId);
 
                 if (customer != null)
                 {
