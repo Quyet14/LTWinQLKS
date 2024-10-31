@@ -30,12 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.cmbDichVu = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnDat = new QuanLyKhachSan.Components.VBButton();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSoLuong = new QuanLyKhachSan.Components.VBTextBox();
-            this.txtGia = new System.Windows.Forms.TextBox();
+            this.btnDat = new QuanLyKhachSan.Components.VBButton();
             this.SuspendLayout();
             // 
             // label1
@@ -59,17 +57,6 @@
             this.cmbDichVu.Size = new System.Drawing.Size(234, 28);
             this.cmbDichVu.TabIndex = 2;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(211, 258);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Giá";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -81,26 +68,6 @@
             this.label3.Size = new System.Drawing.Size(238, 31);
             this.label3.TabIndex = 0;
             this.label3.Text = "Thông Tin Dịch Vụ";
-            // 
-            // btnDat
-            // 
-            this.btnDat.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDat.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDat.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDat.BorderRadius = 20;
-            this.btnDat.BorderSize = 0;
-            this.btnDat.FlatAppearance.BorderSize = 0;
-            this.btnDat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDat.ForeColor = System.Drawing.Color.White;
-            this.btnDat.Location = new System.Drawing.Point(338, 295);
-            this.btnDat.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDat.Name = "btnDat";
-            this.btnDat.Size = new System.Drawing.Size(112, 32);
-            this.btnDat.TabIndex = 4;
-            this.btnDat.Text = "Đặt";
-            this.btnDat.TextColor = System.Drawing.Color.White;
-            this.btnDat.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -116,8 +83,8 @@
             // txtSoLuong
             // 
             this.txtSoLuong.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSoLuong.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtSoLuong.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtSoLuong.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtSoLuong.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtSoLuong.BorderRadius = 0;
             this.txtSoLuong.BorderSize = 2;
             this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,32 +101,42 @@
             this.txtSoLuong.TabIndex = 6;
             this.txtSoLuong.Texts = "";
             this.txtSoLuong.UnderlinedStyle = false;
-            this.txtSoLuong._TextChanged += new System.EventHandler(this.txtSoLuong__TextChanged);
             // 
-            // txtGia
+            // btnDat
             // 
-            this.txtGia.Location = new System.Drawing.Point(283, 258);
-            this.txtGia.Name = "txtGia";
-            this.txtGia.ReadOnly = true;
-            this.txtGia.Size = new System.Drawing.Size(234, 20);
-            this.txtGia.TabIndex = 7;
+            this.btnDat.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnDat.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnDat.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDat.BorderRadius = 20;
+            this.btnDat.BorderSize = 0;
+            this.btnDat.FlatAppearance.BorderSize = 0;
+            this.btnDat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDat.ForeColor = System.Drawing.Color.White;
+            this.btnDat.Location = new System.Drawing.Point(341, 251);
+            this.btnDat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDat.Name = "btnDat";
+            this.btnDat.Size = new System.Drawing.Size(112, 32);
+            this.btnDat.TabIndex = 4;
+            this.btnDat.Text = "Đặt";
+            this.btnDat.TextColor = System.Drawing.Color.White;
+            this.btnDat.UseVisualStyleBackColor = false;
+            this.btnDat.Click += new System.EventHandler(this.btnDat_Click_1);
             // 
             // DichVu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(755, 411);
-            this.Controls.Add(this.txtGia);
             this.Controls.Add(this.txtSoLuong);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnDat);
             this.Controls.Add(this.cmbDichVu);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DichVu";
-            this.Text = "DichVu";
+            this.Text = "Dịch Vụ";
             this.Load += new System.EventHandler(this.DichVu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -170,11 +147,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbDichVu;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Components.VBButton btnDat;
         private System.Windows.Forms.Label label4;
         private Components.VBTextBox txtSoLuong;
-        private System.Windows.Forms.TextBox txtGia;
     }
 }

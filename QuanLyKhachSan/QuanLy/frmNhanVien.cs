@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace QuanLyKhachSan.QuanLy
@@ -61,7 +62,7 @@ namespace QuanLyKhachSan.QuanLy
             if (selectedRow == -1)
             {
                 int a;
-                if(cmbQuyen.Text == "Quản lý")
+                if (cmbQuyen.Text == "Quản lý")
                 {
                     a = 0;
                 }
@@ -78,8 +79,9 @@ namespace QuanLyKhachSan.QuanLy
                     SoDienThoai = txtSDT.Texts,
                     Email = txtEmail.Texts,
                     CMND = txtCMND.Texts,
+                    Password = txtMatKhau.Texts,
                     perm = a,
-                    Active = default
+                    Active = true
                 };
                 context.NhanViens.Add(NV);
                 context.SaveChanges();
@@ -96,7 +98,8 @@ namespace QuanLyKhachSan.QuanLy
             dgvNhanVien.Rows.Clear();
             foreach (var item in listNhanVien)
             {
-                if(item.Active) { 
+                if (item.Active)
+                {
                     int index = dgvNhanVien.Rows.Add();
                     dgvNhanVien.Rows[index].Cells[0].Value = item.MaNhanVien;
                     dgvNhanVien.Rows[index].Cells[1].Value = item.HoTen;
@@ -105,7 +108,7 @@ namespace QuanLyKhachSan.QuanLy
                     dgvNhanVien.Rows[index].Cells[4].Value = item.SoDienThoai;
                     dgvNhanVien.Rows[index].Cells[5].Value = item.Email;
                     dgvNhanVien.Rows[index].Cells[6].Value = item.CMND;
-                    if(item.perm == 0)
+                    if (item.perm == 0)
                     {
                         dgvNhanVien.Rows[index].Cells[7].Value = "Quản lý";
                     }
@@ -147,7 +150,7 @@ namespace QuanLyKhachSan.QuanLy
                 NV.SoDienThoai = txtSDT.Text;
                 NV.CMND = txtCMND.Text;
                 NV.Password = txtMatKhau.Texts;
-                if(cmbQuyen.Text == "Quản lý")
+                if (cmbQuyen.Text == "Quản lý")
                 {
                     NV.perm = 0;
                 }
@@ -169,7 +172,46 @@ namespace QuanLyKhachSan.QuanLy
         {
             int a = int.Parse(txtMaNhanVien.Texts);
             DoAnN6_QLKS_DAL.Entity.NhanVien NV = context.NhanViens.FirstOrDefault(p => p.MaNhanVien == a);
-            NV.Active = false;
+            if (NV != null)
+            {
+                NV.Active = false;
+                context.SaveChanges();
+                List<DoAnN6_QLKS_DAL.Entity.NhanVien> listNhanVien = context.NhanViens.ToList();
+                BindGrid(listNhanVien);
+                clearData();
+            }
+        }
+
+        private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            DataGridViewRow row = dgvNhanVien.Rows[e.RowIndex];
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) {
+                txtMaNhanVien.Texts = row.Cells[0].Value.ToString();
+                txtHoten.Texts = row.Cells[1].Value.ToString();
+                if (row.Cells[2].Value.ToString() == "Nam")
+                {
+                    rbMale.Checked = true;
+                }
+                else
+                {
+                    rbFemale.Checked = false;
+                }
+                txtDiaChi.Texts = row.Cells[3].Value.ToString();
+                txtSDT.Texts = row.Cells[4].Value.ToString();
+                txtEmail.Texts = row.Cells[5].Value.ToString();
+                txtCMND.Texts = row.Cells[6].Value.ToString();
+                if(row.Cells[7].Value.ToString() == "Quản lý")
+                {
+                    cmbQuyen.ValueMember = "Quản lý";
+
+                }
+                else
+                {
+                    cmbQuyen.ValueMember = "Nhân viên";
+                }
+            }
+            
         }
     }
 

@@ -44,8 +44,8 @@
             // txtDonGia
             // 
             this.txtDonGia.BackColor = System.Drawing.SystemColors.Window;
-            this.txtDonGia.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtDonGia.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtDonGia.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtDonGia.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtDonGia.BorderRadius = 10;
             this.txtDonGia.BorderSize = 2;
             this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -66,8 +66,8 @@
             // txtTenDichVu
             // 
             this.txtTenDichVu.BackColor = System.Drawing.SystemColors.Window;
-            this.txtTenDichVu.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtTenDichVu.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTenDichVu.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtTenDichVu.BorderFocusColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtTenDichVu.BorderRadius = 10;
             this.txtTenDichVu.BorderSize = 2;
             this.txtTenDichVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -87,8 +87,8 @@
             // 
             // btnSua
             // 
-            this.btnSua.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnSua.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSua.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSua.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSua.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnSua.BorderRadius = 10;
             this.btnSua.BorderSize = 0;
@@ -106,8 +106,8 @@
             // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnThem.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnThem.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnThem.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnThem.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnThem.BorderRadius = 10;
             this.btnThem.BorderSize = 0;
@@ -151,7 +151,7 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvDichVu.Location = new System.Drawing.Point(362, 101);
+            this.dgvDichVu.Location = new System.Drawing.Point(325, 101);
             this.dgvDichVu.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDichVu.Name = "dgvDichVu";
             this.dgvDichVu.RowHeadersWidth = 51;
@@ -181,9 +181,9 @@
             // 
             // frmThemDichVu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 407);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(785, 407);
             this.Controls.Add(this.txtDonGia);
             this.Controls.Add(this.txtTenDichVu);
             this.Controls.Add(this.btnSua);
@@ -193,7 +193,7 @@
             this.Controls.Add(this.dgvDichVu);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmThemDichVu";
-            this.Text = "frmThemDichVu";
+            this.Text = "Thêm Dịch Vụ";
             this.Load += new System.EventHandler(this.frmThemDichVu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).EndInit();
             this.ResumeLayout(false);

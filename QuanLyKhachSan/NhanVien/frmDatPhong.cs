@@ -21,6 +21,7 @@ namespace QuanLyKhachSan.NhanVien
         private readonly decimal roomPrice;
         private readonly int loggedEmployeeId;
         private PhieuDatPhong currentBooking;
+        QuanLyKhachSanDB context = new QuanLyKhachSanDB();
         public frmDatPhong(string roomCode, decimal roomPrice, int employeeId, bool isOccupied)
         {
             InitializeComponent();
@@ -28,7 +29,6 @@ namespace QuanLyKhachSan.NhanVien
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-
             this.roomCode = roomCode;
             this.roomPrice = roomPrice;
             this.loggedEmployeeId = employeeId;
@@ -124,7 +124,7 @@ namespace QuanLyKhachSan.NhanVien
             string phoneNumber = txtCustomerId.Texts.Trim();
 
             // Use customerServices to search by phone number
-            KhachHang customer = customerServices.FindCustomerByPhone(phoneNumber);
+            DoAnN6_QLKS_DAL.Entity.KhachHang customer = customerServices.FindCustomerByPhone(phoneNumber);
 
             if (customer != null)
             {
@@ -147,6 +147,16 @@ namespace QuanLyKhachSan.NhanVien
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void TaoHoaDonDV(int employeeId, int customerID )
+        {
+            HoaDonDichVu HDDV = new HoaDonDichVu();
+            HDDV.MaKhachHang = customerID;
+            HDDV.MaNhanVien = employeeId;
+            HDDV.NgayLap = DateTime.Now;
+            HDDV.TongTien = 0;
+            context.HoaDonDichVus.Add(HDDV);
+            context.SaveChanges();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -190,20 +200,12 @@ namespace QuanLyKhachSan.NhanVien
                     MessageBox.Show($"Đặt phòng thất bại! {errorMessage}", "Lỗi",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                TaoHoaDonDV(loggedEmployeeId, customer.MaKhachHang);
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void dtpCheckOut_ValueChanged(object sender, EventArgs e)
-        {
-            if (dtpCheckOut.Value <= DateTime.Now)
-            {
-                MessageBox.Show("Ngày trả phòng phải sau thời điểm hiện tại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                dtpCheckOut.Value = DateTime.Now.AddDays(1);
             }
         }
     }

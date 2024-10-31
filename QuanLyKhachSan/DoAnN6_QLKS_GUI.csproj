@@ -114,11 +114,6 @@
     <Compile Include="KhachHang\DichVu.Designer.cs">
       <DependentUpon>DichVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhachHang\frmHoaDonDichVu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KhachHang\frmHoaDonDichVu.Designer.cs">
-      <DependentUpon>frmHoaDonDichVu.cs</DependentUpon>
     <Compile Include="NhanVien\frmDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,8 +200,6 @@
     <EmbeddedResource Include="KhachHang\DichVu.resx">
       <DependentUpon>DichVu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KhachHang\frmHoaDonDichVu.resx">
-      <DependentUpon>frmHoaDonDichVu.cs</DependentUpon>
     <EmbeddedResource Include="NhanVien\frmDatPhong.resx">
       <DependentUpon>frmDatPhong.cs</DependentUpon>
     </EmbeddedResource>
