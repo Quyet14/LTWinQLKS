@@ -48,6 +48,7 @@
             this.panelCard.Name = "panelCard";
             this.panelCard.Size = new System.Drawing.Size(391, 168);
             this.panelCard.TabIndex = 2;
+            this.panelCard.Click += new System.EventHandler(this.CardRoom_Click);
             this.panelCard.MouseEnter += new System.EventHandler(this.panelCard_MouseEnter);
             this.panelCard.MouseLeave += new System.EventHandler(this.panelCard_MouseLeave);
             // 

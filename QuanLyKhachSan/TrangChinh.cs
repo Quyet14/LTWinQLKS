@@ -148,7 +148,7 @@ namespace QuanLyKhachSan
                     btn3.Click += (s, e) =>
                     {
                         ActivateButton(btn3, RGBColors.color); 
-                        OpenChildForm(new frmDanhGia());
+                        OpenChildForm(new frmDanhGia(UserId));
                     };
                     break;
 
@@ -163,8 +163,9 @@ namespace QuanLyKhachSan
                     //};
                     btn2.Click += (s, e) =>
                     {
+                        Console.WriteLine($"Opening frmPhong with UserId: {UserId}");
                         ActivateButton(btn2, RGBColors.color);
-                        OpenChildForm(new frmPhong());
+                        OpenChildForm(new frmPhong(UserId));
                     };
                     break;
 

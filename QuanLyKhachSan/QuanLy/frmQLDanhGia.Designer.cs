@@ -30,14 +30,14 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvRespond = new System.Windows.Forms.DataGridView();
+            this.ratingBox = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnSearch = new QuanLyKhachSan.Components.VBButton();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDateSent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ratingBox = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnSearch = new QuanLyKhachSan.Components.VBButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRespond)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ratingBox)).BeginInit();
             this.SuspendLayout();
@@ -66,48 +66,14 @@
             this.dgvRespond.Name = "dgvRespond";
             this.dgvRespond.RowHeadersWidth = 72;
             this.dgvRespond.RowTemplate.Height = 31;
-            this.dgvRespond.Size = new System.Drawing.Size(1500, 383);
+            this.dgvRespond.Size = new System.Drawing.Size(1222, 383);
             this.dgvRespond.TabIndex = 0;
-            // 
-            // colId
-            // 
-            this.colId.FillWeight = 25F;
-            this.colId.HeaderText = "Mã Phản Hồi";
-            this.colId.MinimumWidth = 9;
-            this.colId.Name = "colId";
-            // 
-            // colMaKH
-            // 
-            this.colMaKH.HeaderText = "Mã Khách Hàng";
-            this.colMaKH.MinimumWidth = 9;
-            this.colMaKH.Name = "colMaKH";
-            // 
-            // colRating
-            // 
-            this.colRating.HeaderText = "Rating";
-            this.colRating.MinimumWidth = 9;
-            this.colRating.Name = "colRating";
-            // 
-            // colND
-            // 
-            this.colND.FillWeight = 125.3012F;
-            this.colND.HeaderText = "Nội dung phản hồi";
-            this.colND.MinimumWidth = 9;
-            this.colND.Name = "colND";
-            this.colND.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // colDateSent
-            // 
-            this.colDateSent.FillWeight = 125.3012F;
-            this.colDateSent.HeaderText = "Ngày gửi";
-            this.colDateSent.MinimumWidth = 9;
-            this.colDateSent.Name = "colDateSent";
             // 
             // ratingBox
             // 
             this.ratingBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ratingBox.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ratingBox.Location = new System.Drawing.Point(1263, 111);
+            this.ratingBox.Location = new System.Drawing.Point(985, 111);
             this.ratingBox.Maximum = new decimal(new int[] {
             5,
             0,
@@ -133,7 +99,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(1155, 111);
+            this.label1.Location = new System.Drawing.Point(877, 111);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 41);
             this.label1.TabIndex = 2;
@@ -151,7 +117,7 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(1422, 109);
+            this.btnSearch.Location = new System.Drawing.Point(1144, 109);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(113, 48);
             this.btnSearch.TabIndex = 3;
@@ -160,16 +126,51 @@
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // frmQuanLyDanhGia
+            // colId
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1614, 646);
+            this.colId.FillWeight = 25F;
+            this.colId.HeaderText = "Mã Phản Hồi";
+            this.colId.MinimumWidth = 9;
+            this.colId.Name = "colId";
+            // 
+            // colMaKH
+            // 
+            this.colMaKH.HeaderText = "Mã Khách Hàng";
+            this.colMaKH.MinimumWidth = 9;
+            this.colMaKH.Name = "colMaKH";
+            // 
+            // colRating
+            // 
+            this.colRating.FillWeight = 50F;
+            this.colRating.HeaderText = "Rating";
+            this.colRating.MinimumWidth = 9;
+            this.colRating.Name = "colRating";
+            // 
+            // colND
+            // 
+            this.colND.FillWeight = 150F;
+            this.colND.HeaderText = "Nội dung phản hồi";
+            this.colND.MinimumWidth = 9;
+            this.colND.Name = "colND";
+            this.colND.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // colDateSent
+            // 
+            this.colDateSent.FillWeight = 125F;
+            this.colDateSent.HeaderText = "Ngày gửi";
+            this.colDateSent.MinimumWidth = 9;
+            this.colDateSent.Name = "colDateSent";
+            // 
+            // frmQLDanhGia
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(168F, 168F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(1312, 620);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ratingBox);
             this.Controls.Add(this.dgvRespond);
-            this.Name = "frmQuanLyDanhGia";
+            this.Name = "frmQLDanhGia";
             this.Text = "Quản Lý Đánh Giá";
             ((System.ComponentModel.ISupportInitialize)(this.dgvRespond)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ratingBox)).EndInit();
@@ -181,13 +182,13 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvRespond;
+        private System.Windows.Forms.NumericUpDown ratingBox;
+        private System.Windows.Forms.Label label1;
+        private Components.VBButton btnSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRating;
         private System.Windows.Forms.DataGridViewTextBoxColumn colND;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDateSent;
-        private System.Windows.Forms.NumericUpDown ratingBox;
-        private System.Windows.Forms.Label label1;
-        private Components.VBButton btnSearch;
     }
 }

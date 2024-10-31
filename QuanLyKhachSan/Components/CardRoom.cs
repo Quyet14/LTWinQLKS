@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnN6_QLKS_DAL.Entity;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -7,7 +8,8 @@ namespace QuanLyKhachSan.Components
     public partial class CardRoom : UserControl
     {
         private string roomStatus;
-
+        public event EventHandler<string> CardClicked;
+        public string MaPhong { get; set; }
         public string RoomStatus
         {
             get => roomStatus;
@@ -21,8 +23,16 @@ namespace QuanLyKhachSan.Components
         public CardRoom()
         {
             InitializeComponent();
-            this.panelCard.MouseEnter += panelCard_MouseEnter;
-            this.panelCard.MouseLeave += panelCard_MouseLeave;
+            AttachClickEventToControls(this);
+        }
+        private void AttachClickEventToControls(Control control)
+        {
+            // Add click event to each control inside the UserControl
+            control.Click += CardRoom_Click;
+            foreach (Control child in control.Controls)
+            {
+                AttachClickEventToControls(child);  // Recursively attach to all child controls
+            }
         }
 
         private void UpdateBackgroundColor()
@@ -61,13 +71,16 @@ namespace QuanLyKhachSan.Components
 
         private void panelCard_MouseLeave(object sender, EventArgs e)
         {
-            // Return to default color on leave
             Point mousePos = panelCard.PointToClient(Control.MousePosition);
             if (!panelCard.ClientRectangle.Contains(mousePos))
             {
                 UpdateBackgroundColor();
             }
            
+        }
+        private void CardRoom_Click(object sender, EventArgs e)
+        {
+            CardClicked?.Invoke(this, MaPhong);
         }
     }
 }
