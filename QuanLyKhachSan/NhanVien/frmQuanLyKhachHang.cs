@@ -22,11 +22,11 @@ namespace QuanLyKhachSan.NhanVien
         QuanLyKhachSanDB context = new QuanLyKhachSanDB();
         private void frmQuanLyKhachSan_Load(object sender, EventArgs e)
         {
-            List<KhachHang> listKhachHang = context.KhachHangs.ToList();
+            List<DoAnN6_QLKS_DAL.Entity.KhachHang> listKhachHang = context.KhachHangs.ToList();
             BindGrid(listKhachHang);
             rbMale.Checked = true;
         }
-        private void BindGrid(List<KhachHang> listKhachHang)
+        private void BindGrid(List<DoAnN6_QLKS_DAL.Entity.KhachHang> listKhachHang)
         {
             dgvKhachHang.Rows.Clear();
             foreach (var item in listKhachHang)
@@ -45,50 +45,50 @@ namespace QuanLyKhachSan.NhanVien
         private bool ValidateInput()
         {
             // Kiểm tra txtMaKhachHang
-            if (string.IsNullOrWhiteSpace(txtMaKhachHang.Text))
+            if (string.IsNullOrWhiteSpace(txtMaKhachHang.Texts))
             {
                 MessageBox.Show("Mã khách hàng không được bỏ trống.");
                 return false;
             }
-            if (!Regex.IsMatch(txtMaKhachHang.Text, @"^\d+$")) // Chỉ chứa số
+            if (!Regex.IsMatch(txtMaKhachHang.Texts, @"^\d+$")) // Chỉ chứa số
             {
                 MessageBox.Show("Mã khách hàng chỉ được chứa số và không được chứa ký tự đặc biệt.");
                 return false;
             }
 
             // Kiểm tra txtHoTen
-            if (string.IsNullOrWhiteSpace(txtHoTen.Text))
+            if (string.IsNullOrWhiteSpace(txtHoTen.Texts))
             {
                 MessageBox.Show("Họ tên không được bỏ trống.");
                 return false;
             }
-            if (!Regex.IsMatch(txtHoTen.Text, @"^[a-zA-Z\s]+$")) // Chỉ chứa chữ cái và dấu cách
+            if (!Regex.IsMatch(txtHoTen.Texts, @"^[a-zA-Z\s]+$")) // Chỉ chứa chữ cái và dấu cách
             {
                 MessageBox.Show("Họ tên không được chứa số hoặc ký tự đặc biệt.");
                 return false;
             }
 
             // Kiểm tra txtDiaChi
-            if (string.IsNullOrWhiteSpace(txtDiaChi.Text))
+            if (string.IsNullOrWhiteSpace(txtDiaChi.Texts))
             {
                 MessageBox.Show("Địa chỉ không được bỏ trống.");
                 return false;
             }
-            if (!Regex.IsMatch(txtDiaChi.Text, @"^[a-zA-Z0-9\s/]+$")) // Cho phép chữ cái, số, dấu cách, và dấu "/"
+            if (!Regex.IsMatch(txtDiaChi.Texts, @"^[a-zA-Z0-9\s/]+$")) // Cho phép chữ cái, số, dấu cách, và dấu "/"
             {
                 MessageBox.Show("Địa chỉ không được chứa ký tự đặc biệt (ngoại trừ '/').");
                 return false;
             }
 
             // Kiểm tra txtSDT (Số điện thoại Việt Nam bắt đầu bằng 0)
-            if (!Regex.IsMatch(txtSDT.Text, @"^0\d{9,10}$")) // Số bắt đầu bằng 0 và có độ dài từ 10-11 chữ số
+            if (!Regex.IsMatch(txtSDT.Texts, @"^0\d{9,10}$")) // Số bắt đầu bằng 0 và có độ dài từ 10-11 chữ số
             {
                 MessageBox.Show("Số điện thoại không hợp lệ. Số điện thoại Việt Nam phải bắt đầu bằng 0 và có từ 10 đến 11 chữ số.");
                 return false;
             }
 
             // Kiểm tra txtEmail (Email phải đúng định dạng)
-            if (!Regex.IsMatch(txtEmail.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$")) // Định dạng email cơ bản
+            if (!Regex.IsMatch(txtEmail.Texts, @"^[^@\s]+@[^@\s]+\.[^@\s]+$")) // Định dạng email cơ bản
             {
                 MessageBox.Show("Email không hợp lệ. Vui lòng nhập đúng định dạng email.");
                 return false;
@@ -113,13 +113,13 @@ namespace QuanLyKhachSan.NhanVien
         }
         private void ClearData()
         {
-            txtMaKhachHang.Text = string.Empty;
-            txtHoTen.Text = string.Empty;
+            txtMaKhachHang.Texts = string.Empty;
+            txtHoTen.Texts = string.Empty;
             rbMale.Checked = true;
-            txtDiaChi.Text = string.Empty;
-            txtSDT.Text = string.Empty;
-            txtEmail.Text = string.Empty;
-            txtCMND.Text = string.Empty;
+            txtDiaChi.Texts = string.Empty;
+            txtSDT.Texts = string.Empty;
+            txtEmail.Texts = string.Empty;
+            txtCMND.Texts = string.Empty;
         }
 
         private void dgvKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -149,12 +149,12 @@ namespace QuanLyKhachSan.NhanVien
         {
             if (ValidateInput())
             {
-                int selectedRow = GetSelectedRow(txtMaKhachHang.Text);
+                int selectedRow = GetSelectedRow(txtMaKhachHang.Texts);
                 if (selectedRow == -1)
                 {
-                    KhachHang KH = new KhachHang()
+                    DoAnN6_QLKS_DAL.Entity.KhachHang KH = new DoAnN6_QLKS_DAL.Entity.KhachHang()
                     {
-                        MaKhachHang = int.Parse(txtMaKhachHang.Text),
+                        MaKhachHang = int.Parse(txtMaKhachHang.Texts),
                         HoTen = txtHoTen.Texts,
                         GioiTinh = rbFemale.Checked ? "Nữ" : "Nam",
                         DiaChi = txtDiaChi.Texts,
@@ -167,14 +167,14 @@ namespace QuanLyKhachSan.NhanVien
 
                     MessageBox.Show("Thêm mới dữ liệu thành công!", "Thông Báo", MessageBoxButtons.OK);
 
-                    List<KhachHang> listStudent = context.KhachHangs.ToList();
-                    BindGrid(listStudent);
+                    List<DoAnN6_QLKS_DAL.Entity.KhachHang> listKhachHang = context.KhachHangs.ToList();
+                    BindGrid(listKhachHang);
                     ClearData();
                 }
                 else
                 {
-                    int a = int.Parse(txtMaKhachHang.Text);
-                    KhachHang KH = context.KhachHangs.FirstOrDefault(p => p.MaKhachHang == a);
+                    int a = int.Parse(txtMaKhachHang.Texts);
+                    DoAnN6_QLKS_DAL.Entity.KhachHang KH = context.KhachHangs.FirstOrDefault(p => p.MaKhachHang == a);
                     KH.HoTen = txtHoTen.Texts;
                     if (rbFemale.Checked)
                     {
@@ -190,7 +190,7 @@ namespace QuanLyKhachSan.NhanVien
                     KH.CMND = txtCMND.Texts;
                     context.SaveChanges();
                     MessageBox.Show("Thay đổi dữ liệu thành công!", "Thông Báo", MessageBoxButtons.OK);
-                    List<KhachHang> listStudent = context.KhachHangs.ToList();
+                    List<DoAnN6_QLKS_DAL.Entity.KhachHang> listStudent = context.KhachHangs.ToList();
                     BindGrid(listStudent);
                     ClearData();
                 }
