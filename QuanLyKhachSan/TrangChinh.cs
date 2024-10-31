@@ -289,9 +289,45 @@ namespace QuanLyKhachSan
             WindowState = FormWindowState.Minimized;
         }
 
-        private void panelMain_Paint(object sender, PaintEventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show(
+                "Bạn có chắc chắn muốn đăng xuất?",
+                "Xác nhận đăng xuất",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
 
+            if (result == DialogResult.Yes)
+            {
+                // Reset user information
+                UserId = 0;
+                UserType = null;
+
+                // Close current child form if any
+                if (currentChildForm != null)
+                {
+                    currentChildForm.Close();
+                    currentChildForm = null;
+                }
+
+                // Reset the home icon and label
+                iconHome.IconChar = IconChar.Home;
+                iconHome.IconColor = Color.Gainsboro;
+                lblHome.Text = "Home";
+
+                // Reset button highlighting
+                DisableButton();
+                leftBorderBtn.Visible = false;
+
+                // Hide all menu buttons
+                btn1.Visible = btn2.Visible = btn3.Visible =
+                    btn4.Visible = btn5.Visible = btn6.Visible =
+                        btn7.Visible = false;
+
+                // Show login form again
+                this.Hide();
+                ShowLoginForm();
+            }
         }
     }
 }

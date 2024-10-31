@@ -19,7 +19,21 @@ namespace QuanLyKhachSan
         {
             InitializeComponent();      
         }
-
+        private void frmChamCong_Load(object sender, EventArgs e)
+        {
+            List<ChamCong> ListChamCong = context.ChamCongs.ToList();
+            BindGrid(ListChamCong);
+        }
+        private void BindGrid(List<ChamCong> listChamCong)
+        {
+            foreach (var item in listChamCong)
+            {
+                int index = dgvChamCong.Rows.Add();
+                dgvChamCong.Rows[index].Cells[0].Value = item.MaChamCong;
+                dgvChamCong.Rows[index].Cells[1].Value = item.MaNhanVien;
+                dgvChamCong.Rows[index].Cells[2].Value = item.Ngay;
+            }
+        }
         private void btnTinhLuong_Click(object sender, EventArgs e)
         {
             int maNV;

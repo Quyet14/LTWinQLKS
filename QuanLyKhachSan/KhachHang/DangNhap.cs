@@ -109,6 +109,7 @@ namespace QuanLyKhachSan
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            QuanLyKhachSanDB context = new QuanLyKhachSanDB();
         }
         public static string HashPasswordSHA256(string password)
         {
