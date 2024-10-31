@@ -41,6 +41,8 @@
             this.lblHome = new System.Windows.Forms.Label();
             this.iconHome = new FontAwesome.Sharp.IconPictureBox();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.btn6 = new FontAwesome.Sharp.IconButton();
+            this.btn7 = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
@@ -52,6 +54,8 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panelMenu.Controls.Add(this.btn7);
+            this.panelMenu.Controls.Add(this.btn6);
             this.panelMenu.Controls.Add(this.btn5);
             this.panelMenu.Controls.Add(this.btn4);
             this.panelMenu.Controls.Add(this.btn3);
@@ -61,7 +65,7 @@
             this.panelMenu.ForeColor = System.Drawing.SystemColors.Highlight;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(303, 944);
+            this.panelMenu.Size = new System.Drawing.Size(303, 1017);
             this.panelMenu.TabIndex = 4;
             // 
             // btn5
@@ -80,7 +84,7 @@
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(303, 99);
             this.btn5.TabIndex = 6;
-            this.btn5.Text = "QL Dịch vụ";
+            this.btn5.Text = "button 5";
             this.btn5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn5.UseVisualStyleBackColor = false;
@@ -101,7 +105,7 @@
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(303, 99);
             this.btn4.TabIndex = 5;
-            this.btn4.Text = "QL Dịch vụ";
+            this.btn4.Text = "button 4";
             this.btn4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn4.UseVisualStyleBackColor = false;
@@ -122,7 +126,7 @@
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(303, 99);
             this.btn3.TabIndex = 2;
-            this.btn3.Text = "QL Loại Phòng";
+            this.btn3.Text = "button 3";
             this.btn3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn3.UseVisualStyleBackColor = false;
@@ -143,7 +147,7 @@
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(303, 99);
             this.btn2.TabIndex = 1;
-            this.btn2.Text = "QL Phòng";
+            this.btn2.Text = "button 2";
             this.btn2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn2.UseVisualStyleBackColor = false;
@@ -164,7 +168,7 @@
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(303, 99);
             this.btn1.TabIndex = 0;
-            this.btn1.Text = "Phòng";
+            this.btn1.Text = "button 1";
             this.btn1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn1.UseVisualStyleBackColor = false;
@@ -266,14 +270,56 @@
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(303, 104);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1465, 840);
+            this.panelMain.Size = new System.Drawing.Size(1465, 913);
             this.panelMain.TabIndex = 8;
+            // 
+            // btn6
+            // 
+            this.btn6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn6.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn6.FlatAppearance.BorderSize = 0;
+            this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn6.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn6.ForeColor = System.Drawing.Color.White;
+            this.btn6.IconChar = FontAwesome.Sharp.IconChar.ListCheck;
+            this.btn6.IconColor = System.Drawing.Color.White;
+            this.btn6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn6.Location = new System.Drawing.Point(0, 763);
+            this.btn6.Name = "btn6";
+            this.btn6.Size = new System.Drawing.Size(303, 99);
+            this.btn6.TabIndex = 7;
+            this.btn6.Text = "button 6";
+            this.btn6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn6.UseVisualStyleBackColor = false;
+            // 
+            // btn7
+            // 
+            this.btn7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn7.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn7.FlatAppearance.BorderSize = 0;
+            this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn7.ForeColor = System.Drawing.Color.White;
+            this.btn7.IconChar = FontAwesome.Sharp.IconChar.ListCheck;
+            this.btn7.IconColor = System.Drawing.Color.White;
+            this.btn7.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7.Location = new System.Drawing.Point(0, 868);
+            this.btn7.Name = "btn7";
+            this.btn7.Size = new System.Drawing.Size(303, 99);
+            this.btn7.TabIndex = 8;
+            this.btn7.Text = "button 7";
+            this.btn7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn7.UseVisualStyleBackColor = false;
             // 
             // TrangChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(168F, 168F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1768, 944);
+            this.ClientSize = new System.Drawing.Size(1768, 1017);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);
@@ -309,5 +355,7 @@
         private FontAwesome.Sharp.IconPictureBox btnExit;
         private FontAwesome.Sharp.IconPictureBox btnMinimize;
         private FontAwesome.Sharp.IconButton btn5;
+        private FontAwesome.Sharp.IconButton btn6;
+        private FontAwesome.Sharp.IconButton btn7;
     }
 }

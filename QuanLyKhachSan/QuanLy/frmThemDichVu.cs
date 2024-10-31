@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Theemdv_Quan_Ly_Khach_San
+namespace QuanLyKhachSan.QuanLy
 {
     public partial class frmThemDichVu : Form
     {
